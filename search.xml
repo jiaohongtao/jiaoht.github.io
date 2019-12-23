@@ -328,6 +328,9 @@ git pull origin master
     git init：创建一个/path/.git目录
     git add . ：将所有现有文件添加到索引
     git commit . -m &quot;a commit message&quot;：将原始状态记录为历史的第一个提交</code></pre>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
   </entry>
   <entry>
     <title>Effective Java</title>
