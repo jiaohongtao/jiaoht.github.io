@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>jht&#39;s site</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://jiaoht.github.io/"/>
+  <updated>2019-12-23T09:57:20.606Z</updated>
+  <id>https://jiaoht.github.io/</id>
+  
+  <author>
+    <name>Mr.Jiao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://jiaoht.github.io/2019/12/23/hello-world/"/>
+    <id>https://jiaoht.github.io/2019/12/23/hello-world/</id>
+    <published>2019-12-23T09:57:20.606Z</published>
+    <updated>2019-12-23T09:57:20.606Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 主题备份问题</title>
+    <link href="https://jiaoht.github.io/2019/08/13/Hexo-%E4%B8%BB%E9%A2%98%E5%A4%87%E4%BB%BD%E9%97%AE%E9%A2%98/"/>
+    <id>https://jiaoht.github.io/2019/08/13/Hexo-主题备份问题/</id>
+    <published>2019-08-13T07:09:57.000Z</published>
+    <updated>2019-12-23T09:57:20.606Z</updated>
+    
+    <content type="html"><![CDATA[<p>一般备份hexo目录是，发现主题并没有提交上去，如下图：<br><img src="/images/%E4%B8%BB%E9%A2%98%E5%A4%87%E4%BB%BD.png" alt="lujingxianshi"></p><p>解决方式如下：</p><ol><li><p>git rm –cached themes/next/</p><blockquote></blockquote><pre><code>rm &apos;themes/next&apos;</code></pre></li><li><p>git status</p><blockquote></blockquote><pre><code>On branch masterYour branch is up to date with &apos;origin/master&apos;.Changes to be committed:  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)    deleted:    themes/nextUntracked files:  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)themes/</code></pre></li><li><p>git add themes/next/</p></li><li><p>git status</p><blockquote></blockquote><pre><code>On branch master    Your branch is up to date with &apos;origin/master&apos;.    Changes to be committed:      (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)        deleted:    themes/next        new file:   themes/next/.all-contributorsrc        new file:   themes/next/.editorconfig        new file:   themes/next/.eslintrc.json        new file:   themes/next/.gitattributes`        ......</code></pre></li><li><p>git commit -m “备份next主题”</p><blockquote></blockquote><pre><code>[master 2386fe5] 备份next主题 347 files changed, 27937 insertions(+), 1 deletion(-) delete mode 160000 themes/next create mode 100644 themes/next/.all-contributorsrc create mode 100644 themes/next/.editorconfig ......</code></pre></li><li><p>git push origin master</p><blockquote></blockquote><pre><code>Enumerating objects: 418, done.Counting objects: 100% (418/418), done.Delta compression using up to 4 threadsCompressing objects: 100% (400/400), done.Writing objects: 100% (416/416), 761.18 KiB | 3.49 MiB/s, done.Total 416 (delta 27), reused 0 (delta 0)remote: Resolving deltas: 100% (27/27), completed with 1 local object.To https://github.com/jiaoht/HexoDemoBac.git   e495fcb..2386fe5  master -&gt; master</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一般备份hexo目录是，发现主题并没有提交上去，如下图：&lt;br&gt;&lt;img src=&quot;/images/%E4%B8%BB%E9%A2%98%E5%A4%87%E4%BB%BD.png&quot; alt=&quot;lujingxianshi&quot;&gt;&lt;/p&gt;
+&lt;p&gt;解决方式如下：&lt;/p&gt;
+&lt;ol&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>测试版权文件</title>
+    <link href="https://jiaoht.github.io/2019/08/12/%E6%B5%8B%E8%AF%95%E7%89%88%E6%9D%83%E6%96%87%E4%BB%B6/"/>
+    <id>https://jiaoht.github.io/2019/08/12/测试版权文件/</id>
+    <published>2019-08-12T07:06:40.000Z</published>
+    <updated>2019-12-23T09:57:20.606Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Git总结</title>
+    <link href="https://jiaoht.github.io/2019/08/12/git_command/"/>
+    <id>https://jiaoht.github.io/2019/08/12/git_command/</id>
+    <published>2019-08-12T03:10:35.000Z</published>
+    <updated>2019-12-23T09:57:20.606Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>如有错误，斧正不甚感激</p></blockquote><p>总结来自<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b0" target="_blank" rel="noopener">廖雪峰老师的官方网站Git教程</a></p><ol><li><p>配置用户名和密码：</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure></li><li><p>git init：把当前目录变成Git可以管理的仓库</p></li><li><p>git add xx：将文件xx添加到暂存区，可反复多次使用，添加多个文件</p></li><li><p>git commit -m “xx”：将暂存区所有文件提交到仓库</p></li><li><p>git status：查看仓库当前的状态</p></li><li><p>git diff xx：查看xx文件都做过哪些修改操作</p></li><li><p>git log( –pretty=oneline)：显示从最近到最远的提交日志(简行显示)</p></li><li><p>git reset –hard (HEAD^/版本号)：回退到(上一个/某个)版本</p></li><li><p>git reflog：记录所有历史版本号</p></li><li><p>git diff HEAD – xx：查看工作区和版本库里面最新版本的区别</p></li><li><p>git checkout – file：丢弃工作区的修改</p></li><li><p>git rm xx：删除xx文件(之后执行git commit提交完成)</p></li><li><p>配置公钥：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure></li><li><p>连接远程仓库：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:jiaoht/learngit.git</span><br></pre></td></tr></table></figure></li><li><p>git push -u origin master：把本地库的所有内容推送到远程库上(第一次推送master分支时，加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令)</p></li><li><p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:jiaoht/gitskills.git：从远程库克隆到本地库</p></li><li><p>git checkout：命令加上-b参数表示创建并切换，相当于以下两条命令：</p><ul><li>git branch dev：创建分支</li><li>git checkout dev：切换分支</li></ul></li><li><p>git branch：命令会列出所有分支，当前分支前面会标一个*号</p></li><li><p>git merge：命令用于合并指定分支到当前分支</p></li><li><p>git branch -d xx：删除xx分支</p></li><li><p>git log –graph( –pretty=oneline –abbrev-commit)：命令可以看到分支合并图</p></li><li><p>git merge –no-ff：用普通模式合并，合并后的历史有分支，能看出来曾经做过合并</p></li><li><p>git stash：把当前工作现场“储藏”起来，等以后恢复现场后继续工作</p></li><li><p>git stash list：列出工作现场</p></li><li><p>git stash pop：恢复工作现场的同时把stash内容也删了，相当于：</p><ul><li>git stash apply：只恢复，不删除stash</li><li>git stash drop：删除stash</li></ul></li><li><p>git branch -D name：强行删除，删除该分支时前须先切换到其他分支</p></li><li><p>git remote( -v)：查看远程库的信息(更详细的信息)</p></li><li><p>git push origin xx：推送xx分支</p></li><li><p>git checkout -b dev origin/dev：同事创建远程origin的dev分支到本地</p></li><li><p>git branch –set-upstream branch-name origin/branch-name：建立本地分支和远程分支的关联</p></li><li><p>git pull：抓取远程的新提交</p></li><li><p>git tag tagname：新建标签，默认为HEAD，也可以指定commit id</p></li><li><p>git tag -a tagname -m “blablabla…”：指定标签信息</p></li><li><p>git tag：查看所有标签</p></li><li><p>git push origin tagname：推送一个本地标签</p></li><li><p>git push origin –tags：推送全部未推送过的本地标签</p></li><li><p>git tag -d tagname：删除一个本地标签</p></li><li><p>git push origin :refs/tags/tagname：删除一个远程标签</p></li></ol><h4 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h4><ol><li>HEAD指向的版本就是当前版本.</li><li>如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch –set-upstream-to branch-name origin/branch-name。</li><li>git rebase操作可以把本地未push的分叉提交历史整理成直线，使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比</li></ol><hr><p>总结来自来自<a href="https://www.yiibai.com/git" target="_blank" rel="noopener">易百的Git教程</a></p><p><em>这一部分属实看的不是很懂，其实上面的大概已经够用了，这部分可不看</em></p><p>Gitee总结：</p><ol><li>echo ‘This is my first Git control file ‘ &gt; mytext.txt：新建的mytext.tex文件，将这句话放到文件中</li><li>git status (-s/–short)：简行命令(未跟踪??,修改未暂存区:右M,修改入暂存区:左M,工作区被修改提交到暂存区后工作区中又被修改MM,暂存区A,文件重命名R,文件已从本地存储库中删除D)<ol start="3"><li>git add . ：将所有文件暂存</li><li>git commit -a：加参数-a,直接跳过git add进行提交</li><li>git commit –amend：修改(覆盖)最后一次提交</li><li>git mv a b：把a文件命名为b,相当于：</li></ol><ul><li>mv a b</li><li>git rm a</li><li>git add b</li></ul><ol start="7"><li>git log -p -2：p用来显示每次提交的内容差异,仅显示最近两次提交</li><li>git log –stat：显示每次提交的简略的统计信息</li><li>git log –pretty=oneline(short/full/fuller/format)：指定使用不同于默认格式的方式展示提交历史，本次为显示在一行</li><li>git log –pretty=format:”%h %s” –graph：graph用ASCII字符串来显示分支</li><li>git remote show origin：查看远程仓库信息</li><li>git remote rename a b：远程仓库重命名</li><li>git remote rm：远程仓库移除</li><li>git branch -m oldname newname：重命名分支</li><li>git config -–add site.name jiaoht：添加配置项</li><li>git config –[local|global|system] -–unset xx：删除xx配置项</li><li>git add *Controller：将以Controller结尾的文件的所有修改添加到暂存区</li><li>git add Hello*：将所有以Hello开头的文件的修改添加到暂存区</li><li>git add Hello?：将以Hello开头后面只有一位的文件的修改提交到暂存区</li><li>git add -[u|A|i] [<path>]：</path></li></ol><ul><li>u：把<path>中所有跟踪文件中被修改过或已删除文件的信息添加到索引库，省略<path>表示 . ,即当前目录</path></path></li><li>A：把所有跟踪文件中被修改过或已删除文件和所有未跟踪的文件信息添加到索引库，省略<path>表示 . ,即当前目录</path></li><li>i：查看被所有修改过或已删除文件但没有提交的文件，并通过其revert子命令可以查看<path>中所有未跟踪的文件，同时进入一个子命令系统</path></li></ul><ol start="21"><li>git status -uno：只列出所有已经被git管理的且被修改但没提交的文件</li><li>git diff <file>：比较当前文件和暂存区文件差异</file></li><li>git diffgit diff <id1><id2>：比较两次提交之间的差异</id2></id1></li><li>git diff <branch1> <branch2>：在两个分支之间比较</branch2></branch1></li><li>git diff –[staged|cached]：比较暂存区和版本库差异</li><li>git diff –stat：仅仅比较统计信息</li><li>git text.txt mydir：将ext.txt 移动到 mydir，相当于：</li></ol><ul><li>mv test.txt mydir/</li><li>git rm test.txt</li><li>git add mydir</li></ul><ol start="28"><li>git log –pretty=format:”%an %ae %ad %cn %ce %cd %cr %s” –graph<br>常见的format选项：<br>#选项     #说明<br>%H      提交对象(commit)的完整哈希字串<br>%h      提交对象的简短哈希字串<br>%T      树对象(tree)的完整哈希字串<br>%t      树对象的简短哈希字串<br>%P      父对象(parent)的完整哈希字串<br>%p      父对象的简短哈希字串<br>%an     作者(author)的名字<br>%ae     作者的电子邮件地址<br>%ad     作者修订日期(可以用 -date= 选项定制格式)<br>%ar     作者修订日期，按多久以前的方式显示<br>%cn     提交者(committer)的名字<br>%ce     提交者的电子邮件地址<br>%cd     提交日期<br>%cr     提交日期，按多久以前的方式显示<br>%s      提交说明<br>–graph 显示分支</li></ol></li></ol><ol start="29"><li>git log –before={3,weeks,ago} –after={2018-04-18}：<ul><li>–after 仅显示指定时间之后的提交(不包含当前日期)</li><li>–before 仅显示指定时间之前的提交(包含当前日期)</li></ul></li><li>git push –all origin：将本地的所有分支都推送到远程主机</li><li>git push origin –tags：向远程推送标签</li><li>git push origin tag_name：推送单个标签</li><li>git push origin :tag_name：删除单个标签</li><li>git remote add [shortname] [url]：添加一个新的远程仓库，和简名</li><li>git rebase：把一个分支的修改合并到当前分支(没怎么看懂)</li></ol><p>注意事项：<br>git fetch和git pull的区别</p><pre><code>git fetch：相当于是从远程获取最新版本到本地，不会自动合并。$ git fetch origin master$ git log -p master..origin/master$ git merge origin/master以上命令的含义：首先从远程的origin的master主分支下载最新的版本到origin/master分支上然后比较本地的master分支和origin/master分支的差别最后进行合并上述过程其实可以用以下更清晰的方式来进行：$ git fetch origin master:tmp$ git diff tmp$ git merge tmpgit pull：相当于是从远程获取最新版本并merge到本地git pull origin master上述命令其实相当于git fetch 和 git merge在实际使用中，git fetch更安全一些，因为在merge前，我们可以查看更新情况，然后再决定是否合并。</code></pre><p>常用操作：</p><pre><code>为现有的代码库启动一个新的Git仓库：    cd path：转到该路径下    git init：创建一个/path/.git目录    git add . ：将所有现有文件添加到索引    git commit . -m &quot;a commit message&quot;：将原始状态记录为历史的第一个提交</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;如有错误，斧正不甚感激&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;总结来自&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c01
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Effective Java</title>
+    <link href="https://jiaoht.github.io/2019/08/12/Effective-Java/"/>
+    <id>https://jiaoht.github.io/2019/08/12/Effective-Java/</id>
+    <published>2019-08-12T03:09:18.000Z</published>
+    <updated>2019-12-23T09:57:20.606Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>标签测试文章</title>
+    <link href="https://jiaoht.github.io/2019/08/09/%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <id>https://jiaoht.github.io/2019/08/09/标签测试文章/</id>
+    <published>2019-08-09T08:44:32.000Z</published>
+    <updated>2019-12-23T09:57:20.606Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Testing" scheme="https://jiaoht.github.io/tags/Testing/"/>
+    
+      <category term="Another Tag" scheme="https://jiaoht.github.io/tags/Another-Tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sometion</title>
+    <link href="https://jiaoht.github.io/2019/08/09/sometion/"/>
+    <id>https://jiaoht.github.io/2019/08/09/sometion/</id>
+    <published>2019-08-09T02:21:44.000Z</published>
+    <updated>2019-12-23T09:57:20.606Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>something</title>
+    <link href="https://jiaoht.github.io/2019/08/09/something/"/>
+    <id>https://jiaoht.github.io/2019/08/09/something/</id>
+    <published>2019-08-09T02:19:41.000Z</published>
+    <updated>2019-12-23T09:57:20.606Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
