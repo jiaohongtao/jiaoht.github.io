@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaoht.github.io/2019/08/12/git_command/</loc>
+    <lastmod>2019-12-23</lastmod>
+  </url>  <url>
     <loc>https://jiaoht.github.io/2019/08/12/Effective-Java/</loc>
     <lastmod>2019-12-23</lastmod>
   </url>  <url>
     <loc>https://jiaoht.github.io/2019/08/13/Hexo-%E4%B8%BB%E9%A2%98%E5%A4%87%E4%BB%BD%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2019-12-23</lastmod>
-  </url>  <url>
-    <loc>https://jiaoht.github.io/2019/08/12/git_command/</loc>
     <lastmod>2019-12-23</lastmod>
   </url>  <url>
     <loc>https://jiaoht.github.io/2019/12/23/hello-world/</loc>
