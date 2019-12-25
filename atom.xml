@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaoht.github.io/"/>
-  <updated>2019-12-25T05:10:28.522Z</updated>
+  <updated>2019-12-25T05:17:16.516Z</updated>
   <id>https://jiaoht.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html获取当前项目根路径</title>
+    <link href="https://jiaoht.github.io/2019/12/25/html%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B9%E7%9B%AE%E6%A0%B9%E8%B7%AF%E5%BE%84/"/>
+    <id>https://jiaoht.github.io/2019/12/25/html获取当前项目根路径/</id>
+    <published>2019-12-25T05:16:00.000Z</published>
+    <updated>2019-12-25T05:17:16.516Z</updated>
+    
+    <content type="html"><![CDATA[<p>Spring boot 正常启动 浏览器无法访问Controller，在本地测试是可以访问的，如果放到tomcat中就出现了这个问题。通过浏览器F12查询到url丢失了项目根路径，添加之后成功访问。</p><p>获取当前项目根路径：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取项目根路径</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getRootPath_web</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp</span></span><br><span class="line">        <span class="keyword">var</span> curWwwPath = <span class="built_in">window</span>.document.location.href;</span><br><span class="line">        <span class="comment">//获取主机地址之后的目录，如： uimcardprj/share/meun.jsp</span></span><br><span class="line">        <span class="keyword">var</span> pathName = <span class="built_in">window</span>.document.location.pathname;</span><br><span class="line">        <span class="keyword">var</span> pos = curWwwPath.indexOf(pathName);</span><br><span class="line">        <span class="comment">//获取主机地址，如： http://localhost:8083</span></span><br><span class="line">        <span class="keyword">var</span> localhostPaht = curWwwPath.substring(<span class="number">0</span>, pos);</span><br><span class="line">        <span class="comment">//获取带"/"的项目名，如：/uimcardprj</span></span><br><span class="line">        <span class="keyword">var</span> projectName = pathName.substring(<span class="number">0</span>, pathName.substr(<span class="number">1</span>).indexOf(<span class="string">'/'</span>) + <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 打印获取当前项目根路径</span></span><br><span class="line">    <span class="built_in">console</span>.log(getRootPath_web());</span><br><span class="line">        <span class="keyword">return</span> (localhostPaht + projectName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $(<span class="string">"#increaseInput"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">        <span class="comment">// 这里在controller的url之前加上根路径，即可成功访问</span></span><br><span class="line">            url: getRootPath_web() + <span class="string">"/increaseInput"</span>,</span><br><span class="line">            data: $(<span class="string">"#increaseInput"</span>).value,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(result);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p>感谢bloger：</p><p>Hgihness-<a href="https://blog.csdn.net/javahighness/article/details/52515226" target="_blank" rel="noopener">https://blog.csdn.net/javahighness/article/details/52515226</a>，idea构建war包</p><p>oldmonk-<a href="https://www.cnblogs.com/xujingyang/p/7607212.html" target="_blank" rel="noopener">https://www.cnblogs.com/xujingyang/p/7607212.html</a></p><p>星朝-<a href="https://www.cnblogs.com/jpfss/p/9042249.html" target="_blank" rel="noopener">https://www.cnblogs.com/jpfss/p/9042249.html</a>（虽然很厉害，但是没看懂）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Spring boot 正常启动 浏览器无法访问Controller，在本地测试是可以访问的，如果放到tomcat中就出现了这个问题。通过浏览器F12查询到url丢失了项目根路径，添加之后成功访问。&lt;/p&gt;
+&lt;p&gt;获取当前项目根路径：&lt;/p&gt;
+&lt;figure class=&quot;
+      
+    
+    </summary>
+    
+      <category term="html&amp;css&amp;js" scheme="https://jiaoht.github.io/categories/html-css-js/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
