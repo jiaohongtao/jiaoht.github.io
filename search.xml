@@ -17,6 +17,9 @@
 
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hexo 主题备份问题</title>
@@ -186,7 +189,8 @@ To https://github.com/jiaoht/HexoDemoBac.git
 <li><p>git push origin :refs/tags/tagname：删除一个远程标签</p>
 </li>
 </ol>
-<h4 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h4><ol>
+<p>注意事项：</p>
+<ol>
 <li>HEAD指向的版本就是当前版本.</li>
 <li>如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch –set-upstream-to branch-name origin/branch-name。</li>
 <li>git rebase操作可以把本地未push的分叉提交历史整理成直线，使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比</li>
