@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaoht.github.io/"/>
-  <updated>2019-12-25T05:17:16.516Z</updated>
+  <updated>2019-12-25T05:31:11.897Z</updated>
   <id>https://jiaoht.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Blogger Introduce</title>
+    <link href="https://jiaoht.github.io/2019/12/25/Blogger-Introduce/"/>
+    <id>https://jiaoht.github.io/2019/12/25/Blogger-Introduce/</id>
+    <published>2019-12-25T05:24:06.000Z</published>
+    <updated>2019-12-25T05:31:11.897Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="jiaohongtao.com:8089" target="_blank" rel="noopener">红桃jiao的个人博客</a>，绘制中</p><p><a href="https://blog.csdn.net/weixin_40375601" target="_blank" rel="noopener">csdn</a>，<br><a href="https://github.com/jiaoht" target="_blank" rel="noopener">github</a>，<br><a href="https://weibo.com/p/1005055731326417" target="_blank" rel="noopener">微博</a>，</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;jiaohongtao.com:8089&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;红桃jiao的个人博客&lt;/a&gt;，绘制中&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_40375601&quot; 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>html获取当前项目根路径</title>
