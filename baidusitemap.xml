@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaoht.github.io/2019/08/12/git_command/</loc>
+    <lastmod>2019-12-25</lastmod>
+  </url>  <url>
     <loc>https://jiaoht.github.io/2019/12/25/Blogger-Introduce/</loc>
     <lastmod>2019-12-25</lastmod>
   </url>  <url>
@@ -8,9 +11,6 @@
     <lastmod>2019-12-25</lastmod>
   </url>  <url>
     <loc>https://jiaoht.github.io/2019/08/12/%E6%B5%8B%E8%AF%95%E7%89%88%E6%9D%83%E6%96%87%E4%BB%B6/</loc>
-    <lastmod>2019-12-25</lastmod>
-  </url>  <url>
-    <loc>https://jiaoht.github.io/2019/08/12/git_command/</loc>
     <lastmod>2019-12-25</lastmod>
   </url>  <url>
     <loc>https://jiaoht.github.io/2019/12/23/hello-world/</loc>
