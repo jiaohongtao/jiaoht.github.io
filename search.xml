@@ -1,6 +1,1165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>idea报错：java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java</title>
+    <url>/2019/12/26/idea%E6%8A%A5%E9%94%99%EF%BC%9Ajava-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/</url>
+    <content><![CDATA[<p>java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java.library.path, no leveldbjni-1.8 in java.library.path, C:\Windows\System32\leveldbjni.dll: Can’t find dependent libraries, C:\Users\dajiaotao\AppData\Local\Temp\leveldbjni-64-1-1989621817943305095.8: Can’t find dependent libraries]</p>
+<p>==================================================</p>
+<p>这个折磨我两天的问题，就是少了dll。。。。</p>
+<p>下载网址：<a href="http://www.onlinedown.net/soft/120082.htm" target="_blank" rel="noopener">http://www.onlinedown.net/soft/120082.htm</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java.lang.UnsatisfiedLinkError</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>javabean作用和优势,什么时候该对数据封装?</title>
+    <url>/2019/12/26/javabean%E4%BD%9C%E7%94%A8%E5%92%8C%E4%BC%98%E5%8A%BF-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<h4 id="javabean作用和优势-什么时候该对数据封装"><a href="#javabean作用和优势-什么时候该对数据封装" class="headerlink" title="javabean作用和优势,什么时候该对数据封装?"></a>javabean作用和优势,什么时候该对数据封装?</h4><blockquote>
+<p>参考（侵权删）：<a href="https://zhidao.baidu.com/question/51726153.html" target="_blank" rel="noopener">https://zhidao.baidu.com/question/51726153.html</a></p>
+</blockquote>
+<p>首先这是一个编程思想，也就是所谓‘面向对象’的问题。javabean本身是一个java对象，他对数据进行的封装。我们需要访问数据的时候只要访问这个对象就可以了。<br>其次，如果你的表单数据比较少还好，如果多一些，比如10个，那么你在servlet的方法调用，比如调用数据库insert操作，你要建立一个具有10个参数的方法吗？还是创建一个只有一个javabean做参数的方法简单？<br>在你的例子中，比如A页面提交跳转如B页面，期间A页面的表单数据封装进一个javabean，那么在B页面只需要访问这个javabean，然后调用其相关get方法就可以了。而如果不用javabean，你在servlet终究要不厌其烦的request.setParameter().<br>而且，将来你肯定会接触到一些数据库持久层的开源框架，现在用的最多的比如hibernate，他对数据库的增删改查全是基于javabean的，比如你要保存一个student的学号，姓名，性别的信息。原来的做法是<br>insert into t_student (id,name,sex) value(1,’jack’,1).<br>而使用Hibernate这类框架，只需要调用一个方法save(student).<br>其中student就是一个javabean,它具有3个成员变量，id,name,sex.是不是很方便？<br>扯远了。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>javabean作用和优势</tag>
+        <tag>数据封装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IDEA、WebStorm永久激活</title>
+    <url>/2019/12/26/IDEA%E3%80%81WebStorm%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/</url>
+    <content><![CDATA[<p>Web Storm 激活步骤与此相同</p>
+<blockquote>
+<p>版权声明：感谢博主 张未-大道五十,天衍四九,人遁其一-成都,中国</p>
+</blockquote>
+<p>本文转自：<a href="https://blog.weechang.xyz/2018/09/21/IDEA、WebStorm最新永久激活方式/" target="_blank" rel="noopener">https://blog.weechang.xyz/2018/09/21/IDEA、WebStorm最新永久激活方式/</a></p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a><strong>步骤</strong></h3><p>1.下载插件<br>2.安装插件<br>3.修改配置</p>
+<h4 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h4><p>首先下载插件jar包 <a href="http://idea.lanyus.com/jar/JetbrainsCrack-3.1-release-enc.jar" target="_blank" rel="noopener">http://idea.lanyus.com/jar/JetbrainsCrack-3.1-release-enc.jar</a></p>
+<h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>然后将插件移动到 IDEA 安装目录的bin下。如我的目录 %IntelliJ IDEA%\bin</p>
+<h4 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h4><p>修改 IDEA 安装bin目录下的 idea64.exe.vmoptions 或者 idea.exe.vmoptions 具体修改哪一个看自己操作系统是64 位还是32位。64位修改 idea64.exe.vmoptions ， 32位修改 idea.exe.vmoptions。</p>
+<p>然后在文件末尾添加上（其中 D:\idea\IntelliJ IDEA 2018.2.4\bin\JetbrainsCrack-3.1-release-enc.jar 为插件的安装路径和文件名。注意，目录和文件名一定要一直，不然IDEA不能启动）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-javaagent:D:\idea\IntelliJ IDEA 2018.2.4\bin\JetbrainsCrack-3.1-release-enc.jar</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启IDEA、填写CODE"><a href="#重启IDEA、填写CODE" class="headerlink" title="重启IDEA、填写CODE"></a>重启IDEA、填写CODE</h4><p>重启IDEA，选择Activation Code填写激活码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ThisCrackLicenseId-&#123;</span><br><span class="line">    &quot;licenseId&quot;:&quot;ThisCrackLicenseId&quot;,</span><br><span class="line">    &quot;licenseeName&quot;:&quot;你想填的用户名&quot;,</span><br><span class="line">    &quot;assigneeName&quot;:&quot;&quot;,</span><br><span class="line">    &quot;assigneeEmail&quot;:&quot;你想填的邮箱&quot;,</span><br><span class="line">    &quot;licenseRestriction&quot;:&quot;For This Crack, Only Test! Please support genuine!!!&quot;,</span><br><span class="line">    &quot;checkConcurrentUse&quot;:false,</span><br><span class="line">    &quot;products&quot;:[</span><br><span class="line">    &#123;&quot;code&quot;:&quot;II&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;DM&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;AC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;RS0&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;WS&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;DPN&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;RC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;PS&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;DC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;RM&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;CL&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;PC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;hash&quot;:&quot;2911276/0&quot;,</span><br><span class="line">    &quot;gracePeriodDays&quot;:7,</span><br><span class="line">    &quot;autoProlongated&quot;:false&#125;</span><br></pre></td></tr></table></figure>
+
+<p>激活<br>OK，至此为止，你的IDEA 就激活成功，又可以继续浪了。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>关于postman的请求参数的格式问题</title>
+    <url>/2019/12/26/%E5%85%B3%E4%BA%8Epostman%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<blockquote>
+<p>版权声明：创作不易，转载请附上本文地址<a href="https://blog.csdn.net/weixin_40375601/article/details/85121974" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40375601/article/details/85121974</a></p>
+</blockquote>
+<p>注意点：<br>    1.GET请求<br>    2.参数格式为params : { “xx” : “xx” }<br>    3.Cookie的JSESSIONID</p>
+<h5 id="1-错误示例："><a href="#1-错误示例：" class="headerlink" title="1.错误示例："></a>1.错误示例：</h5><p><img src="https://img-blog.csdnimg.cn/20181220144504609.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="2-正确示例："><a href="#2-正确示例：" class="headerlink" title="2.正确示例："></a>2.正确示例：</h5><p><img src="https://img-blog.csdnimg.cn/20181220144440397.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>Miexd</category>
+      </categories>
+      <tags>
+        <tag>postman</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zookeeper连接不上/Session 0x0 for server null, unexpected error, closing socket connection</title>
+    <url>/2019/12/26/zookeeper%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-Session-0x0-for-server-null-unexpected-error-closing-socket-connection/</url>
+    <content><![CDATA[<p>好像是Linux重启导致zookeeper端口出了问题</p>
+<h5 id="设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，慎用-，不过我确实是用这个解决了-然后重新打开需要的端口）"><a href="#设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，慎用-，不过我确实是用这个解决了-然后重新打开需要的端口）" class="headerlink" title="设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，慎用!!!，不过我确实是用这个解决了,然后重新打开需要的端口）"></a>设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，<font color="red">慎用!!!</font>，不过我确实是用这个解决了,然后重新打开需要的端口）</h5><pre><code>firewall-cmd --set-default-zone=public</code></pre><p>打开端口命令：</p>
+<pre><code>firewall-cmd --add-port=端口号/tcp</code></pre>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>zookeeper</tag>
+        <tag>Linux端口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为Linux服务器设置静态IP的方法,并且ping通外网</title>
+    <url>/2019/12/26/%E4%B8%BALinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E7%9A%84%E6%96%B9%E6%B3%95-%E5%B9%B6%E4%B8%94ping%E9%80%9A%E5%A4%96%E7%BD%91/</url>
+    <content><![CDATA[<blockquote>
+<p>参考<a href="https://www.cnblogs.com/freeweb/p/5335973.html" target="_blank" rel="noopener">https://www.cnblogs.com/freeweb/p/5335973.html</a></p>
+</blockquote>
+<p>这里以CentOS 7系列为例设置静态IP，原来RedHat系列的Linux发行版可以通过setup工具方便的设置静态IP，但是在版本7之后setup工具的功能就逐渐减弱了，所以这时候采用修改配置文件的方式来设置静态IP，方法如下：</p>
+<p>　　首先注意，路由网关处必须设置可以配置静态IP或者使用指定IP绑定MAC才可以配置，否则配置不成功，不要盲目的配置<br>　　网络配置的配置文件在/etc/sysconfig/network-scripts/下，文件名前缀为ifcfg-后面跟的就是网卡的名称，可以通过双TAB键查看然后编辑，也可以使用ifconfig查看，也可以使用命令： vim /etc/sysconfig/network-scripts/ifcfg-* 编辑配置文件(没有安装vim可以使用Linux默认的<font color="blue">vi</font>编辑)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20181225173359867.PNG" alt="在这里插入图片描述"></p>
+<p>比如这里就是ifcfg-ens33这个文件，现在使用： vim /etc/sysconfig/network-scripts/ifcfg-ens33 打开配置文件进行编辑，默认情况是dhcp动态获取的，如下图：<br><img src="https://img-blog.csdnimg.cn/20181225174313943.PNG" alt="在这里插入图片描述"><br>这时候如果想修改成静态的，首先把BOOTPROTO=”dhcp”改成BOOTPROTO=”static”表示静态获取，ONBOOT=no改成ONBOOT=yes联网，然后在最后追加比如下面的配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">BROADCAST=192.168.11.255</span><br><span class="line">IPADDR=192.168.11.128</span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line">GATEWAY=192.168.11.2</span><br></pre></td></tr></table></figure>
+
+<p>BROADCAST设置的是局域网广播地址，IPADDR就是静态IP，NETMASK是子网掩码，GATEWAY（注意事项在下面）就是网关或者路由地址；需要说明，原来还有个NETWORK配置的是局域网网络号，这个是ifcalc自动计算的，所以这里配置这些就足够了，最终配置如下图：<br><img src="https://img-blog.csdnimg.cn/20181225175042392.PNG" alt="在这里插入图片描述"></p>
+<p>需要注意的是GATEWAY是需要与虚拟机设置的一致，否则ping不通外网，比如我的是192.168.11.2。如图：<br><img src="https://img-blog.csdnimg.cn/20181225175554534.png" alt="在这里插入图片描述"><br>配置完成之后保存退出，设置完毕，然后使用命令： /etc/init.d/network restart 或者 service network restart 重启网络服务，重启后如果路由配置了支持静态IP，那么linux就能获取到刚才配置的IP地址，这样静态IP就配置成功了<br>　　配置成功后，dns配置一般会消失，所以这时候就ping不通域名了，需要配置DNS，配置文件位置是：/etc/resolv.conf，里面的nameserver指定dns服务器地址，这个配置很简单就不详细说了，如下图：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20181225175923432.PNG" alt="在这里插入图片描述"><br>保存后，dns配置是立即生效的，原因很简单，只要本地需要解析缓冲区没有的域名，都要读取一遍dns配置文件，所以这个配置是立即生效的，不用任何操作,到这里静态IP并访问外网就没问题了.<br>    啊哈哈！！</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>设置静态ip</tag>
+        <tag>ping外网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>spring @Configuration的使用</title>
+    <url>/2019/12/26/spring-Configuration%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>1.1、@Configuration配置spring并启动spring容器<br>@Configuration标注在类上，相当于把该类作为spring的xml配置文件中的<beans>，作用为：配置spring容器(应用上下文)</beans></p>
+<p>1.2、@Configuration启动容器+@Bean注册Bean，@Bean下管理bean的生命周期<br>@Bean标注在方法上(返回某个实例的方法)，等价于spring的xml配置文件中的<bean>，作用为：注册bean对象<br>    注：<br>    (1)、@Bean注解在返回实例的方法上，如果未通过@Bean指定bean的名称，则默认与标注的方法名相同；<br>    (2)、@Bean注解默认作用域为单例singleton作用域，可通过@Scope(“prototype”)设置为原型作用域；<br>    (3)、既然@Bean的作用是注册bean对象，那么完全可以使用@Component、@Controller、@Service、@Repository等注解注册bean，当然需要配置@ComponentScan注解进行自动扫描。</bean></p>
+<p>@Bean下管理bean的生命周期<br>可以使用基于 Java 的配置来管理 bean 的生命周期。@Bean 支持两种属性，即 initMethod 和destroyMethod，这些属性可用于定义生命周期方法。在实例化 bean 或即将销毁它时，容器便可调用生命周期方法。生命周期方法也称为回调方法，因为它将由容器调用。</p>
+<p>1.3、@Configuration启动容器+@Component注册Bean</p>
+<ul>
+<li>@Component注册Bean</li>
+<li>@ComponentScan扫描Bean</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>@Configuration</tag>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Specification中一个条件用或者表示(criteriaBuilder.or)</title>
+    <url>/2019/12/26/Specification%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E7%94%A8%E6%88%96%E8%80%85%E8%A1%A8%E7%A4%BA-criteriaBuilder-or/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Specification spec = (root, criteriaQuery, criteriaBuilder) -&gt; &#123;</span><br><span class="line"></span><br><span class="line">			List&lt;Predicate&gt; predicate = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">			Predicate pred1 = criteriaBuilder.equal(root.get(&quot;bizId&quot;), user.getBizId());</span><br><span class="line">			Predicate pred2 = criteriaBuilder.equal(root.get(&quot;bizId&quot;), 0);</span><br><span class="line">			predicate.add(criteriaBuilder.or(pred1, pred2));</span><br><span class="line">			</span><br><span class="line">			Predicate[] pre = new Predicate[predicate.size()];</span><br><span class="line">			criteriaQuery.where(predicate.toArray(pre));</span><br><span class="line">			return null;</span><br><span class="line">		&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Specification</tag>
+        <tag>criteriaBuilder.or</tag>
+        <tag>JPA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java + Selenium + WebDriver自动版本化</title>
+    <url>/2019/12/26/Java-Selenium-WebDriver%E8%87%AA%E5%8A%A8%E7%89%88%E6%9C%AC%E5%8C%96/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package packageOne;</span><br><span class="line"></span><br><span class="line">import org.openqa.selenium.By;</span><br><span class="line">import org.openqa.selenium.WebDriver;</span><br><span class="line">import org.openqa.selenium.chrome.ChromeDriver;</span><br><span class="line"></span><br><span class="line">public class OpenBaidu &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String args[]) throws InterruptedException &#123;</span><br><span class="line"></span><br><span class="line">		// 指定谷歌驱动的地址(找到对应的驱动)</span><br><span class="line">		System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;D:/chromedriver.exe&quot;);</span><br><span class="line"></span><br><span class="line">		// 实例化一个WebDriver的对象，此时会启动谷歌浏览器</span><br><span class="line">		WebDriver driver = new ChromeDriver();</span><br><span class="line"></span><br><span class="line">		// 最大化浏览器窗口</span><br><span class="line">		driver.manage().window().maximize();</span><br><span class="line"></span><br><span class="line">		// 打开百度首页</span><br><span class="line">		driver.get(&quot;https://www.baidu.com/&quot;);</span><br><span class="line"></span><br><span class="line">		// 在搜索框中输入查询内容：自动化测试</span><br><span class="line">		driver.findElement(By.id(&quot;kw&quot;)).sendKeys(&quot;自动化测试&quot;);</span><br><span class="line"></span><br><span class="line">		// 强制等待3秒</span><br><span class="line">		Thread.sleep(3000);</span><br><span class="line"></span><br><span class="line">		// 点击“百度一下” 执行搜索</span><br><span class="line">		driver.findElement(By.id(&quot;su&quot;)).click();</span><br><span class="line"></span><br><span class="line">		// 强制等待3秒</span><br><span class="line">		Thread.sleep(4000);</span><br><span class="line"></span><br><span class="line">		try &#123;</span><br><span class="line">			// 关闭谷歌浏览器</span><br><span class="line">			driver.quit();</span><br><span class="line">			System.out.println(&quot;浏览器已关闭&quot;);</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			System.out.println(&quot;浏览器关闭失败&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体请看：<br><a href="https://blog.csdn.net/yoyocat915/article/details/80269901" target="_blank" rel="noopener">https://blog.csdn.net/yoyocat915/article/details/80269901</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Selenium</tag>
+        <tag>自动版本化</tag>
+        <tag>WebDriver</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jQuery: 点击button弹出新窗口</title>
+    <url>/2019/12/26/jQuery-button%E5%AE%9E%E7%8E%B0target%E4%B8%BA-blank-%E7%82%B9%E5%87%BBbutton%E5%BC%B9%E5%87%BA%E6%96%B0%E7%AA%97%E5%8F%A3/</url>
+    <content><![CDATA[<p>该方法可适用于跳转下载等</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;button id=&quot;clickGo&quot;&gt;跳转页面&lt;/button&gt;</span><br><span class="line">$(&quot;#clickGo&quot;).click(function () &#123;</span><br><span class="line">	window.open(&apos;url&apos;, &apos;_blank&apos;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>html&amp;css&amp;js</category>
+      </categories>
+      <tags>
+        <tag>点击button弹出新窗口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java导出 Excel，PDF</title>
+    <url>/2019/12/26/Excel%E5%AF%BC%E5%87%BA-PDF%E5%AF%BC%E5%87%BA%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<blockquote>
+<p>自我总结：结构可能比较复杂，不过涵盖知识点多</p>
+</blockquote>
+<h4 id="PDF导出"><a href="#PDF导出" class="headerlink" title="PDF导出"></a>PDF导出</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import com.alibaba.fastjson.JSONObject;</span><br><span class="line"></span><br><span class="line">import com.itextpdf.text.*;</span><br><span class="line">import com.itextpdf.text.pdf.BaseFont;</span><br><span class="line">import com.itextpdf.text.pdf.PdfPCell;</span><br><span class="line">import com.itextpdf.text.pdf.PdfPTable;</span><br><span class="line">import com.itextpdf.text.pdf.PdfWriter;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.web.bind.annotation.*;</span><br><span class="line"></span><br><span class="line">import javax.servlet.http.HttpServletResponse;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.OutputStream;</span><br><span class="line">import java.net.URLEncoder;</span><br><span class="line">import java.text.SimpleDateFormat;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.Collections;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Set;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">public class InspectRecordPdfController extends BaseController &#123;</span><br><span class="line"></span><br><span class="line">	@Autowired</span><br><span class="line">	InspectRecordService inspectRecordService;</span><br><span class="line"></span><br><span class="line">	@RequestMapping(value = &quot;/url/pdf/&#123;id&#125;&quot;, method = &#123;RequestMethod.GET&#125;)</span><br><span class="line">	@ResponseBody</span><br><span class="line">	public void pdfExport(@PathVariable(&quot;id&quot;) Long id, HttpServletResponse response) &#123;</span><br><span class="line"></span><br><span class="line">		RespDto&lt;InspectRecord&gt; respDto = inspectRecordService.get(id);</span><br><span class="line">		if (respDto.getSuccess()) &#123;</span><br><span class="line">			InspectRecord record = respDto.getData();</span><br><span class="line">			try &#123;</span><br><span class="line">				covertPdf(record, response);</span><br><span class="line">			&#125; catch (Exception e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private void covertPdf(InspectRecord record, HttpServletResponse response) throws IOException, DocumentException &#123;</span><br><span class="line"></span><br><span class="line">		// 第一步，实例化一个document对象</span><br><span class="line">		Document document = new Document();</span><br><span class="line"></span><br><span class="line">		String filename = record.getName() + &quot;.pdf&quot;;</span><br><span class="line"></span><br><span class="line">		// 清空response，否则可能会对程序有影响，因为在此之前有可能也用到了response，若不reset，后面的setCntentoType()有可能失效</span><br><span class="line">		response.reset();</span><br><span class="line">		response.setContentType(&quot;application/pdf&quot;);</span><br><span class="line">		response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=&quot; + URLEncoder.encode(filename, &quot;utf-8&quot;));</span><br><span class="line"></span><br><span class="line">		// 第二步，设置要到出的路径</span><br><span class="line">		// 如果是浏览器通过request请求需要在浏览器中输出则使用下面方式</span><br><span class="line">		OutputStream out = response.getOutputStream();</span><br><span class="line">		// 第三步,设置字符,宋体</span><br><span class="line">		BaseFont bfChinese = BaseFont.createFont(&quot;STSong-Light&quot;, &quot;UniGB-UCS2-H&quot;, BaseFont.NOT_EMBEDDED);</span><br><span class="line">		Font fontZH = new Font(bfChinese, 12.0F, Font.NORMAL);</span><br><span class="line">		// 第四步，将pdf文件输出到磁盘</span><br><span class="line">		PdfWriter.getInstance(document, out);</span><br><span class="line">		// 第五步，打开生成的pdf文件</span><br><span class="line">		document.open();</span><br><span class="line"></span><br><span class="line">		Font greenFont = new Font(bfChinese);</span><br><span class="line">		greenFont.setColor(BaseColor.GREEN);</span><br><span class="line">		Font redFont = new Font(bfChinese);</span><br><span class="line">		redFont.setColor(BaseColor.RED);</span><br><span class="line">		Font orangeFont = new Font(bfChinese);</span><br><span class="line">		orangeFont.setColor(BaseColor.ORANGE);</span><br><span class="line"></span><br><span class="line">		String title = &quot;巡检信息&quot;;</span><br><span class="line">		Paragraph paragraph = new Paragraph();</span><br><span class="line">		paragraph.setAlignment(Element.ALIGN_CENTER);</span><br><span class="line">		paragraph.add(new Chunk(title, fontZH).setLocalDestination(title));</span><br><span class="line">		// paragraph.add(new Chunk(title, new Font(bfChinese, 20F, Font.BOLD)).setLocalDestination(title));</span><br><span class="line">		document.add(paragraph);</span><br><span class="line">		document.add(new Paragraph(&quot;\n&quot;));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		PdfPTable table = new PdfPTable(2);</span><br><span class="line">		table.setHorizontalAlignment(Element.ALIGN_CENTER);</span><br><span class="line">		float[] widths = &#123;20f, 90f&#125;;</span><br><span class="line">		table.setWidths(widths);</span><br><span class="line"></span><br><span class="line">		PdfPCell cell;</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;巡检名称&quot;, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(record.getName(), fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;巡检类型&quot;, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		Integer recordType = record.getType();</span><br><span class="line">		String typeText = &quot;-&quot;;</span><br><span class="line">		if (recordType == 0) &#123;</span><br><span class="line">			typeText = &quot;快速巡检-脚本&quot;;</span><br><span class="line">		&#125; else if (recordType == 1) &#123;</span><br><span class="line">			typeText = &quot;常规巡检&quot;;</span><br><span class="line">		&#125; else if (recordType == 2) &#123;</span><br><span class="line">			typeText = &quot;定时巡检&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cell = new PdfPCell(new Paragraph(typeText, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;执行人员&quot;, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(record.getUserName(), fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;巡检状态&quot;, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		Integer recordStatus = record.getStatus();</span><br><span class="line">		if (recordStatus == 0) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;启动中&quot;, fontZH));</span><br><span class="line">		&#125; else if (recordStatus == 1) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;执行中&quot;, fontZH));</span><br><span class="line">		&#125; else if (recordStatus == 2) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;成功&quot;, greenFont));</span><br><span class="line">		&#125; else if (recordStatus == 3) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;错误&quot;, redFont));</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;-&quot;, fontZH));</span><br><span class="line">		&#125;</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;告警状态&quot;, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		Boolean recordWarning = record.getWarning();</span><br><span class="line">		if (!recordWarning) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;正常&quot;, greenFont));</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;告警&quot;, orangeFont));</span><br><span class="line">		&#125;</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;创建时间&quot;, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line"></span><br><span class="line">		String createTime = simpleDateFormat.format(record.getCreateTime());</span><br><span class="line">		cell = new PdfPCell(new Paragraph(createTime, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;执行时长&quot;, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">		Double totalTime = record.getTotalTime();</span><br><span class="line">		if (totalTime != null) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(totalTime.toString() + &quot; 秒&quot;, fontZH));</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;-&quot;, fontZH));</span><br><span class="line">		&#125;</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// 告警开始</span><br><span class="line">		List&lt;InspectRecordWarning&gt; warnList = record.getInspectRecordWarnings();</span><br><span class="line">		if (warnList.size() &gt; 0) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;告警信息&quot;, fontZH));</span><br><span class="line">			setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">			PdfPTable warnTable = new PdfPTable(3);</span><br><span class="line">			warnTable.setWidths(new float[]&#123;22f, 23f, 55f&#125;);</span><br><span class="line">			setAndAddCellStyle(table, new PdfPCell(getWarningInfo(warnList, warnTable, fontZH)));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		List&lt;InspectRecordItem&gt; list = record.getInspectRecordItems();</span><br><span class="line">		List&lt;Object&gt; objects = new ArrayList&lt;&gt;();</span><br><span class="line">		for (Object item : list) &#123;</span><br><span class="line"></span><br><span class="line">			objects.add(item);</span><br><span class="line">			objects.removeAll(Collections.singleton(null));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		if (objects.size() &gt; 0) &#123;</span><br><span class="line"></span><br><span class="line">			cell = new PdfPCell(new Paragraph(&quot;执行错误&quot;, fontZH));</span><br><span class="line">			setAndAddCellStyle(table, cell);</span><br><span class="line"></span><br><span class="line">			PdfPTable errorTable = new PdfPTable(3);</span><br><span class="line">			errorTable.setWidths(new float[]&#123;22f, 23f, 55f&#125;);</span><br><span class="line">			setAndAddCellStyle(table, new PdfPCell(getErrorInfo(list, errorTable, fontZH)));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;执行详情&quot;, fontZH));</span><br><span class="line">		setAndAddCellStyle(table, cell);</span><br><span class="line">		PdfPTable detailTable = new PdfPTable(3);</span><br><span class="line">		detailTable.setWidths(new float[]&#123;22f, 23f, 55f&#125;);</span><br><span class="line">		setAndAddCellStyle(table, new PdfPCell(getDetailInfo(list, detailTable, fontZH)));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// 添加大表格</span><br><span class="line">		document.add(table);</span><br><span class="line">		// 第七步，关闭document</span><br><span class="line">		document.close();</span><br><span class="line"></span><br><span class="line">		System.out.println(&quot;导出pdf成功~&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private PdfPTable getWarningInfo(List&lt;InspectRecordWarning&gt; list, PdfPTable warningTable, Font fontZH) &#123;</span><br><span class="line"></span><br><span class="line">		PdfPCell cell;</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;主机ip&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		warningTable.addCell(cell);</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;指标项&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;告警信息&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		warningTable.addCell(cell);</span><br><span class="line">		for (InspectRecordWarning item : list) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(item.getIp(), fontZH));</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			warningTable.addCell(cell);</span><br><span class="line">			cell = new PdfPCell(new Paragraph(item.getInspectItemName(), fontZH));</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			warningTable.addCell(cell);</span><br><span class="line">			String content = item.getContent();</span><br><span class="line">			cell = new PdfPCell(new Paragraph(content != null ? content : &quot;-&quot;, fontZH));</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			warningTable.addCell(cell);</span><br><span class="line">		&#125;</span><br><span class="line">		return warningTable;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/*</span><br><span class="line">	获取执行错误信息</span><br><span class="line">	 */</span><br><span class="line">	private PdfPTable getErrorInfo(List&lt;InspectRecordItem&gt; list, PdfPTable errorTable, Font fontZH) &#123;</span><br><span class="line"></span><br><span class="line">		PdfPCell cell;</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;主机ip&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		errorTable.addCell(cell);</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;指标项&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		errorTable.addCell(cell);</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;执行错误信息&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		errorTable.addCell(cell);</span><br><span class="line">		for (InspectRecordItem item : list) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(item.getIp(), fontZH));</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			errorTable.addCell(cell);</span><br><span class="line">			cell = new PdfPCell(new Paragraph(item.getInspectItemName(), fontZH));</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			errorTable.addCell(cell);</span><br><span class="line"></span><br><span class="line">			String errorInfo = item.getScriptErrorInfo();</span><br><span class="line">			cell = new PdfPCell(new Paragraph(errorInfo !=null ? errorInfo : &quot;-&quot;, fontZH));</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			errorTable.addCell(cell);</span><br><span class="line">		&#125;</span><br><span class="line">		return errorTable;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private PdfPTable getDetailInfo(List&lt;InspectRecordItem&gt; list, PdfPTable detailTable, Font fontZH) &#123;</span><br><span class="line"></span><br><span class="line">		PdfPCell cell;</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;主机ip&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		detailTable.addCell(cell);</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;指标项&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		detailTable.addCell(cell);</span><br><span class="line">		cell = new PdfPCell(new Paragraph(&quot;详情&quot;, fontZH));</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		detailTable.addCell(cell);</span><br><span class="line"></span><br><span class="line">		for (InspectRecordItem item : list) &#123;</span><br><span class="line">			cell = new PdfPCell(new Paragraph(item.getIp(), fontZH));</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			detailTable.addCell(cell);</span><br><span class="line">			cell = new PdfPCell(new Paragraph(item.getInspectItemName(), fontZH));</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			detailTable.addCell(cell);</span><br><span class="line"></span><br><span class="line">			// 详情</span><br><span class="line">			String log = item.getLog();</span><br><span class="line">			if (log != null) &#123;</span><br><span class="line">				JSONObject logJsonObj = JSONObject.parseObject(log);</span><br><span class="line"></span><br><span class="line">				Set&lt;String&gt; logSet = logJsonObj.keySet();</span><br><span class="line">				Object logObj;</span><br><span class="line">				String logStr = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">				for (String key : logSet) &#123;</span><br><span class="line">					logObj = logJsonObj.get(key);</span><br><span class="line">					logStr += key + &quot; : &quot; + logObj.toString() + &quot;\n&quot;;</span><br><span class="line">				&#125;</span><br><span class="line">				cell = new PdfPCell(new Paragraph(&quot;&quot;.equals(logStr) ? &quot;-&quot; : logStr, fontZH));</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				cell = new PdfPCell(new Paragraph(&quot;-&quot;, fontZH));</span><br><span class="line">			&#125;</span><br><span class="line">			setCellCenter(cell);</span><br><span class="line">			detailTable.addCell(cell);</span><br><span class="line">		&#125;</span><br><span class="line">		return detailTable;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private void setAndAddCellStyle(PdfPTable table, PdfPCell cell) &#123;</span><br><span class="line">		cell.setMinimumHeight(30.0F);</span><br><span class="line">		cell.setPaddingTop(10f);</span><br><span class="line">		cell.setPaddingBottom(10f);</span><br><span class="line">		setCellCenter(cell);</span><br><span class="line">		cell.setBorder(Rectangle.NO_BORDER);</span><br><span class="line">		table.addCell(cell);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private void setCellCenter(PdfPCell cell) &#123;</span><br><span class="line">		cell.setHorizontalAlignment(Element.ALIGN_CENTER);</span><br><span class="line">		cell.setVerticalAlignment(Element.ALIGN_MIDDLE);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Excel导出"><a href="#Excel导出" class="headerlink" title="Excel导出"></a>Excel导出</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import com.alibaba.fastjson.JSONObject;</span><br><span class="line"></span><br><span class="line">import org.apache.poi.hssf.usermodel.*;</span><br><span class="line">import org.apache.poi.hssf.util.HSSFColor;</span><br><span class="line">import org.apache.poi.ss.usermodel.HorizontalAlignment;</span><br><span class="line">import org.apache.poi.ss.usermodel.VerticalAlignment;</span><br><span class="line">import org.apache.poi.ss.util.CellRangeAddress;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.web.bind.annotation.*;</span><br><span class="line"></span><br><span class="line">import javax.servlet.http.HttpServletResponse;</span><br><span class="line">import java.io.FileOutputStream;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.OutputStream;</span><br><span class="line">import java.net.URLEncoder;</span><br><span class="line">import java.text.SimpleDateFormat;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.Collections;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Set;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">public class InspectRecordExcelController extends BaseController &#123;</span><br><span class="line"></span><br><span class="line">	@Autowired</span><br><span class="line">	InspectRecordService inspectRecordService;</span><br><span class="line"></span><br><span class="line">	public static final short BOLD_FONT = 20;</span><br><span class="line">	public static final short NORMAL_FONT = 12;</span><br><span class="line"></span><br><span class="line">	// 创建表头</span><br><span class="line">	@RequestMapping(value = &quot;/inspect/record/excel/&#123;id&#125;&quot;, method = &#123;RequestMethod.GET&#125;)</span><br><span class="line">	@ResponseBody</span><br><span class="line">	public void createTitle(@PathVariable(&quot;id&quot;) Long id, HttpServletResponse response) throws IOException &#123;</span><br><span class="line"></span><br><span class="line">		HSSFWorkbook workbook = new HSSFWorkbook();</span><br><span class="line"></span><br><span class="line">		HSSFSheet sheet = workbook.createSheet();</span><br><span class="line"></span><br><span class="line">		sheet.setColumnWidth(0, 16 * 256);</span><br><span class="line">		sheet.setColumnWidth(1, 20 * 256);</span><br><span class="line">		sheet.setColumnWidth(2, 30 * 256);</span><br><span class="line">		sheet.setColumnWidth(3, 40 * 256);</span><br><span class="line"></span><br><span class="line">		InspectRecord record = inspectRecordService.get(id).getData();</span><br><span class="line"></span><br><span class="line">		sheet.addMergedRegion(new CellRangeAddress(0, 1, 0, 3));</span><br><span class="line"></span><br><span class="line">		for (int i = 2; i &lt; 9; i++) &#123;</span><br><span class="line">			sheet.addMergedRegion(new CellRangeAddress(i, i, 1, 3));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		HSSFRow row = sheet.createRow(0);</span><br><span class="line">		HSSFCell cell = row.createCell(0);</span><br><span class="line">		cell.setCellStyle(getStyle(workbook, BOLD_FONT, true));</span><br><span class="line">		cell.setCellValue(&quot;巡检信息&quot;);</span><br><span class="line"></span><br><span class="line">		HSSFRow row2 = sheet.createRow(2);</span><br><span class="line">		HSSFCell cell2 = row2.createCell(0);</span><br><span class="line">		cell2.setCellValue(&quot;巡检名称&quot;);</span><br><span class="line">		cell2.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell2 = row2.createCell(1);</span><br><span class="line">		cell2.setCellValue(record.getName());</span><br><span class="line">		cell2.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line"></span><br><span class="line">		HSSFRow row3 = sheet.createRow(3);</span><br><span class="line">		HSSFCell cell3 = row3.createCell(0);</span><br><span class="line">		cell3.setCellValue(&quot;巡检类型&quot;);</span><br><span class="line">		cell3.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell3 = row3.createCell(1);</span><br><span class="line"></span><br><span class="line">		Integer recordType = record.getType();</span><br><span class="line">		if (recordType == 0) &#123;</span><br><span class="line">			cell3.setCellValue(&quot;快速巡检-脚本&quot;);</span><br><span class="line">		&#125; else if (recordType == 1) &#123;</span><br><span class="line">			cell3.setCellValue(&quot;常规巡检&quot;);</span><br><span class="line">		&#125; else if (recordType == 2) &#123;</span><br><span class="line">			cell3.setCellValue(&quot;定时巡检&quot;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			cell3.setCellValue(&quot;-&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		cell3.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line"></span><br><span class="line">		HSSFRow row4 = sheet.createRow(4);</span><br><span class="line">		HSSFCell cell4 = row4.createCell(0);</span><br><span class="line">		cell4.setCellValue(&quot;用户名&quot;);</span><br><span class="line">		cell4.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell4 = row4.createCell(1);</span><br><span class="line">		cell4.setCellValue(record.getUserName());</span><br><span class="line">		cell4.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line"></span><br><span class="line">		HSSFRow row5 = sheet.createRow(5);</span><br><span class="line">		HSSFCell cell5 = row5.createCell(0);</span><br><span class="line">		cell5.setCellValue(&quot;巡检状态&quot;);</span><br><span class="line">		cell5.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell5 = row5.createCell(1);</span><br><span class="line"></span><br><span class="line">		Integer status = record.getStatus();</span><br><span class="line">		if (status == 0) &#123;</span><br><span class="line">			cell5.setCellValue(&quot;启动中&quot;);</span><br><span class="line">			cell5.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">		&#125; else if (status == 1) &#123;</span><br><span class="line">			cell5.setCellValue(&quot;执行中&quot;);</span><br><span class="line">			cell5.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">		&#125; else if (status == 2) &#123;</span><br><span class="line">			setStatus(workbook, cell5, &quot;成功&quot;, HSSFColor.GREEN.index);</span><br><span class="line">		&#125; else if (status == 3) &#123;</span><br><span class="line">			setStatus(workbook, cell5, &quot;错误&quot;, HSSFColor.RED.index);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			cell5.setCellValue(&quot;-&quot;);</span><br><span class="line">			cell5.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		HSSFRow row6 = sheet.createRow(6);</span><br><span class="line">		HSSFCell cell6 = row6.createCell(0);</span><br><span class="line">		cell6.setCellValue(&quot;告警状态&quot;);</span><br><span class="line">		cell6.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell6 = row6.createCell(1);</span><br><span class="line"></span><br><span class="line">		if (!record.getWarning()) &#123;</span><br><span class="line">			setStatus(workbook, cell6, &quot;正常&quot;, HSSFColor.GREEN.index);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			setStatus(workbook, cell6, &quot;告警&quot;, HSSFColor.ORANGE.index);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		HSSFRow row7 = sheet.createRow(7);</span><br><span class="line">		HSSFCell cell7 = row7.createCell(0);</span><br><span class="line">		cell7.setCellValue(&quot;创建时间&quot;);</span><br><span class="line">		cell7.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell7 = row7.createCell(1);</span><br><span class="line">		SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line">		cell7.setCellValue(sdf.format(record.getCreateTime()));</span><br><span class="line">		cell7.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line"></span><br><span class="line">		HSSFRow row8 = sheet.createRow(8);</span><br><span class="line">		HSSFCell cell8 = row8.createCell(0);</span><br><span class="line">		cell8.setCellValue(&quot;执行时长&quot;);</span><br><span class="line">		cell8.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell8 = row8.createCell(1);</span><br><span class="line"></span><br><span class="line">		Double totalTime = record.getTotalTime();</span><br><span class="line">		if (totalTime != null) &#123;</span><br><span class="line">			cell8.setCellValue(totalTime + &quot;秒&quot;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			cell8.setCellValue(&quot;-&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		cell8.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line"></span><br><span class="line">		// 嵌套</span><br><span class="line">		List&lt;InspectRecordWarning&gt; warnings = record.getInspectRecordWarnings();</span><br><span class="line">		int warnSize = warnings.size();</span><br><span class="line"></span><br><span class="line">		if (warnSize &gt; 0) &#123; // 如果有告警信息才显示对象</span><br><span class="line"></span><br><span class="line">			sheet.addMergedRegion(new CellRangeAddress(10, 10 + warnSize, 0, 0));</span><br><span class="line"></span><br><span class="line">			HSSFRow row10 = sheet.createRow(10);</span><br><span class="line">			HSSFCell cell10 = row10.createCell(0);</span><br><span class="line">			cell10.setCellValue(&quot;告警信息&quot;);</span><br><span class="line">			cell10.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">			cell10 = row10.createCell(1);</span><br><span class="line">			cell10.setCellValue(&quot;主机ip&quot;);</span><br><span class="line">			cell10.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">			cell10 = row10.createCell(2);</span><br><span class="line">			cell10.setCellValue(&quot;指标项&quot;);</span><br><span class="line">			cell10.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">			cell10 = row10.createCell(3);</span><br><span class="line">			cell10.setCellValue(&quot;告警信息&quot;);</span><br><span class="line">			cell10.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line"></span><br><span class="line">			for (int i = 0; i &lt; warnSize;) &#123;</span><br><span class="line">				InspectRecordWarning warning = warnings.get(i);</span><br><span class="line">				i += 1;</span><br><span class="line">				HSSFRow row11 = sheet.createRow(10 + i);</span><br><span class="line">				HSSFCell cell11 = row11.createCell(1);</span><br><span class="line">				cell11.setCellValue(warning.getIp());</span><br><span class="line">				cell11.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">				cell11 = row11.createCell(2);</span><br><span class="line">				cell11.setCellValue(warning.getInspectItemName());</span><br><span class="line">				cell11.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">				cell11 = row11.createCell(3);</span><br><span class="line"></span><br><span class="line">				String warnInfo = warning.getContent();</span><br><span class="line">				cell11.setCellValue(warnInfo == null ? &quot;-&quot; : warnInfo);</span><br><span class="line">				cell11.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		// 错误开始</span><br><span class="line">		List&lt;InspectRecordItem&gt; list = record.getInspectRecordItems();</span><br><span class="line"></span><br><span class="line">		int listSize = list.size();</span><br><span class="line">		List&lt;Object&gt; objects = new ArrayList&lt;&gt;();</span><br><span class="line">		for (InspectRecordItem item : list) &#123;</span><br><span class="line"></span><br><span class="line">			objects.add(item);</span><br><span class="line">			objects.removeAll(Collections.singleton(null));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		int errorSize = objects.size();</span><br><span class="line"></span><br><span class="line">		if (objects.size() &gt; 0) &#123; // 如果有错误信息才展示列表</span><br><span class="line"></span><br><span class="line">			sheet.addMergedRegion(new CellRangeAddress(11 + warnSize, 11 + warnSize + errorSize, 0, 0));</span><br><span class="line"></span><br><span class="line">			HSSFRow row12 = sheet.createRow(11 + warnSize);</span><br><span class="line">			HSSFCell cell12 = row12.createCell(0);</span><br><span class="line">			cell12.setCellValue(&quot;错误信息&quot;);</span><br><span class="line">			cell12.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">			cell12 = row12.createCell(1);</span><br><span class="line">			cell12.setCellValue(&quot;主机ip&quot;);</span><br><span class="line">			cell12.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">			cell12 = row12.createCell(2);</span><br><span class="line">			cell12.setCellValue(&quot;指标项&quot;);</span><br><span class="line">			cell12.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">			cell12 = row12.createCell(3);</span><br><span class="line">			cell12.setCellValue(&quot;错误信息&quot;);</span><br><span class="line">			cell12.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line"></span><br><span class="line">			for (int i = 0; i &lt; listSize; ) &#123;</span><br><span class="line">				InspectRecordItem item = list.get(i);</span><br><span class="line">				i += 1;</span><br><span class="line">				HSSFRow row13 = sheet.createRow(11 + i + warnSize);</span><br><span class="line">				HSSFCell cell13 = row13.createCell(1);</span><br><span class="line">				cell13.setCellValue(item.getIp());</span><br><span class="line">				cell13.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">				cell13 = row13.createCell(2);</span><br><span class="line">				cell13.setCellValue(item.getInspectItemName());</span><br><span class="line">				cell13.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">				cell13 = row13.createCell(3);</span><br><span class="line"></span><br><span class="line">				String errorInfo = item.getScriptErrorInfo();</span><br><span class="line">				cell13.setCellValue(errorInfo == null ? &quot;-&quot; : errorInfo);</span><br><span class="line">				cell13.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		// 详情必须显示</span><br><span class="line">		sheet.addMergedRegion(new CellRangeAddress(12 + warnSize + errorSize, 12 + warnSize + errorSize + listSize, 0,</span><br><span class="line">				0));</span><br><span class="line"></span><br><span class="line">		HSSFRow row13 = sheet.createRow(12 + warnSize + errorSize);</span><br><span class="line">		HSSFCell cell14 = row13.createCell(0);</span><br><span class="line">		cell14.setCellValue(&quot;详细信息&quot;);</span><br><span class="line">		cell14.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell14 = row13.createCell(1);</span><br><span class="line">		cell14.setCellValue(&quot;主机ip&quot;);</span><br><span class="line">		cell14.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell14 = row13.createCell(2);</span><br><span class="line">		cell14.setCellValue(&quot;指标项&quot;);</span><br><span class="line">		cell14.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line">		cell14 = row13.createCell(3);</span><br><span class="line">		cell14.setCellValue(&quot;详细信息&quot;);</span><br><span class="line">		cell14.setCellStyle(getStyle(workbook, NORMAL_FONT, true));</span><br><span class="line"></span><br><span class="line">		for (int i = 0; i &lt; listSize;) &#123;</span><br><span class="line">			InspectRecordItem item = list.get(i);</span><br><span class="line">			i += 1;</span><br><span class="line">			HSSFRow row14 = sheet.createRow(12 + i + warnSize + errorSize);</span><br><span class="line">			HSSFCell cell15 = row14.createCell(1);</span><br><span class="line">			cell15.setCellValue(item.getIp());</span><br><span class="line">			cell15.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">			cell15 = row14.createCell(2);</span><br><span class="line">			cell15.setCellValue(item.getInspectItemName());</span><br><span class="line">			cell15.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">			cell15 = row14.createCell(3);</span><br><span class="line"></span><br><span class="line">			String log = item.getLog();</span><br><span class="line">			if (log != null) &#123;</span><br><span class="line"></span><br><span class="line">				JSONObject logJsonObj = JSONObject.parseObject(log);</span><br><span class="line">				Set&lt;String&gt; logSet = logJsonObj.keySet();</span><br><span class="line"></span><br><span class="line">				Object logObj;</span><br><span class="line">				String logStr = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">				for (String key : logSet) &#123;</span><br><span class="line">					logObj = logJsonObj.get(key);</span><br><span class="line">					logStr += key + &quot;：&quot; + logObj.toString() + &quot;\n&quot;;</span><br><span class="line">				&#125;</span><br><span class="line">				cell15.setCellValue(&quot;&quot;.equals(logStr) ? &quot;-&quot; : logStr);</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				cell15.setCellValue(&quot;-&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">			cell15.setCellStyle(getStyle(workbook, NORMAL_FONT, false));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		String filename = record.getName() + &quot;.xls&quot;;</span><br><span class="line">		buildExcelDocument(filename, workbook, response);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * @param cellValue  单元格填充值</span><br><span class="line">	 * @param workbook   工作表</span><br><span class="line">	 * @param cell       单元格</span><br><span class="line">	 * @param colorIndex 单元格字体颜色</span><br><span class="line">	 */</span><br><span class="line">	private void setStatus(HSSFWorkbook workbook, HSSFCell cell, String cellValue, short colorIndex) &#123;</span><br><span class="line">		cell.setCellValue(cellValue);</span><br><span class="line">		HSSFFont font = workbook.createFont();</span><br><span class="line">		font.setColor(colorIndex);</span><br><span class="line">		HSSFCellStyle style = getStyle(workbook, NORMAL_FONT, false);</span><br><span class="line">		style.setFont(font);</span><br><span class="line">		cell.setCellStyle(style);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 标题或者第一列数据信息单元格样式</span><br><span class="line">	 *</span><br><span class="line">	 * @param fontHeight 标题20， 第一列12，第二列12</span><br><span class="line">	 */</span><br><span class="line">	private HSSFCellStyle getStyle(HSSFWorkbook workbook, short fontHeight, boolean isBold) &#123;</span><br><span class="line"></span><br><span class="line">		HSSFFont font = workbook.createFont();</span><br><span class="line">		font.setFontHeightInPoints((fontHeight));</span><br><span class="line">		font.setBold(isBold);</span><br><span class="line">		font.setFontName(&quot;宋体&quot;);</span><br><span class="line"></span><br><span class="line">		HSSFCellStyle style = workbook.createCellStyle();</span><br><span class="line">		style.setFont(font);</span><br><span class="line">		style.setWrapText(true);</span><br><span class="line">		style.setAlignment(HorizontalAlignment.CENTER);</span><br><span class="line">		style.setVerticalAlignment(VerticalAlignment.CENTER);</span><br><span class="line">		return style;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 浏览器下载excel</span><br><span class="line">	private void buildExcelDocument(String filename, HSSFWorkbook workbook, HttpServletResponse response) throws</span><br><span class="line">			IOException &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// 清空response，否则可能会对程序有影响，因为在此之前有可能也用到了response，若不reset，后面的setCntentoType()有可能失效</span><br><span class="line">		response.reset();</span><br><span class="line">		response.setContentType(&quot;application/vnd.ms-excel&quot;);</span><br><span class="line">		response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=&quot; + URLEncoder.encode(filename, &quot;utf-8&quot;));</span><br><span class="line">		OutputStream os = response.getOutputStream();</span><br><span class="line">		workbook.write(os);</span><br><span class="line">		os.flush();</span><br><span class="line">		os.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java两种发送邮件的方式</title>
+    <url>/2019/12/26/Untitled/</url>
+    <content><![CDATA[<h5 id="Java两种发送邮件的方式-不止这两种-："><a href="#Java两种发送邮件的方式-不止这两种-：" class="headerlink" title="Java两种发送邮件的方式(不止这两种)："></a>Java两种发送邮件的方式(不止这两种)：</h5><p>pom：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;javax.mail&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mail&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.4.5&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-Javamail-发送163邮件"><a href="#1-Javamail-发送163邮件" class="headerlink" title="1. Javamail 发送163邮件"></a>1. Javamail 发送163邮件</h5><blockquote>
+<p>原文：<a href="https://blog.csdn.net/qq_18573005/article/details/79805507#commentBox" target="_blank" rel="noopener">https://blog.csdn.net/qq_18573005/article/details/79805507#commentBox</a></p>
+</blockquote>
+<h5 id="2-Java通过QQ邮箱发送邮件："><a href="#2-Java通过QQ邮箱发送邮件：" class="headerlink" title="2. Java通过QQ邮箱发送邮件："></a>2. Java通过QQ邮箱发送邮件：</h5><p>需要用户名密码验证邮件发送实例:<br>你需要在登录QQ邮箱后台在”设置”=》账号中开启POP3/SMTP服务 ，如下图所示：<br><img src="https://img-blog.csdnimg.cn/20190605103352347.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>QQ 邮箱通过生成授权码来设置密码：<br><img src="https://img-blog.csdnimg.cn/20190605103446667.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>Java 代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// 需要用户名密码邮件发送，你需要在qq后台设置</span><br><span class="line"></span><br><span class="line">import java.util.Properties;</span><br><span class="line">import javax.mail.Authenticator;</span><br><span class="line">import javax.mail.Message;</span><br><span class="line">import javax.mail.MessagingException;</span><br><span class="line">import javax.mail.PasswordAuthentication;</span><br><span class="line">import javax.mail.Session;</span><br><span class="line">import javax.mail.Transport;</span><br><span class="line">import javax.mail.internet.InternetAddress;</span><br><span class="line">import javax.mail.internet.MimeMessage;</span><br><span class="line"> </span><br><span class="line">public class QQSendEmail &#123;</span><br><span class="line">   public static void main(String [] args) &#123;</span><br><span class="line">      // 收件人电子邮箱</span><br><span class="line">      String to = &quot;xxx@qq.com&quot;;</span><br><span class="line"> </span><br><span class="line">      // 发件人电子邮箱</span><br><span class="line">      String from = &quot;xxx@qq.com&quot;;</span><br><span class="line"> </span><br><span class="line">      // 指定发送邮件的主机为 smtp.qq.com</span><br><span class="line">      String host = &quot;smtp.qq.com&quot;;  //QQ 邮件服务器</span><br><span class="line"> </span><br><span class="line">      // 获取系统属性</span><br><span class="line">      Properties properties = System.getProperties();</span><br><span class="line"> </span><br><span class="line">      // 设置邮件服务器</span><br><span class="line">      properties.setProperty(&quot;mail.smtp.host&quot;, host);</span><br><span class="line"> </span><br><span class="line">      properties.put(&quot;mail.smtp.auth&quot;, &quot;true&quot;);</span><br><span class="line">      // 获取默认session对象</span><br><span class="line">      Session session = Session.getDefaultInstance(properties,new Authenticator()&#123;</span><br><span class="line">        public PasswordAuthentication getPasswordAuthentication()</span><br><span class="line">        &#123;</span><br><span class="line">         return new PasswordAuthentication(&quot;xxx@qq.com&quot;, &quot;填写qq邮箱授权码&quot;); //发件人邮件用户名、授权码</span><br><span class="line">        &#125;</span><br><span class="line">       &#125;);</span><br><span class="line"> </span><br><span class="line">      try&#123;</span><br><span class="line">         // 创建默认的 MimeMessage 对象</span><br><span class="line">         MimeMessage message = new MimeMessage(session);</span><br><span class="line"> </span><br><span class="line">         // Set From: 头部头字段</span><br><span class="line">         message.setFrom(new InternetAddress(from));</span><br><span class="line"> </span><br><span class="line">         // Set To: 头部头字段</span><br><span class="line">         message.addRecipient(Message.RecipientType.TO,</span><br><span class="line">                                  new InternetAddress(to));</span><br><span class="line"> </span><br><span class="line">         // Set Subject: 头部头字段</span><br><span class="line">         message.setSubject(&quot;This is the Subject Line!&quot;);</span><br><span class="line"> </span><br><span class="line">         // 设置消息体</span><br><span class="line">         message.setText(&quot;This is actual message&quot;);</span><br><span class="line"> </span><br><span class="line">         // 发送消息</span><br><span class="line">         Transport.send(message);</span><br><span class="line">         System.out.println(&quot;Sent message successfully....from runoob.com&quot;);</span><br><span class="line">      &#125;catch (MessagingException mex) &#123;</span><br><span class="line">         mex.printStackTrace();</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>原文：<a href="https://www.runoob.com/java/java-sending-email.html" target="_blank" rel="noopener">https://www.runoob.com/java/java-sending-email.html</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java发送邮件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mix Note</title>
+    <url>/2019/12/26/Mix-Note/</url>
+    <content><![CDATA[<p>Mysql：</p>
+<p>Java MySQL 连接：<a href="https://www.runoob.com/java/java-mysql-connect.html" target="_blank" rel="noopener">https://www.runoob.com/java/java-mysql-connect.html</a><br>设置mysql自增起始数：<br>alter table 表名 AUTO_INCREMENT=起始数字;</p>
+<p>Docker：再删除镜像之前需要先删除container（docker rm id，docker rmi image）</p>
+<p>int和char可以互串</p>
+<p>tomcat的安装目录是tomcat的软件存放的目录，根目录是项目存放的目录。</p>
+<p>位于运算（n |= n &gt;&gt;&gt; 8）</p>
+<p><a href="https://www.cnblogs.com/qubaba/p/11558127.html" target="_blank" rel="noopener">https://www.cnblogs.com/qubaba/p/11558127.html</a></p>
+<p><a href="https://zhidao.baidu.com/question/291266003.html" target="_blank" rel="noopener">https://zhidao.baidu.com/question/291266003.html</a></p>
+<p>python第三方库地址：</p>
+<p><a href="https://pypi.python.org/simple" target="_blank" rel="noopener">https://pypi.python.org/simple</a>  默认地址国外地址</p>
+<p><a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple/</a>  清华大学镜像</p>
+<p><a href="http://pypi.douban.com/simple/" target="_blank" rel="noopener">http://pypi.douban.com/simple/</a>  豆瓣镜像</p>
+<p><a href="http://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple/</a>  阿里镜像</p>
+]]></content>
+      <categories>
+        <category>Mixed</category>
+      </categories>
+      <tags>
+        <tag>mixed</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在高德地图使用: AMap is not defined</title>
+    <url>/2019/12/26/%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%BD%BF%E7%94%A8-AMap-is-not-defined/</url>
+    <content><![CDATA[<p>高德模板原版引入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script language=&quot;javascript&quot; src=&quot;//webapi.amap.com/maps?v=1.4.15&amp;key=43b2dae85b7a78ed9ff10f40427c1d8b&amp;plugin=AMap.ControlBar&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当时这是个坑，因为src里没有加上http:或https:，应为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script language=&quot;javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=43b2dae85b7a78ed9ff10f40427c1d8b&amp;plugin=AMap.ControlBar&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>html&amp;css&amp;js</category>
+      </categories>
+      <tags>
+        <tag>高德地图: AMap is not defined</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>取整取余问题</title>
+    <url>/2019/12/26/%E5%8F%96%E6%95%B4%E5%8F%96%E4%BD%99%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h5 id="i对j取余问题，一般这种常用于循环问题"><a href="#i对j取余问题，一般这种常用于循环问题" class="headerlink" title="i对j取余问题，一般这种常用于循环问题"></a>i对j取余问题，一般这种常用于循环问题</h5><p>举出几个例子，你应该就懂了。</p>
+<p>公式：<br>a÷b=c……d<br>则a/b=c,a%b=d</p>
+<h6 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h6><p>例如：35除以3，商11，余数2。</p>
+<p>正常情况下：<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>取整情况下：<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>取余情况下：<br>35 ÷ 3 = 11…2<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>35/3=11<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>35%3=2</p>
+<p>当i小于j呢？<br>例如：16除以35，商0，余数16。</p>
+<p>16 ÷ 35 = 0……16<br>同理可得取整的值和取余的值。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>取整取余</tag>
+        <tag>i % j 循环</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>转换模型时,Django model_to_dict会跳过所有DateTimeField</title>
+    <url>/2019/12/26/%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%9E%8B%E6%97%B6-Django-model-to-dict%E4%BC%9A%E8%B7%B3%E8%BF%87%E6%89%80%E6%9C%89DateTimeField/</url>
+    <content><![CDATA[<blockquote>
+<p>原文地址：<a href="http://www.voidcn.com/article/p-wgqimgrq-bug.html" target="_blank" rel="noopener">http://www.voidcn.com/article/p-wgqimgrq-bug.html</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pycharm 2019.1中打开.md文件出现卡死的情况</title>
+    <url>/2019/12/26/Pycharm-2019-1%E4%B8%AD%E6%89%93%E5%BC%80-md%E6%96%87%E4%BB%B6%E5%87%BA%E7%8E%B0%E5%8D%A1%E6%AD%BB%E7%9A%84%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<blockquote>
+<p>尊重原创<br>源地址：<a href="https://blog.csdn.net/qq_41897629/article/details/89163939" target="_blank" rel="noopener">https://blog.csdn.net/qq_41897629/article/details/89163939</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>pycharm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于python manage.py makemigrations，python manage.py migrate不能建表</title>
+    <url>/2019/12/26/%E5%85%B3%E4%BA%8Epython-manage-py-makemigrations%EF%BC%8Cpython-manage-py-migrate%E4%B8%8D%E8%83%BD%E5%BB%BA%E8%A1%A8/</url>
+    <content><![CDATA[<blockquote>
+<p>尊重原创：<a href="https://www.jb51.net/article/140960.htm" target="_blank" rel="noopener">https://www.jb51.net/article/140960.htm</a></p>
+</blockquote>
+<p>如果你想要重新生成表，就直接删除数据库对应的表，然后执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+
+<p>有些人是会成功的，但是我总觉得一般情况下是不会成功的，所有，我们直接往下看-&gt;</p>
+<hr>
+<p>一般情况下，在我们删除表和生成的0001_initial.py文件以后，执行:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+
+<p>还是不能生成表,提示:No changes detected</p>
+<p>最后一步：<br>我们进入数据库，然后发现有一张django_migrations表,里面记录这有关创建表的记录,删除对应的数据<strong>表</strong> （原文说删表，其实是把这条数据删掉）:<br>命令：<code>delete from django_migrations where app=&#39;yourappname&#39;;</code></p>
+<p>然后再执行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+
+<p>成功重新创建表，hurray！</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>python manage.py makemigrations</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Dialog的使用方法</title>
+    <url>/2019/12/26/Dialog%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="js弹框"><a href="#js弹框" class="headerlink" title="js弹框"></a>js弹框</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;button id=&quot;tantantan&quot;&gt;带按钮弹窗&lt;/button&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    //带按钮弹窗</span><br><span class="line">    $(&quot;#tantantan&quot;).click(function() &#123;</span><br><span class="line">        var d = dialog(&#123;</span><br><span class="line">			</span><br><span class="line">			let content_html =&quot;&quot;,</span><br><span class="line">            width: 260,</span><br><span class="line">            title: &apos;提示&apos;,</span><br><span class="line">            content: content_html,</span><br><span class="line">            okValue: &apos;确定&apos;,</span><br><span class="line">            ok: function() &#123;</span><br><span class="line">                // do something</span><br><span class="line">            &#125;,</span><br><span class="line">            cancelValue: &apos;取消&apos;,</span><br><span class="line">            cancel: function() &#123;</span><br><span class="line">                // do something</span><br><span class="line">            &#125;,</span><br><span class="line">            onshow: function() &#123;</span><br><span class="line">                // do something</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;);</span><br><span class="line">        d.show();</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Dialog-showModal-方法"><a href="#Dialog-showModal-方法" class="headerlink" title="Dialog showModal() 方法"></a>Dialog showModal() 方法</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dialog id=&quot;myDialog&quot;&gt;这是一个对话窗口&lt;/dialog&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	function myFunction() &#123; </span><br><span class="line">		document.getElementById(&quot;myDialog&quot;).showModal(); </span><br><span class="line">	&#125; </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>html&amp;css&amp;js</category>
+      </categories>
+      <tags>
+        <tag>Dialog的使用方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python ValueError: too many values to unpack</title>
+    <url>/2019/12/26/ValueError-too-many-values-to-unpack/</url>
+    <content><![CDATA[<p>错误代码:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def update_handle(request):</span><br><span class="line">	_get = request.POST</span><br><span class="line">	TaskDetailTwo.objects.get(_get[&quot;id&quot;])</span><br><span class="line">	略略略</span><br></pre></td></tr></table></figure>
+
+<p>正确代码:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def update_handle(request):</span><br><span class="line">	_get = request.POST</span><br><span class="line">	TaskDetailTwo.objects.get(id=_get[&quot;id&quot;])</span><br><span class="line">	略略略</span><br></pre></td></tr></table></figure>
+
+<p>这是因为该方法的条件中未写对应数据库的字段名，filter等方法等同。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>ValueError: too many values to unpack</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于注解@Controller和@RestController返回页面</title>
+    <url>/2019/12/26/%E5%85%B3%E4%BA%8E%E6%B3%A8%E8%A7%A3-Controller%E5%92%8C-RestController%E8%BF%94%E5%9B%9E%E9%A1%B5%E9%9D%A2/</url>
+    <content><![CDATA[<p>默认情况下，@Controller返回页面，@RestController返回数据。</p>
+<p>但是在有些情况下需要在被@RestController的注解时返回页面的，我们就需要用到视图ModelAndView：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(value=&quot;/tologin&quot;, method=RequestMethod.GET)</span><br><span class="line">    public ModelAndView login()&#123;</span><br><span class="line">    ModelAndView mv = new ModelAndView(&quot;index&quot;);</span><br><span class="line">    return mv;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>那如果要是在被@Controller注解下的方法返回数据呢？(我看你是爱吃鱼挑刺)：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@RequestMapping(&quot;/goshopping&quot;, method=RequestMethod.POST)</span><br><span class="line">@ResponseBody // 其实就差个这个(鄙人觉得)</span><br><span class="line">public Map&lt;String, Object&gt; goshopping(Me me, Money money) &#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">    map.put(&quot;me&quot;, &quot;me&quot;);</span><br><span class="line">    map.put(&quot;money&quot;, money);</span><br><span class="line">    return map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>@Controller与@RestController</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker删除none镜像</title>
+    <url>/2019/12/26/docker-%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4none%E9%95%9C%E5%83%8F/</url>
+    <content><![CDATA[<p>原创地址：<a href="https://blog.51cto.com/13767724/2287193" target="_blank" rel="noopener">https://blog.51cto.com/13767724/2287193</a></p>
+<blockquote>
+<p>如果执行Dockerfile文件报错会生成镜像none.<br>删除none的镜像，要先删除镜像中的容器。要删除镜像中的容器，必须先停止容器</p>
+</blockquote>
+<p>执行的命令：<br>$ docker stop $(docker ps -a | grep “Exited” | awk ‘{print $1 }’) //停止容器<br>$ docker rm $(docker ps -a | grep “Exited” | awk ‘{print $1 }’)  //删除容器<br>$ docker rmi $(docker images | grep “none” | awk ‘{print $3}’)  //删除镜像 </p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>docker删除none镜像 </tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux java编译报错找不到或无法加载主类</title>
+    <url>/2019/12/26/Linux-java%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BB/</url>
+    <content><![CDATA[<p>编译运行有两个步骤：<br>javac LinuxJava.java(不报错)<br>java LinuxJava(报错)</p>
+<p><strong>我发现的问题是我再复制的时候将该文件头部的包名路径带上了，去掉在运行就不报错了。</strong></p>
+<p>错误例子：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.example.canvas;</span><br><span class="line"></span><br><span class="line">public class LinuxDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;===============&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>纠正例子：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class LinuxDemo &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;===============&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Linux java编译报错找不到或无法加载主类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java读取文件内容</title>
+    <url>/2019/12/26/java%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">File files = new File(String pathname); // 例如：&quot;C:\\Users\\用户名\\Desktop\\a.sql&quot;</span><br><span class="line">BufferedReader reader = null;</span><br><span class="line">StringBuffer sbf = new StringBuffer();</span><br><span class="line">try &#123;</span><br><span class="line">	reader = new BufferedReader(new FileReader(files));</span><br><span class="line">	String tempStr;</span><br><span class="line">	while ((tempStr = reader.readLine()) != null) &#123;</span><br><span class="line">		sbf.append(tempStr);</span><br><span class="line">	&#125;</span><br><span class="line">	reader.close();</span><br><span class="line">&#125; catch (IOException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;  finally &#123;</span><br><span class="line">    if (reader != null) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            reader.close();</span><br><span class="line">        &#125; catch (IOException e1) &#123;</span><br><span class="line">            e1.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;=========\n&quot; + sbf); //sbf就是文件的内容</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java读取文件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java对ganymed-ssh2的使用</title>
+    <url>/2019/12/26/Java%E5%AF%B9ganymed-ssh2%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package com.utils;</span><br><span class="line"></span><br><span class="line">import ch.ethz.ssh2.Connection;</span><br><span class="line">import ch.ethz.ssh2.Session;</span><br><span class="line">import ch.ethz.ssh2.StreamGobbler;</span><br><span class="line">import com.bocloud.common.model.BocloudResult;</span><br><span class="line"></span><br><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStream;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.net.ConnectException;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author jiao</span><br><span class="line"> * @since 2019/9/20 16:06</span><br><span class="line"> */</span><br><span class="line">public class GanymedUtil &#123;</span><br><span class="line"></span><br><span class="line">	private static Connection login(String ip, int port, String username, String password) &#123;</span><br><span class="line">		boolean flag;</span><br><span class="line">		Connection connection = null;</span><br><span class="line">		try &#123;</span><br><span class="line">			connection = new Connection(ip, port);</span><br><span class="line">			connection.connect();// 连接</span><br><span class="line">			flag = connection.authenticateWithPassword(username, password);// 认证</span><br><span class="line">			if (flag) &#123;</span><br><span class="line">				System.out.println(&quot;================登录成功==================&quot;);</span><br><span class="line">				return connection;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			System.out.println(&quot;登录失败,请检查IP或端口是否有误：&quot; + e);</span><br><span class="line">			connection.close();</span><br><span class="line">			System.exit(-1);</span><br><span class="line">		&#125;</span><br><span class="line">		return connection;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 远程执行shell脚本或者命令</span><br><span class="line">	 *</span><br><span class="line">	 * @param command 即将执行的命令</span><br><span class="line">	 * @return 命令执行完后返回的结果值</span><br><span class="line">	 */</span><br><span class="line">	private static String execCommand(Connection connection, String command) &#123;</span><br><span class="line">		String result = &quot;&quot;;</span><br><span class="line">		try &#123;</span><br><span class="line">			if (connection != null) &#123;</span><br><span class="line">				Session session = null;// 打开一个会话</span><br><span class="line">				try &#123;</span><br><span class="line">					session = connection.openSession();</span><br><span class="line">				&#125; catch (IllegalStateException ise) &#123;</span><br><span class="line">					System.out.println(&quot;请检查用户名或密码是否有误&quot;);</span><br><span class="line"></span><br><span class="line">					ise.printStackTrace();</span><br><span class="line">					System.exit(-1);</span><br><span class="line">				&#125;</span><br><span class="line">				try &#123;</span><br><span class="line">					session.execCommand(command);// 执行命令</span><br><span class="line">				&#125; catch (IOException e) &#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">				String DEFAULT_CHART = &quot;UTF-8&quot;;</span><br><span class="line">				result = processStdout(session.getStdout(), DEFAULT_CHART);</span><br><span class="line">				if (&quot;&quot;.equals(result)) &#123;</span><br><span class="line">					System.out.println(&quot;请检查脚本内容是否有误&quot;);</span><br><span class="line">					System.exit(1);</span><br><span class="line">				&#125;</span><br><span class="line">				connection.close();</span><br><span class="line">				session.close();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			System.out.println(&quot;执行命令失败,链接conn:&quot; + connection + &quot;,执行的命令：&quot; + command + &quot;   &quot; + e);</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		return result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 解析脚本执行返回的结果集</span><br><span class="line">	 *</span><br><span class="line">	 * @param in      输入流对象</span><br><span class="line">	 * @param charset 编码</span><br><span class="line">	 * @return 以纯文本的格式返回</span><br><span class="line">	 */</span><br><span class="line">	private static String processStdout(InputStream in, String charset) &#123;</span><br><span class="line">		InputStream stdout = new StreamGobbler(in);</span><br><span class="line">		StringBuilder buffer = new StringBuilder();</span><br><span class="line">		try &#123;</span><br><span class="line">			BufferedReader br = new BufferedReader(new InputStreamReader(stdout, charset));</span><br><span class="line">			String line;</span><br><span class="line">			while ((line = br.readLine()) != null) &#123;</span><br><span class="line">				buffer.append(line).append(&quot;\n&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">			br.close();</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			System.out.println(&quot;解析脚本出错：&quot; + e.getMessage());</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		return buffer.toString();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static BocloudResult ganymedExecCommand(String host, int port, String username, String password, String command) &#123;</span><br><span class="line"></span><br><span class="line">		Connection connection = login(host, port, username, password);</span><br><span class="line">		String execCommand = execCommand(connection, command);</span><br><span class="line">		if (execCommand.contains(&quot;successfully&quot;)) &#123;</span><br><span class="line">			return new BocloudResult(true, &quot;安装成功&quot;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			return new BocloudResult(false, &quot;安装失败&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String ip = &quot;192.168.112.130&quot;;</span><br><span class="line">		String username = &quot;root&quot;;</span><br><span class="line">		String password = &quot;root&quot;;</span><br><span class="line">		int port = 22;</span><br><span class="line"></span><br><span class="line">		/*String url = &quot;ls /;&quot;;*/</span><br><span class="line">		String url = &quot;https://github.com/jiaoht/LinuxUse/raw/master/CatDisk&quot;;</span><br><span class="line">		String getArgsExecScript = &quot; wget -c &quot; + install_url + &quot; -O installer; sh installer;\n&quot;;</span><br><span class="line"></span><br><span class="line">		String rmInstaller = &quot; rm -rf installer;\n&quot;;</span><br><span class="line">		String getAndRm = getArgsExecScript + rmInstaller;</span><br><span class="line">		String command = &quot;cd /tmp;\n&quot; +</span><br><span class="line">				&quot;if [ ! -f &apos;installer&apos; ];then\n&quot; +</span><br><span class="line">				getAndRm +</span><br><span class="line">				&quot;else\n&quot; +</span><br><span class="line">				rmInstaller + getAndRm +</span><br><span class="line">				&quot;fi&quot;;</span><br><span class="line"></span><br><span class="line">		System.out.println(ganymedExecCommand(ip, port, username, password, command));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>ganymed-ssh2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nginx搭建文件服务器(指定目录)</title>
+    <url>/2019/12/26/ginx%E6%90%AD%E5%BB%BA%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8-%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<p>通过yum install -y nginx安装，配置文件是/etc/nginx/nginx.conf。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">user nginx;</span><br><span class="line">worker_processes auto;</span><br><span class="line">error_log /var/log/nginx/error.log;</span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line">include /usr/share/nginx/modules/*.conf;</span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span><br><span class="line">    access_log  /var/log/nginx/access.log  main;</span><br><span class="line">    sendfile            on;</span><br><span class="line">    tcp_nopush          on;</span><br><span class="line">    tcp_nodelay         on;</span><br><span class="line">    keepalive_timeout   65;</span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line">    include             /etc/nginx/mime.types;</span><br><span class="line">    default_type        application/octet-stream;</span><br><span class="line">    # Load modular configuration files from the /etc/nginx/conf.d directory.</span><br><span class="line">    # See http://nginx.org/en/docs/ngx_core_module.html#include</span><br><span class="line">    # for more information.</span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       8055 default_server;</span><br><span class="line">        listen       [::]:8055 default_server;</span><br><span class="line">        server_name  _;</span><br><span class="line">        # Load configuration files for the default server block.</span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line">        location / &#123;</span><br><span class="line">            root    /usr/share/nginx/html/download;</span><br><span class="line">            autoindex on;    #开启索引功能</span><br><span class="line">            autoindex_exact_size off;  #关闭计算文件确切大小（单位bytes），只显示大概大小（单位kb、mb、gb）</span><br><span class="line">            autoindex_localtime on;   #显示本机时间而非 GMT 时间</span><br><span class="line">	    #index index.html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        location /nginxdata &#123;</span><br><span class="line">            #alias /nginxdata/;</span><br><span class="line">            root /;</span><br><span class="line">            autoindex on; # 开启目录文件列表</span><br><span class="line">            autoindex_exact_size on; # 显示出文件的确切大小，单位是bytes</span><br><span class="line">            autoindex_localtime on; # 显示的文件时间为文件的服务器时间</span><br><span class="line">            charset utf-8,gbk; # 避免中文乱码</span><br><span class="line">        &#125;</span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中第二个location指定的是该图的路径：<br><img src="https://img-blog.csdnimg.cn/20190923170644870.png" alt="指定路径的"></p>
+<h6 id="nginx命令："><a href="#nginx命令：" class="headerlink" title="nginx命令："></a>nginx命令：</h6><p>启动：nginx<br>关闭：</p>
+<ul>
+<li>nginx -s quit 此方式停止步骤是待nginx进程处理任务完毕进行停止</li>
+<li>nginx -s stop 此方式相当于先查出nginx进程id再使用kill命令强制杀掉进程<br>重新加载配置：nginx -s reload</li>
+</ul>
+<p><strong>可能遇到的错误排查：</strong></p>
+<p><strong>1</strong>.最重要的就是查看自己的<strong>路径</strong>和<strong>端口</strong>是不是有问题。</p>
+<p><strong>2</strong>.检查nginx使用的Linux的端口是否未开启，一般错误样子为下图：<br><img src="https://img-blog.csdnimg.cn/20190924111159430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="错误例子"><br>解决：打开端口：/sbin/iptables -I INPUT -p tcp –dport 8080 -j ACCEPT</p>
+<p><strong>3</strong>.403问题,查看Linux的selinux服务是否关闭：<br><img src="https://img-blog.csdnimg.cn/20190924112046885.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="403问题"><br>解决办法：getenforce查看状态：Enforcing为开启，Permissive为关闭。<br>使用 setenforce 0 命令关闭selinux服务，再次访问成功。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>nginx.conf</tag>
+        <tag>nginx搭建服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>（pycharm）添加chrome环境变量</title>
+    <url>/2019/12/26/%EF%BC%88pycharm%EF%BC%89%E6%B7%BB%E5%8A%A0chrome%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[<p>报错信息可能为：selenium.common.exceptions.WebDriverException: Message: ‘chromedriver’ executable needs to be in PATH</p>
+<p>解决：</p>
+<ul>
+<li>打开chrome 输入 “chrome://version/”来查看chrome版本。<br><img src="https://img-blog.csdnimg.cn/20191009101033464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="chrome版本"></li>
+<li>下载对应的chromedriver驱动：<br><a href="http://chromedriver.storage.googleapis.com/index.html" target="_blank" rel="noopener">http://chromedriver.storage.googleapis.com/index.html</a><br>对应版本可参考<br><img src="https://img-blog.csdnimg.cn/20191009102814758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="chrome与chromedirver对应版本"><br>例如我的chrome版本是77.0.3865.90，我下了一个接近的版本 <a href="http://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_win32.zip" target="_blank" rel="noopener">77.0.3865.40</a>（没有我的指定版本。。）</li>
+<li>将Chromedriver加入到PATH（<strong>记住环境变量添加完成后重启pycharm生效</strong>）<br><a href="https://www.jianshu.com/p/7713743ac687" target="_blank" rel="noopener">https://www.jianshu.com/p/7713743ac687</a></li>
+</ul>
+<p>重启后，再次运行项目，OK。</p>
+<p>————————————————分割线————————————–</p>
+<p>比如我的python代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding=utf-8</span><br><span class="line">from selenium import webdriver</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line">browser.get(&apos;http://www.baidu.com/&apos;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Python </category>
+        <category>Chrome</category>
+      </categories>
+      <tags>
+        <tag>pycharm</tag>
+        <tag>chrome环境变量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>以流的形式批量下载</title>
+    <url>/2019/12/26/%E4%BB%A5%E6%B5%81%E7%9A%84%E5%BD%A2%E5%BC%8F%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p>压缩包的形式下载文件：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.controller.task;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONArray;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.cmc.utils.DefaultHeader;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.common.enums.BoCloudMethod;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.common.enums.BoCloudService;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.common.model.BocloudResult;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.common.utils.Common;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.common.utils.JSONTools;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.service.http.core.ServiceFactory;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.service.http.model.RemoteService;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.Api;</span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.ApiOperation;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.lang3.StringUtils;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.MediaType;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.net.URLEncoder;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.zip.ZipEntry;</span><br><span class="line"><span class="keyword">import</span> java.util.zip.ZipOutputStream;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/script"</span>)</span><br><span class="line"><span class="meta">@Api</span>(value = <span class="string">"脚本管理"</span>, tags = <span class="string">"脚本管理"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScriptController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Logger logger = LoggerFactory.getLogger(ScriptController<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> String PATH = <span class="string">"/script"</span>;</span><br><span class="line">	<span class="keyword">private</span> BoCloudService SERVICE = BoCloudService.Cop;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> ServiceFactory serviceFactory;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 批量导出脚本 */</span></span><br><span class="line">	<span class="meta">@ApiOperation</span>(value = <span class="string">"脚本批量导出"</span>, response = BocloudResult<span class="class">.<span class="keyword">class</span>, <span class="title">httpMethod</span> </span>= <span class="string">"GET"</span>, produces = MediaType</span><br><span class="line">			.APPLICATION_JSON_VALUE)</span><br><span class="line">	<span class="meta">@RequestMapping</span>(value = <span class="string">"/batchExport"</span>, method = &#123;RequestMethod.GET&#125;)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> BocloudResult <span class="title">batchExport</span><span class="params">(@RequestParam(value = Common.PARAMS, required = <span class="keyword">false</span>)</span> String params,</span></span><br><span class="line"><span class="function">	                                 HttpServletRequest request, HttpServletResponse response) </span>&#123;</span><br><span class="line"></span><br><span class="line">		JSONObject jsonObject = JSONTools.isJSONObj(params);</span><br><span class="line">		String ids = jsonObject.getString(<span class="string">"ids"</span>);</span><br><span class="line">		<span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">		Map&lt;String, Object&gt; sorterMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		sorterMap.put(<span class="string">"ids"</span>, ids);</span><br><span class="line"></span><br><span class="line">		RemoteService service = serviceFactory.safeBuild(SERVICE, PATH + <span class="string">"/batchExport"</span>, BoCloudMethod.SUBOBJ,</span><br><span class="line">				DefaultHeader.header(), sorterMap, request);</span><br><span class="line">		BocloudResult result = service.invoke();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (result.isSuccess()) &#123;</span><br><span class="line">			String content = JSONObject.toJSONString(result.getData());</span><br><span class="line">			JSONObject object = JSONObject.parseObject(content);</span><br><span class="line">			String zipName = <span class="string">"脚本"</span> + System.currentTimeMillis() + <span class="string">".zip"</span>;</span><br><span class="line">			response.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				response.setHeader(<span class="string">"Content-Disposition"</span>,</span><br><span class="line">						<span class="string">"attachment;filename="</span> + URLEncoder.encode(zipName, <span class="string">"UTF-8"</span>));</span><br><span class="line">			&#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">				logger.error(<span class="string">"UnsupportedEncodingException："</span>, e);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			JSONArray scripts = JSONArray.parseArray(object.getString(<span class="string">"rows"</span>));</span><br><span class="line">			ZipOutputStream zipOutput = <span class="keyword">null</span>;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				zipOutput = <span class="keyword">new</span> ZipOutputStream(<span class="keyword">new</span> BufferedOutputStream(response.getOutputStream()));</span><br><span class="line">			&#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">				logger.error(<span class="string">"FileNotFoundException:"</span>, e);</span><br><span class="line">			&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">				logger.error(<span class="string">"FileNotFoundException:"</span>, e);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			BufferedInputStream bis = <span class="keyword">null</span>;</span><br><span class="line">			<span class="keyword">int</span> read;</span><br><span class="line">			<span class="keyword">for</span> (Object script : scripts) &#123;</span><br><span class="line">				JSONObject jObj = (JSONObject) JSONObject.toJSON(script);</span><br><span class="line">				String contentScript = jObj.getString(<span class="string">"content"</span>);</span><br><span class="line"></span><br><span class="line">				String scriptName = jObj.getString(<span class="string">"name"</span>);</span><br><span class="line">				String fileName = <span class="string">""</span>;</span><br><span class="line">				<span class="comment">//获得要下载的文件名</span></span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					String fname = <span class="string">"脚本-"</span> + scriptName + <span class="string">"_"</span> + System.currentTimeMillis() + <span class="string">".txt"</span>;</span><br><span class="line">					fileName = URLEncoder.encode(fname, <span class="string">"UTF-8"</span>);</span><br><span class="line">					<span class="keyword">final</span> String userAgent = request.getHeader(<span class="string">"USER-AGENT"</span>);</span><br><span class="line">					<span class="keyword">if</span> (StringUtils.contains(userAgent, <span class="string">"Mozilla"</span>)) &#123;</span><br><span class="line">						fileName = <span class="keyword">new</span> String(String.valueOf(fname).getBytes(), <span class="string">"UTF-8"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">					logger.error(<span class="string">"UnsupportedEncodingException:"</span>, e);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					ZipEntry zEntry = <span class="keyword">new</span> ZipEntry(fileName);</span><br><span class="line">					<span class="keyword">assert</span> zipOutput != <span class="keyword">null</span>;</span><br><span class="line">					zipOutput.putNextEntry(zEntry);</span><br><span class="line">					bis = <span class="keyword">new</span> BufferedInputStream(<span class="keyword">new</span> ByteArrayInputStream(contentScript.getBytes()));</span><br><span class="line">					<span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">					<span class="keyword">while</span> ((read = bis.read(buffer)) != -<span class="number">1</span>) &#123;</span><br><span class="line">						zipOutput.write(buffer, <span class="number">0</span>, read);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">					logger.error(<span class="string">"Download fail:"</span>, e);</span><br><span class="line">				&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">					<span class="keyword">try</span> &#123;</span><br><span class="line">						<span class="keyword">if</span> (bis != <span class="keyword">null</span>) &#123;</span><br><span class="line">							bis.close();</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">if</span> (zipOutput != <span class="keyword">null</span>) &#123;</span><br><span class="line">							zipOutput.close();</span><br><span class="line">						&#125;</span><br><span class="line">					&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">						logger.error(<span class="string">"bis AND zipOutput："</span>, e);</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">try</span> &#123;</span><br><span class="line">						<span class="comment">//删除压缩包</span></span><br><span class="line">						File zfile = <span class="keyword">new</span> File(zipName);</span><br><span class="line">						zfile.delete();</span><br><span class="line">					&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">						logger.error(<span class="string">"删除压缩包失败："</span>, e);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> BocloudResult(<span class="keyword">true</span>, <span class="string">"导出成功"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> result;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>如果把文件new一次，本地就会在下载后生成一个文件，如果不想保存文件，则需要建文件以流的形式传输。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java以流的形式批量下载</tag>
+        <tag>java压缩包下载</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VMware Player15序列号</title>
+    <url>/2019/12/26/VMware-Player15%E5%BA%8F%E5%88%97%E5%8F%B7/</url>
+    <content><![CDATA[<p><strong>VMware Player15序列号：</strong></p>
+<p>AU558-D0G0Q-M84HZ-UEM5E-Q3RXA</p>
+<p>UV3H2-8ZX5K-M81HP-14YN9-XLRCA</p>
+<p>YZ5E2-DQFE5-M8DLQ-VPPQX-NPHAA</p>
+<p>VG3E0-6JX8K-480QQ-QXW5E-XKUA6</p>
+<p>GC7RK-01G53-H854Q-7DWGZ-MPRZ8</p>
+]]></content>
+      <categories>
+        <category>Mixed</category>
+      </categories>
+      <tags>
+        <tag>VMware Player15序列号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql授权数据库（或表）给用户</title>
+    <url>/2019/12/26/mysql%E6%8E%88%E6%9D%83%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E6%88%96%E8%A1%A8%EF%BC%89%E7%BB%99%E7%94%A8%E6%88%B7/</url>
+    <content><![CDATA[<p>授权所有的数据库和表给所有的用户<br><code>GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;passwd&#39; WITH GRANT OPTION;</code></p>
+<p>授权所有的db数据库的table表给所有的用户<br><code>GRANT ALL PRIVILEGES ON db.table TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;passwd&#39; WITH GRANT OPTION;</code></p>
+<p>刷新数据库<br><code>flush privileges;</code></p>
+<p>查询表权限<br><code>select User, host from mysql.user;</code></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zookeeper java.net.ConnectException: 拒绝连接 (Connection refused)</title>
+    <url>/2019/12/26/zookeeper-java-net-ConnectException-%E6%8B%92%E7%BB%9D%E8%BF%9E%E6%8E%A5-Connection-refused/</url>
+    <content><![CDATA[<p>首先说一下网上我查到的解决方案：<br><a href="https://blog.csdn.net/qq_34841911/article/details/79165778" target="_blank" rel="noopener">https://blog.csdn.net/qq_34841911/article/details/79165778</a><br>但是并没有解决我的问题。</p>
+<p>我的方案：</p>
+<p>查看zookeeper的dataDir（数据）和dataLogDir（日志）目录，重启zk就可以了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -rf dataDir目录/*</span><br><span class="line">rm -rf dataLogDir目录/*</span><br><span class="line">ZOOK_HOME/bin/zkServer.sh start</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>zookeeper</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git分支合并分支</title>
+    <url>/2019/12/26/git%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/</url>
+    <content><![CDATA[<p>将Branch3的代码合并到Branch1上，需要用到 git merge</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout Branch1	<span class="comment"># 切换到Branch1分支</span></span><br><span class="line">git merge Branch3	<span class="comment"># 将Branch3分支内容更新到Branch3分支</span></span><br></pre></td></tr></table></figure>
+
+<p>Idea：切换到Branch1，选择Branch3的merge</p>
+<hr>
+<p>如果你想在Branch2上更新Branch1的提交，需要用到 git rebase</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout Branch2	<span class="comment"># 切换到Branch2分支</span></span><br><span class="line">git rebase Branch1	<span class="comment"># 将Branch1分支内容更新到Branch1分支</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>git合并分支</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jira搭建教程</title>
+    <url>/2019/12/26/jira%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>感谢bloger，感谢百度</p>
+<p><a href="https://blog.csdn.net/zwjlpeng/article/details/81061467" target="_blank" rel="noopener">Code研究者-jira搭建部署</a></p>
+<p><a href="https://www.cnblogs.com/flywang/p/11232022.html" target="_blank" rel="noopener">小小飞侠-linux下安装jira
+</a></p>
+<p><a href="https://my.atlassian.com/products/index" target="_blank" rel="noopener">许可证地址</a></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>jira搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>共享-上课笔记</title>
+    <url>/2019/12/26/%E5%85%B1%E4%BA%AB-%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><ul>
+<li><p>编译：javac -cp 目标目录 源文件的全路径（例如：javac -cp c:/java c:/java/test.java）</p>
+</li>
+<li><p>运行：java -cp class文件所在目录 类名称（例如：java -cp c:/java HelloWorld）</p>
+</li>
+</ul>
+<h3 id="类与公开类"><a href="#类与公开类" class="headerlink" title="类与公开类"></a>类与公开类</h3><ul>
+<li>如果一个类是公开类，.java文件名字与公共类名字一致</li>
+<li>一个.java文件只应该有一个公开类</li>
+</ul>
+<h3 id="生成帮助文档"><a href="#生成帮助文档" class="headerlink" title="生成帮助文档"></a>生成帮助文档</h3><ul>
+<li>javadoc -d 目标文件 源文件(例如：javadoc -d c:/java/help c:java/Note.java）</li>
+<li>在其文件夹内运行，可简化为：    javadoc -d help Note.java</li>
+</ul>
+<hr>
+<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><h3 id="全局变量和局部变量的区别"><a href="#全局变量和局部变量的区别" class="headerlink" title="全局变量和局部变量的区别"></a>全局变量和局部变量的区别</h3><blockquote>
+<p>全局变量（成员变量）可以不用初始化值，其默认值为0，局部变量必须初始化值。（即：局部变量必须先定义再赋值后使用）</p>
+</blockquote>
+<h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><ul>
+<li>x += y与x = x + y不完全等价</li>
+<li>byte b = 0;<br>b =b + 1;不正确****b += 1;正确</li>
+</ul>
+<h4 id="以下哪一个数据类型不能作用在switch-case语句当中："><a href="#以下哪一个数据类型不能作用在switch-case语句当中：" class="headerlink" title="以下哪一个数据类型不能作用在switch case语句当中："></a>以下哪一个数据类型不能作用在switch case语句当中：</h4><p>A 枚举  B Sting  C int  D long  E byte  F char<br>选D</p>
+<hr>
+<h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><ul>
+<li><p>for一般应用于固定次数的循环，while一般应用于不固定次数的循环</p>
+</li>
+<li><p>使用lable可跳出多重循环</p>
+</li>
+<li><p>for循环增强（foreach），jdk1.5版本的遍历（迭代）</p>
+</li>
+</ul>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><ol>
+<li>数组所创建的内存空间只能存储相同类型的数据</li>
+<li>数组所分配的内存空间是连续的</li>
+<li>数组所分配的内存空间是不可扩充的</li>
+</ol>
+<h1 id="第四天"><a href="#第四天" class="headerlink" title="第四天"></a>第四天</h1><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><pre><code>byte short char int long float double boolean</code></pre><h3 id="类类型"><a href="#类类型" class="headerlink" title="类类型"></a>类类型</h3><pre><code>Byte Short Character Integer Long Float Double Boolean</code></pre><h3 id="升序排列-使用元素自然的顺序排列"><a href="#升序排列-使用元素自然的顺序排列" class="headerlink" title="升序排列(使用元素自然的顺序排列)"></a>升序排列(使用元素自然的顺序排列)</h3><pre><code>Arrays.sort(数组名);</code></pre><h3 id="降序排列（自定义排列顺序）"><a href="#降序排列（自定义排列顺序）" class="headerlink" title="降序排列（自定义排列顺序）"></a>降序排列（自定义排列顺序）</h3><pre><code>Arrays.sort(数组名,Collections.reverseOrder());</code></pre><blockquote>
+<p>reverseOrder为倒序</p>
+</blockquote>
+<h3 id="汉语排序"><a href="#汉语排序" class="headerlink" title="汉语排序"></a>汉语排序</h3><pre><code>Collator.getInstance(Locale.CHINA);</code></pre><h3 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h3><pre><code>// 执行拷贝(原数组，从原数组的第n位取元素，目标数组，从目标数组的第n位开始装入，拷贝原数组多少位)
+    System.arraycopy(array, 0, newArray, 1, array.length);</code></pre><h2 id="第五天"><a href="#第五天" class="headerlink" title="第五天"></a>第五天</h2><h3 id="线性结构的四大特征"><a href="#线性结构的四大特征" class="headerlink" title="线性结构的四大特征"></a>线性结构的四大特征</h3><p>有序的，连续的，随机访问的，插入和删除慢</p>
+<h3 id="函数的概念"><a href="#函数的概念" class="headerlink" title="函数的概念"></a>函数的概念</h3><p>函数是一个固定的程序段，它在可以实现固定运算的同时，带有一个入口和一个出口</p>
+<h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><p>方法+功能+动作</p>
+<h3 id="函数的语法"><a href="#函数的语法" class="headerlink" title="函数的语法"></a>函数的语法</h3><pre><code>返回值类型 函数名 (函数类型 参数名称1，函数类型 参数名称2) {
+
+    函数体
+
+}</code></pre><h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><ol>
+<li>包名：所有单词中的字母均小写，例如：java.util</li>
+<li>类名：所有单词的首字母大写，其他字母小写，例如：StudentService</li>
+<li>变量名称和方法名称：第一个单词的首字母小写，其他所有单词首字母大写，例如：stuName</li>
+<li>常量：所有单词的所有字母全部大写，单词和单词之间用下划线分隔，例如：PI,STU_SEX_MAN</li>
+</ol>
+<h2 id="第六天"><a href="#第六天" class="headerlink" title="第六天"></a>第六天</h2><h2 id="第七天"><a href="#第七天" class="headerlink" title="第七天"></a>第七天</h2><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><blockquote>
+<p>构造方法的意义：<br>给对象的数据(属性)进行初始化</p>
+<p>构造方法不用调用，一创建对象就执行</p>
+<p>如果在一个类中没有定义构造方法，系统会默认给一个空参的构造方法，格式是：public 类名(){}</p>
+</blockquote>
+<blockquote>
+<p>如果在一个类中定义了一个有参的构造方法，系统就不会默认再给空参的构造方法</p>
+</blockquote>
+<blockquote>
+<p>有参的构造方法是为了给对象中的属性进行初始化，空参在不需要给属性进行初始化，但是还要创建对象的时候使用</p>
+</blockquote>
+<h3 id="面向对象的四大特征"><a href="#面向对象的四大特征" class="headerlink" title="面向对象的四大特征"></a>面向对象的四大特征</h3><h4 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h4><ul>
+<li>对现实世界进行抽象，形成类</li>
+<li>研究事物的静态特征</li>
+<li>研究事物的动态特征</li>
+<li>类的对象之间的转换（产生对象之后就可以调用属性和方法）</li>
+</ul>
+<h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><ul>
+<li>提供构造方法</li>
+<li>静态块（做类的初始化工作）</li>
+<li>控制访问（private,default,protected,pubulic）(控制构造方法，控制属性的访问，控制方法的访问)</li>
+</ul>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><blockquote>
+<p>在遵守控制访问的前提下，子类能继承父类当中的属性(静态特征)和方法（动态特征）</p>
+</blockquote>
+<ul>
+<li>继承父类的属性（公开的和受保护的）</li>
+<li>继承父类的方法（公开的和受保护的）</li>
+<li>父子类在同一包当中，default也可以继承</li>
+</ul>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>动态是指同一个动作，作用在相同或不同的对象之间拥有不同的解释.</p>
+<ul>
+<li><p>重载，同一个类当中多态的体现（编译时多态）</p>
+</li>
+<li><p>重写,父子类当中多态的体现（运行时多态）</p>
+<p>多态的机制：</p>
+</li>
+<li><p>声明父类型的引用指向具体子类型的一个实例</p>
+</li>
+<li><p>运行时才去绑定</p>
+</li>
+<li><p>运行时可变</p>
+</li>
+</ul>
+<h2 id="第八天"><a href="#第八天" class="headerlink" title="第八天"></a>第八天</h2><h2 id="第九天"><a href="#第九天" class="headerlink" title="第九天"></a>第九天</h2><blockquote>
+<p>父类方法加abstract的原因是跟子类表明自己不会(不能实现)这个方法，强制子类重写这个方法</p>
+</blockquote>
+<p>接口本来就是抽象的，可省略abstract不写</p>
+<h2 id="第十二天"><a href="#第十二天" class="headerlink" title="第十二天"></a>第十二天</h2><h4 id="面试题-1"><a href="#面试题-1" class="headerlink" title="面试题"></a>面试题</h4><ul>
+<li>StringBuilder    在多线程下不能保证数据的安全(没有同步)，效率高</li>
+<li>StringBuffer    在多线程下不能保证数据的安全(同步)，效率低</li>
+</ul>
+<h2 id="第十三天"><a href="#第十三天" class="headerlink" title="第十三天"></a>第十三天</h2><h4 id="面试题-2"><a href="#面试题-2" class="headerlink" title="面试题"></a>面试题</h4><ul>
+<li>String str1 = “abc”;</li>
+<li>String str2 = new String(“abc”);</li>
+<li>Integer i1 = 128;</li>
+<li>Integer i2 = 128;</li>
+<li>String str3 = “a”;</li>
+<li>String str4 = “a”;</li>
+<li>System.out.println(str1.equals(str2));// true</li>
+<li>System.out.println(str1 == str2);// false</li>
+<li>System.out.println(i1 == i2);// false</li>
+<li>System.out.println(i1.equals(i2));// ture</li>
+<li>System.out.println(str3 == str4);// ture</li>
+<li>System.out.println(str3.equals(str4));// ture</li>
+</ul>
+<h4 id="类的调用公式"><a href="#类的调用公式" class="headerlink" title="类的调用公式"></a>类的调用公式</h4><p>1.普通类的调用</p>
+<pre><code>类名称 变量名称  = new 类名称();</code></pre><p>2.多态的调用</p>
+<pre><code>父类名称 变量名称 = new 子类名称();
+
+抽象类名称 变量名称 = new 子类名称();
+
+接口名称  变量名称 = new 子类名称();</code></pre><p>3.内部类的调用</p>
+<p>3.1 成员内部类</p>
+<pre><code>外部类名称.内部类名称 变量名称 = new 外部类名称().new 内部类名称();</code></pre><p>3.2 静态成员内部类</p>
+<pre><code>外部类名称.内部类名称 变量名称 = new 外部类名称.内部类名称();</code></pre><p>3.3 局部内部类</p>
+<pre><code>类名称 变量名称  = new 类名称();</code></pre><p>3.4 匿名内部类</p>
+<pre><code>1.抽象类名称 变量名称 = new 抽象类名称(){
+
+          //重写抽象方法
+};
+
+2.接口名称  变量名称 = new 接口名称(){
+         //重写抽象方法
+
+};</code></pre><h4 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h4><p>定义了算法族，分别封装起来，让它们之间可以互相替换（利用到了多态），此模式让算法的变化独立于使用算法的客户</p>
+<p>多态 ==&gt; 面向接口编程  interface</p>
+<h4 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h4><p>一种常用的对象创建型设计模式，此模式的核心精神是封装类中不变的部分，提取其中个性化善变的部分为独立类，通过依赖注入以达到解耦、复用和方便后期维护拓展的目的</p>
+<h2 id="第十四天"><a href="#第十四天" class="headerlink" title="第十四天"></a>第十四天</h2><h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><p>对象创建型的模式，把创建对象的责任掌握在自己手中（往回拉）</p>
+<p>官方定义：在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中一个类只有一个实例</p>
+<ul>
+<li><p>饿汉模式</p>
+<ul>
+<li>无论这个实例有没有被外部使用，一律创建<ul>
+<li>例如：<code>private static OnlineUser onlineUser = new OnlineUser();</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>懒汉模式</p>
+<ul>
+<li>啥时候用啥时候创建<ul>
+<li>例如：<code>private static OnlineUser onlineUser;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h4><p>提供一种方法顺序访问一个聚合（集合）对象中的各种元素，而又不暴露该对象的内部表示</p>
+<p>官方定义：当你需要访问一个聚合对象，而且不管这些对象是什么都需要遍历的时候，就应该考虑使用迭代器模式。另外，当需要对聚集有很多种方式遍历时，可以考虑去使用迭代器模式。迭代器模式为遍历不同的聚集结构提供如开始、下一个、是否结束、当前哪一项等统一的接口</p>
+<h4 id="多态的实现方式"><a href="#多态的实现方式" class="headerlink" title="多态的实现方式"></a>多态的实现方式</h4><blockquote>
+<p>实体类实现(entity)</p>
+</blockquote>
+<pre><code>class IntArray implements Iteerator&lt;Integer&gt; {//重写接口当中的抽象的方法}
+   1. new IntArray();</code></pre><blockquote>
+<p>匿名类实现</p>
+</blockquote>
+<pre><code>class ? implements Iterator&lt;Integer&gt; {//重写接口当中抽象的方法}
+    2. new Iterator&lt;Integer&gt;(){//重写接口当中抽象的方法}；</code></pre><ul>
+<li><p>Iterable:</p>
+<ul>
+<li>Iterator iterator(); //抽象的</li>
+</ul>
+</li>
+<li><p>Iterator:</p>
+<ul>
+<li>boolean hasNext();</li>
+<li>boolean next();</li>
+</ul>
+</li>
+</ul>
+<h4 id="面向对象-成员变量和局部变量的区别"><a href="#面向对象-成员变量和局部变量的区别" class="headerlink" title="面向对象(成员变量和局部变量的区别)"></a>面向对象(成员变量和局部变量的区别)</h4><p>成员变量和局部变量：<br>成员变量所属于对象，要看是否是对象的特性，比如人，人的姓名，年龄等<br>局部变量所属于方法，要看方法执行的时候，是否需要，如果需要就定义，好处是方法运行后就消失</p>
+<p>成员变量：</p>
+<p>类中方法外（位置），堆内存(成员变量属于对象，对象进堆内存)，有默认初始化值，<br>随着对象的调用而存在，随着对象的消失而消失</p>
+<p>局部变量：</p>
+<p>方法内定义或方法上声明（位置），栈内存(局部变量属于方法，对象进栈内存)，没有默认初始化值，<br>随着方法的调用而创建，随着方法的调用完毕（弹栈）而消失</p>
+<p>注意事项：<br>局部变量名称可以和成员变量名称一样，在方法中使用的时候，采用的是就近原则。</p>
+<p><strong>构造方法和setXxx方法的区别</strong> (构造方法Student s = new Student();)</p>
+<p>1.构造方法是用来给对象中的属性进行初始化的<br>2.setXxx是用来修改属性值的，在原对象的基础上</p>
+<p><strong>static</strong><br>共性用静态，特性用非静态</p>
+<h2 id="第十五天"><a href="#第十五天" class="headerlink" title="第十五天"></a>第十五天</h2><p>泛型的用法:</p>
+<p>1.泛型可以声明在类上面，也可以声明在方法上面<br>2.一个类可以有多个泛型，一个方法也可以有多个泛型<br>3.类在实例化之前必须指明泛型的具体类型<br>4.使用extends表示子类，super表示父类，?表示通配符</p>
+<h2 id="第十六天"><a href="#第十六天" class="headerlink" title="第十六天"></a>第十六天</h2><pre><code>Comparable =&gt; 实现了此接口的类的元素，拥有自然的顺序
+int comparaTo(T obj);
+
+ComParator =&gt; 此比较器规定了元素自定义的顺序
+int compare(T obj1, T obj2);</code></pre><h4 id="无限级分类"><a href="#无限级分类" class="headerlink" title="无限级分类"></a>无限级分类</h4><ul>
+<li><p>面向的对象</p>
+<ul>
+<li>抽象</li>
+<li>封装</li>
+<li>继承</li>
+</ul>
+</li>
+<li><p>双链表</p>
+</li>
+<li><p>递归</p>
+</li>
+</ul>
+<h2 id="第十七天"><a href="#第十七天" class="headerlink" title="第十七天"></a>第十七天</h2><ul>
+<li>HashSet无序</li>
+<li>所有的set当中的元素都不能重复，只能放一份儿</li>
+</ul>
+<p>HashiSet中庸</p>
+<h4 id="面试题-3"><a href="#面试题-3" class="headerlink" title="面试题"></a>面试题</h4><p>1.下面哪个集合类能保证以FIFO的顺序取出对象？</p>
+<p>A java.util.List<br>B java.util.LinkedHashSet<br>C java.util.HashSet<br>D java.util.TreeSet</p>
+<p>选B</p>
+<p>解析：<br>A List是接口<br>C 无序的<br>D 不是先进先出，是按照元素自然的顺序输出，或者加上排序器自定义顺序输出</p>
+<p>2.HashSet,LinkedHashSet,TreeSet的区别</p>
+<ul>
+<li>顺序：HashSet无序，LinkedHashSet有序(先进先出),TreeSet有序(自然顺序，自定义顺序)</li>
+<li>能否放null值：<ul>
+<li>Hash和LinkedHashSet能且只能放一个null值</li>
+<li>TreeSet当中只有一个元素的时候，能放null值，大于一个的时候不可以放(会比较，产生空指针异常)</li>
+</ul>
+</li>
+</ul>
+<p>3.ArrayList比LinkedList寻址(访问)快</p>
+<p>错：缺少随机两个字，应该是随机寻址快</p>
+<p>4.List是有序的</p>
+<p>错：List是接口，方法全是抽象的，可以说List的子类全是有序的</p>
+<p>5.Set是无序的</p>
+<p>错：Set是接口，它的子类，HashSet是无序的，LinkedHashSet和TreeSet是有序的</p>
+<p>6.List, Set, Map是否继承了Collection接口？</p>
+<p>错：Map没有继承</p>
+<p>7.Collection和Collcetions的区别？</p>
+<p>Collection是接口，是集合类当中顶层接口，<br>Collections是类，类中定义了很多跟集合类有关的静态方法</p>
+<p>8.Set怎样去重复</p>
+<p>Set当中的位置由hashCode()决定，</p>
+<p>去重需要两个方法：int hashCode();和 boolean equals()</p>
+<p>去重的保留：都只保留最后一个</p>
+<h2 id="第十八天"><a href="#第十八天" class="headerlink" title="第十八天"></a>第十八天</h2><p>Map中的key决定了Entry的位置</p>
+<p>单线程选择HashMap(无序，快)，多线程选择Hashtable(有序，不会出错)</p>
+<p>Set与Map的关系：<br>Set是一个特殊的Map，只有key，没有value的Map</p>
+<h2 id="第十九天"><a href="#第十九天" class="headerlink" title="第十九天"></a>第十九天</h2><ul>
+<li><p>线程2种实现方法：</p>
+<ul>
+<li>1.java.lang.Thread为java中的线程类，也就是说在java中实现线程要继承Thread</li>
+<li>2.实现java.lang.Runnable接口</li>
+</ul>
+</li>
+<li><p>线程的状态</p>
+<ul>
+<li>1.创建</li>
+<li>2.就绪（可调用）</li>
+<li>3.运行</li>
+<li>4.等待/睡眠，阻塞</li>
+<li>5.死亡</li>
+</ul>
+</li>
+<li><p>要保证锁定一定会被释放，就必须将unLock()放到finally{}中</p>
+</li>
+</ul>
+<p>异常捕捉格式：</p>
+<pre><code>try{
+ //可能产生异常的代码段
+ }catch(异常类型1 e){
+
+  //处理异常
+ }catch(异常类型2 e){
+   //处理异常
+ } finally{
+//无论有无异常都将执行的代码（任何情况都会执行）
+}</code></pre><ul>
+<li><p>try/catch:</p>
+<ul>
+<li><p>一个try语句可以跟多个catch语句。</p>
+</li>
+<li><p>catch异常时，先捕捉子类异常，再捕捉父类异常。否则会编译无法通过，报无法到达的捕捉块错误。</p>
+</li>
+<li><p>try，catch，finally必须紧跟，中间不能写除了注释之外的任何代码。</p>
+</li>
+<li><p>catch不能和finally同时省略。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>throw和throws的区别</p>
+<p>throw(抛出异常),用于向上抛异常，作用在catch语句当中。<br>throws(声明方法体会抛出哪些异常)，用于声明方法体所抛出的异常,作用在方法上面。</p>
+<p>throws :<br>1.throws(声明方法体会抛出哪些异常)，用于声明方法体所抛出的异常,作用在方法上面。</p>
+<p>2.throws子句中同时可以指明多个异常，之间用逗号隔开。</p>
+<p>3.如果声明了要抛出的异常，则本方法可以不处理，而由调用者处理。</p>
+<p>4.throws在向上抛的时候，可以向上抛抽象的异常（异常子类的父类）。</p>
+<p>5.若代码显式向上throw 异常时，则必须显式声明throws异常。</p>
+<h2 id="第二十天"><a href="#第二十天" class="headerlink" title="第二十天"></a>第二十天</h2><ul>
+<li><p>字符流：<br>  read()<br>  1.返回字符对应的ascii码(&gt;=0)<br>  2.当读取到末尾的时候，返回-1</p>
+<p>  read(char[] chars)<br>  1.返回读取的字符数<br>  2.当读取到文件末尾时返回-1</p>
+</li>
+<li><p>字节流：<br>  read() </p>
+<p>  1.返回的int(byte) [0,255]</p>
+<p>  2.当读取到文件末尾时返回-1</p>
+<p>  read(byte[] b)  </p>
+<p>  1.返回读取的字节数</p>
+<p>  2.当读取到文件末尾时返回-1</p>
+</li>
+<li><p>InputStream:<br>  我们把能够读取一个字节序列的对象称为输入流;Java中用java.io.InputStream来描述输入流基类 </p>
+</li>
+<li><p>OuputStream:<br>  我们把能够写入一个字节序列的对象称为输出流。java.io.OuputStream来描述输出流的基类</p>
+</li>
+</ul>
+<h2 id="第二十一天"><a href="#第二十一天" class="headerlink" title="第二十一天"></a>第二十一天</h2><p>int强转byte：<br>重复的：直接拿走</p>
+<p>溢出的：int型取反加一得出byte型<br>int    byte(取反加一)</p>
+<p>Data:byte char short int long float double String</p>
+<p>四个地址的区别：</p>
+<p>192.168.1.100 =&gt; 路由器给分配的IP<br>127.0.0.1 =&gt; 本机的IP<br>localhost =&gt; 域名<br><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a> =&gt; 万维网给的域名</p>
+<h2 id="第二十二天"><a href="#第二十二天" class="headerlink" title="第二十二天"></a>第二十二天</h2><p>使用sql语句的优点:<br>可以复用，不用再手动创建</p>
+<p>#<strong>进入数据库</strong></p>
+<p>数据定义语言DDL(Data Definition Language):用于创建对象，如：create table,alter table,drop table,create view,rename</p>
+<p>数据操纵语言DML(Data Manipulation Language)：如insert into,update,delete,select</p>
+<p>当字段的值当中出现了单引号’时，用单引号’对单引号’进行转译,与Java中的\转译类似</p>
+<ul>
+<li>算术运算符 + - * / 优先级：<ul>
+<li>乘和除的运算优先级高于加和减</li>
+<li>优先级相同的运算符是从左到右进行运算的</li>
+<li>可以使用小括号强制语句做出有限运算，并使语句运算顺序更为清晰</li>
+<li>日期计算，也可以使用+ -，单位为天(如：select sysdate + 1 from dual)</li>
+</ul>
+</li>
+</ul>
+<p>连接运算符||或concat(arg1, arg2)</p>
+<p>比较运算符&lt;,&gt;,&lt;=,&gt;=,=,!=,&lt;&gt;,is,is not,in,not in,between,like,any,all</p>
+<p>like(包含)：匹配运算符，只能用在字符串中<br>in：匹配列表值</p>
+<p>–% 通配符 匹配0个或无数个任意字符<br>–_ 通配符 匹配0个或1个任意字符</p>
+<hr>
+<p>添加数据</p>
+<pre><code>BEGIN
+  FOR i in 1..50
+    loop
+      INSERT into t_stu values(seq_stu.nextval,&apos;学生&apos; || i,i,&apos;001&apos; || i,&apos;&apos;,0,i,1);
+    end loop;
+END;</code></pre><p>导出数据</p>
+<ol>
+<li><p>用户<br> 创建用户名和密码<br> creat user ORACLE(用户名) identified by oracle(密码);<br> 为用户授予dba权限<br> grant dba to ORACLE with admin option;</p>
+</li>
+<li><p>对象(表，序列，存储过程，触发器，同义词，视图……)<br> 工具==&gt;导出用户对象</p>
+</li>
+<li><p>存储数据<br> 工具==&gt;导出表</p>
+</li>
+</ol>
+<p>笛卡儿积<br>{1，2} * {3，4，5}<br>{13，14，15，23，24，25}</p>
+<p>union与union的区别：<br>union去重，稍微慢一点儿</p>
+<p>表合并的前提条件：<br>总列数一样，列类型一样，列名一样</p>
+<p>–查询所有的学生,并按导师分组，显示每个组里面的平均年龄，最大学号，最晚入学日期，并显示导师的姓名，性别，年龄<br>–MAX(t.teacher_sex),MAX(t.teacher_age),因为是同一个老师，所以性别唯一，取一个就行，用随便一个组函数就行，比如max或min</p>
+<pre><code>SELECT AVG(s.stu_age),MAX(s.stu_code),MAX(s.stu_entry_date),t.teacher_id teacher_id,MAX(t.teacher_sex),MAX(t.teacher_age)
+FROM t_student3 s
+LEFT JOIN t_teacher3 t ON t.teacher_id = s.teacher_id
+GROUP BY t.teacher_id;</code></pre><h2 id="七周三天"><a href="#七周三天" class="headerlink" title="七周三天"></a>七周三天</h2><p>properties：键值对都是字符串的Map</p>
+<p>标识符无效：表名或列名错误</p>
+<p>Exception in thread “main” java.lang.ExceptionInInitializerError的原因：<br>一般是路径错了</p>
+<p>ORA-01747: user.table.column, table.column 或列说明无效<br>sql语句格式不正确</p>
+<h2 id="七周五天"><a href="#七周五天" class="headerlink" title="七周五天"></a>七周五天</h2><p>Integer的值可以为null，int的值不可以为null.</p>
+<h2 id="九周一天"><a href="#九周一天" class="headerlink" title="九周一天"></a>九周一天</h2><p>JavaScript</p>
+<p>通过字符串进行属性或方法的访问的时候创建的字符串对象是临时生成的，用完就会自动丢弃，原来的字符串并不会产生改变。</p>
+<h2 id="九周三天"><a href="#九周三天" class="headerlink" title="九周三天"></a>九周三天</h2><ul>
+<li><p>String的正则表达式匹配有两个</p>
+<ul>
+<li>matches(String regex)：通知此字符串是否匹配给定的正则表达式,参数regex用来匹配此字符串的正则表达式 返回：当且仅当此字符串匹配给定的正则表达式时，才返回 true </li>
+<li>search(regexp)：如果成功，搜索返回字符串中正则表达式的索引。否则，它返回- 1</li>
+</ul>
+</li>
+</ul>
+<p>正则表达式</p>
+<p>[]自带或含义，()表示组或优先</p>
+<h2 id="十周二天"><a href="#十周二天" class="headerlink" title="十周二天"></a>十周二天</h2><p>构造函数和原型方式各自的的缺陷：<br>构造函数：getXXX方法一样，每次定义多余<br>原型方式：静态属性XX都一样，太极端</p>
+<p>眼睛看不到的值：</p>
+<pre><code>disabled selected checked readonly [true,false]</code></pre><h2 id="十周四天"><a href="#十周四天" class="headerlink" title="十周四天"></a>十周四天</h2><pre><code>XXX（）;和onXXX的区别：
+submit(): 执行提交
+onsubmit: 执行提交完成后，还要执行什么</code></pre><h2 id="十一周一天"><a href="#十一周一天" class="headerlink" title="十一周一天"></a>十一周一天</h2><p>基本选择器的复合选择器之间用逗号隔开，取并集</p>
+<p>属性选择器的复合选择器之间直接连接，不能有任何符号或空格，取交集</p>
+<p><strong>regxp.exe()与regexp.test()的区别</strong></p>
+<p>RegExpObject.exec(string)：exec() 方法用于检索字符串中的正则表达式的匹配。检索字符串中指定的值。返回找到的值(该值是从0开始，然后加1(因为是区间))，并确定其位置</p>
+<p>RegExpObject.test(string)：test() 方法用于检测一个字符串是否匹配某个模式。检索字符串中指定的值。返回 true 或 false</p>
+<p>三种页面初始化方法</p>
+<p>1.window.onload = function(){};</p>
+<p>2.$(document).ready(function(){});</p>
+<p>3.$(function(){});</p>
+<h2 id="十一周三天"><a href="#十一周三天" class="headerlink" title="十一周三天"></a>十一周三天</h2><p>j2ee javaee Java企业版应用<br>j2se javase Java标准版应用</p>
+<h2 id="十二周一天"><a href="#十二周一天" class="headerlink" title="十二周一天"></a>十二周一天</h2><p>重定向：添加，修改，保存，删除<br>查询：查询</p>
+<p>1.存在主键外键(引用完整性约束)<br> 1.1 删除教师时，同时删除教师所带的学生<br> 1.2 删除教师时，把教师所带的学生的teacher_id设置为null<br> 在数据库里设置</p>
+<p>2.不存在主键外键<br> 2.1 删除教师时，同时删除教师所带的学生<br> 2.2 删除教师时，把教师所带的学生的teacher_id设置为null<br> 在代码中设置</p>
+<h2 id="十二周二天"><a href="#十二周二天" class="headerlink" title="十二周二天"></a>十二周二天</h2><pre><code>request.ContextPath = /项目名称</code></pre><p>session会话对象：</p>
+<p>作用于更广<br>三次握手，第三次开始正式的功能<br>保持时间为30分钟，但是关掉浏览器就直接销毁</p>
+<p>取根目录：</p>
+<p>链接里写${pageContext.request.contextPath}</p>
+<p>重定向里写request.getContextPath</p>
+<p>请求转发里不用写，直接在开始加/</p>
+<p>page = PageContext</p>
+<p>request = HttpServletRequest</p>
+<p>response = HttpServletResponse</p>
+<p>session = HttpSession（request.getSession();）</p>
+<p>application = ServletContext</p>
+<p>config = ServletConfig</p>
+<h3 id="SQL知识点"><a href="#SQL知识点" class="headerlink" title="SQL知识点"></a>SQL知识点</h3><p>按照伪序列rownum排序：<br><code>select page2.*
+  from (select page1.*,rownum rn
+      from (select s.* from T_STUDENT s order by s.stu_id) page1) page2
+where rn between ? and ?</code></p>
+<p>起始位置=(当前页号 - 1) * 每页个数 + 1<br>结束位置=当前页号 * 每页个数</p>
+<h3 id="总结知识点"><a href="#总结知识点" class="headerlink" title="总结知识点"></a>总结知识点</h3><p>1.unicode中文码%xx%xx%xx，为什么是六位？</p>
+<p>2.get请求是在head里，post请求是在body里</p>
+<h2 id="十四周三天"><a href="#十四周三天" class="headerlink" title="十四周三天"></a>十四周三天</h2><p>不建外键的原因：<br>环境多，导表麻烦</p>
+<p>适合放在缓存中的情况:<br>访问量大，更新次数少，网页缓存一般放在application中</p>
+<p>缓存的弊端:</p>
+<p>服务器重新启动，才能更新数据，这样太麻烦，所以直接更新缓存，不用重新启动服务器</p>
+<p>MyEclipse错误:</p>
+<p>Failed to initialize end point associated with Protocolhandler [“http-apr-80”] (Socket bind failed:):<br>因为MyEclipse异常退出，tomcat未停止，占用80端口，这时如果再启动tomcat会出现此错误。</p>
+<p><strong>控制台error：</strong></p>
+<p>无法转换为内部表示：可能是变量的数据类型转换不匹配（比如将Integer转换为String）</p>
+<p>java.lang.IllegalArgumentException: attempt to create saveOrUpdate event with null entity（尝试用空实体创建saveOrUpdate事件）异常的易被忽略的原因:<br>就是在Action的代码里面缺少实体类的set方法</p>
+<p><strong>servelt的4个步骤：</strong></p>
+<pre><code>1.接收参数
+2.调模型层
+3.转发参数
+4.做响应：请求转发（或重定向）</code></pre><hr>
+<h2 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate:"></a>Hibernate:</h2><p><strong>三个步骤：</strong></p>
+<p>1.注册驱动<br>2.执行连接 ==》打开会话</p>
+<p>3.编译sql<br>4.执行sql<br>5.从游标中遍历数据 ==》save/update/delete/select</p>
+<p>6.关闭游标，statement，连接 ==》关闭会话</p>
+<p><strong>Hibernate中FetchMode.JOIN FetchMode.SELECT FetchMode.SUBSELECT介绍</strong></p>
+<p>@Fetch(FetchMode.JOIN) 会使用left join查询 只产生一条sql语句<br>@Fetch(FetchMode.SELECT) 会产生N+1条sql语句<br>@Fetch(FetchMode.SUBSELECT) 产生两条sql语句 第二条语句使用id in (…..)查询出所有关联的数据</p>
+<h2 id="Struts"><a href="#Struts" class="headerlink" title="Struts"></a>Struts</h2><p><strong>struts基本流程：</strong></p>
+<p>1.view：填写正确的控制器连接(eg:/empl/list)<br>2.struts.xml：定义正确的/namespace/active，和要转发的视图(eg:/pages/employee/list.jsp)或要重定向的控制器<br>3.Controller：定义需要调用的方法</p>
+<p><strong>struts原理：</strong></p>
+<p>struts的本质是一个过滤器，将别的控制器(里面所有的请求)都拦截到自己的控制器里。</p>
+<p><strong>可做面试题：</strong></p>
+<p>el表达式：${[‘jiao’]}</p>
+<p>${param[‘a’]}与${param.a}:<br>[]里的引号不能省，表示常量，去掉就变成从四大作用域中取a的值</p>
+<p>左连接与左外连接，没有区别，</p>
+<p>save,update与saveOrUpdate：<br>没有区别，saveOrUpdate更方便</p>
+<p><strong>杂烩集锦：</strong></p>
+<p>delete:<br>只设置了id，别的属性没有怎么删的，为甚么不删除员工，因为sql语句：delete from Table where id=？</p>
+<p>集合：<br>Collection包含List,Set，所以尽量用Colletion，包容性好</p>
+<p>自增increment不能用于多线程</p>
+<p>接口中的修饰符不写默认是public</p>
+<p>匿名类在类里执行时的事件一般在做开始，相当于缓存的时间</p>
+<p>sql语句：</p>
+<p><code>select TEACHER_ID, TEACHER_NAME, TEACHER_AGE, ``TEACHER_SEX, TEACHER_CODE, COLLEGE_ID, TEACHER_LOGO,</code> <code>ATTACHMENT_PATH, ATTACHMENT_NAME from ORACLE.T_TEACHER</code><br><code>where (TEACHER_NAME like &#39;%&#39; || &#39;&#39;) or (1=1) or ``(teacher_name = &#39;&#39; || &#39;%&#39;)</code></p>
+<p>‘%’ || ‘’ : 做(字符串)与运算,变成’%’(即teacher_name like ‘%’),其中三个括号里的值都是true</p>
+<p><em>数据库翻页查询公式：</em></p>
+<pre><code>select pager2.* from (
+
+  select pager1.*,rownum rn from (
+         select * from 表名 order by 列名
+
+  )pager1
+
+)pager2
+
+where rn between (pageNo - 1) * (pageCount) + 1 and (pageNo) * (pageCount)</code></pre><p><em>数据库循环插值公式：</em></p>
+<pre><code>declare 
+    i number;
+    begin
+    for i in 1..50
+    loop
+       insert into 表名 (列名,......) 
+       values(列名的值,.....);
+    end loop;
+ end;</code></pre><p>集合中的参数使用了注解就不能使用默认的名字。</p>
+<p>数组越界String index out of range: -1 </p>
+<p><strong>length,length(),size()详解及区别：</strong></p>
+<p>length属性:用于获取数组长度。<br>length()方法：用于获取字符串长度。<br>size()方法：用于获取泛型集合有多少个元素。</p>
+<p><strong>什么时候用size()?什么时候用length?什么时候用length()?</strong></p>
+<p>String类有length的方法，<br>数组有length的属性，<br>集合(List)有size的方法</p>
+<p><strong>为什么控制器Controller没有spring的标识：</strong><br>因为spring扫描控制器是在spring—mvc.xml里，在web.xml启动时才被spring启用，只有在applicationContext.xml里才会自动加上spring标识</p>
+<p><strong>一对多，多对多，更新时：</strong></p>
+<p>先全删除以前(旧)的，再添加现在应有(新)的，</p>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><p><strong>error:</strong><br>Class’org.springframework.orm.hibernate3.LocalSessionFactoryBean’ not found:没有加Spring 3.1 Persistence Libraries（spring 持久化包）.</p>
+<p><strong>applicationContext.xml流程：</strong></p>
+<p>1.控制器引用Service<br>2.Service引用dao<br>3.dao引用session工厂<br>4.session工厂引用数据源<br>5.数据源查数据库</p>
+<p><strong>spring的xml3中注入方式：</strong></p>
+<p>1.xml注入<br>2.自动注入(byName,byType)<br>3.注解注入</p>
+<p><strong>error:</strong><br>Exception in thread “main” org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named ‘userController’ is defined</p>
+<p>文件命名空间，文件位置</p>
+<p><strong>byName与byType的区别:</strong></p>
+<p>byName: beans配置属性default-autowire:”byName” 按照bean的名称(唯一id)， 自动装配property</p>
+<p>byType: beans配置属性default-autowire:”byType” 按照bean的class类型， 自动装配property(前提是session的default-autowire属性是no)，byType配置不能有两个bean引用的class中有一样的类型的属性，否则报错</p>
+<p><strong>使用注解装配步骤：</strong></p>
+<p>1.包内加注解:<br>    @Controller,申请控制器<br>    @Service,申请service<br>    @Repository,申请dao，数据仓库<br>    @Autowired，自动注入<br>2.applicationContext.xml配置:</p>
+<p>命名空间：<br>    <code>xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</code><br>schema:<br>    <code>xsi:schemaLocation=&quot;http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd&quot;</code></p>
+<p>3.告诉spring那些类有注解：</p>
+<p>applicationContext.xml下配置：<br>    <code>&lt;context:component-scan base-package=&quot;要扫描的包含注解的包名(eg:com.oracle.model)&quot; /&gt;</code></p>
+<p>切面编程三个知识点：切面，切点，通知。</p>
+<p>反转是由spring给的。</p>
+<p>autoWired按照byType，byName</p>
+<p><strong>运行时绑定与运行时可变？</strong></p>
+<p>运行时才绑定，运行时才变出来，但可以是任何代理，代理可以不一样，所以是可变</p>
+<p><strong>没有ioc就没有aop？</strong></p>
+<p>因为有了控制反转(eg:IUserDao userDao)，才能有切面编程(运行时绑定，运行时可变)</p>
+<h1 id="SSH"><a href="#SSH" class="headerlink" title="SSH:"></a>SSH:</h1><p>因为ssh，struts和spring会因为控制器而冲突，发生空指针异常，所以需要引struts 2 spring Liability来解决</p>
+<h1 id="SSM"><a href="#SSM" class="headerlink" title="SSM:"></a>SSM:</h1><p><strong>Mapper.xml配置中的符号#和$:</strong></p>
+<pre><code># 使用了预编译
+
+$ 未使用预编译</code></pre><p><strong>运行时绑定和可变：</strong></p>
+<p>运行时绑定：运行时才会绑定了一个代理</p>
+<p>运行时可变：运行时可以有多个代理插入</p>
+<p><strong>连接池：</strong></p>
+<p>连接池是创建和管理一个连接的缓冲池的技术，这些连接准备好被任何需要它们的线程使用。</p>
+<p>连接池主要的优点有：<br>1.减少连接创建时间<br>虽然与其它数据库相比 GBase 提供了较为快速连接功能，但是创建新的 JDBC 连接仍会招致网络和 JDBC 驱动的开销。如果这类连接是“循环”使用的，使用该方式这些花销就可避免。<br>2.简化的编程模式<br>当使用连接池时，每一个单独的线程能够像创建了一个自己的 JDBC 连接一样操作，允许用户直接使用JDBC编程技术。<br>3.受控的资源使用<br>如果用户不使用连接池，而是每当线程需要时创建一个新的连接，那么用户的应用程序的资源使用会产生非常大的浪费并且可能会导致高负载下的异常发生。</p>
+<p>数据库连接池的主要操作如下：<br>（1）建立数据库连接池对象（服务器启动）。<br>（2）按照事先指定的参数创建初始数量的数据库连接（即：空闲连接数）。<br>（3）对于一个数据库访问请求，直接从连接池中得到一个连接。如果数据库连接池对象中没有空闲的连接，且连接数没有达到最大（即：最大活跃连接数），创建一个新的数据库连接。<br>（4）存取数据库。<br>（5）关闭数据库，释放所有数据库连接（此时的关闭数据库连接，并非真正关闭，而是将其放入空闲队列中。如实际空闲连接数大于初始空闲连接数则释放连接）。<br>（6）释放数据库连接池对象（服务器停止、维护期间，释放数据库连接池对象，并释放所有连接）。</p>
+<p>ssm遇到的问题：</p>
+<p>认识spring配置的注解：mvc：annotation-driven</p>
+<p>/表示不拦jsp<br>/*拦所有的文件</p>
+<p>struts：多例模式，有成员变量，来一次请求，实例化(new)一次</p>
+<p>spring：单例模式(只实例化一次)，没有成员变量,</p>
+<p>监听：在servlet初始化的时候，才发起请求，读controller</p>
+<hr>
+<p>控制器里的方法上的参数Integer stuId：</p>
+<p>写在参数里的参数是aop代理controller接收了参数</p>
+<p><strong>java反射：</strong></p>
+<p>getMethod:必须是public才能找到<br>getDeclaredMethod 声明过就能找到</p>
+<p>method.getParameterAnnotations()：获得方法的参数的注解[][]</p>
+<p>method.getAnnotations()：获得方法的注解[]</p>
+<p><strong>文件的位置关系：</strong></p>
+<p>WebRoot下的文件可以随意访问，这里一般放公共的东西，e</p>
+<p>WebRoot/WEB-INF下的文件不可以随便访问，这里面放的是配置的文件，只能控制器带着进去</p>
+<p>为什么做重定向：</p>
+<p>请求转发直奔最后一个环节，没有暴露在互联网下，需要通过查询控制器查到数据，再到视图<br>list.jsp=》controller(XX)=&gt;list=&gt;list.jsp</p>
+<p>重定向：<br>“redirect:list”：正确<br>“forward:list”：带参数，错误<br>“student/list”:直奔视图，错误</p>
+<p><strong>面试题：</strong></p>
+<p>jquery对象$()转dom对象：</p>
+<p>$()[0]<br>$().get(0)</p>
+<p>dom对象转jquery对象$():<br>$(dom)</p>
+<p><strong>mybatis 配置文件报错:”Referenced file contains errors(file:/D:/config/ mybatis-3-mapper.dtd)：</strong></p>
+<p>Widow=&gt;MyEclipse=&gt;Files and Editors=&gt;XML=&gt;XML Catalog=&gt;add…</p>
+<p>添加的是mybatis\org\apache\ibatis\builder\xmlmybatis-3-mapper.dtd</p>
+<p>@JsonIgnore：方法和变量上都可以标注</p>
+<p><strong>service和IService一样，为什么要创建两个？</strong></p>
+<p>因为aop需要执行切面编程，aop就是接口service的子类，所以创建IService的意义就在这</p>
+<p><strong>保存角色信息步骤：(没有设置，报错为无效列类型111)</strong></p>
+<p>1.保存角色</p>
+<p>xml配置：<br>使用生成主键useGeneratedKeys=”true”，主键列keyColumn=”role_id”，对应的对象属性keyProperty=”roleId”</p>
+<p>2.设置(保存)权限 2.1删除旧权限，2.2保存新权限</p>
+<p><strong>拦截的问题：</strong><br>优先走具体的路径(eg:<em>.js,/images/</em>)，再走抽象的路径(/)</p>
+<p><strong>打开二级缓存：</strong></p>
+<p>1.xxMapper.xml中的mapper下，加上<cache></cache></p>
+<p>2.xx.java实现序列化接口</p>
+<p><strong>Session缓存：</strong></p>
+<p>将信息放到session缓存中，直接登录时查一次</p>
+]]></content>
+      <categories>
+        <category>Mixed</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>rabbitmq服务启动失败</title>
+    <url>/2019/12/26/rabbitmq%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5/</url>
+    <content><![CDATA[<blockquote>
+<p>这个问题是真的难，搜出来的答案是很多，不知道是不是我操作不当，就是不能成功，困扰了我一周得，最终这个问题还是被我解决了，但这个答案并不好找。</p>
+</blockquote>
+<h4 id="错误信息："><a href="#错误信息：" class="headerlink" title="错误信息："></a>错误信息：</h4><p>第一个：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@cmp_10_20_10_16 bin]<span class="comment"># rabbitmqctl status</span></span><br><span class="line">Status of node rabbit@cmp_10_20_10_16 ...</span><br><span class="line">Error: unable to connect to node rabbit@cmp_10_20_10_16: nodedown</span><br><span class="line"></span><br><span class="line">DIAGNOSTICS</span><br><span class="line">===========</span><br><span class="line"></span><br><span class="line">attempted to contact: [rabbit@cmp_10_20_10_16]</span><br><span class="line"></span><br><span class="line">rabbit@cmp_10_20_10_16:</span><br><span class="line">  * connected to epmd (port 4369) on cmp_10_20_10_16</span><br><span class="line">  * epmd reports: node <span class="string">'rabbit'</span> not running at all</span><br><span class="line">                  other nodes on cmp_10_20_10_16: [<span class="string">'rabbitmq-cli-10'</span>]</span><br><span class="line">  * suggestion: start the node</span><br><span class="line"></span><br><span class="line">current node details:</span><br><span class="line">- node name: <span class="string">'rabbitmq-cli-10@localhost'</span></span><br><span class="line">- home dir: /root</span><br><span class="line">- cookie <span class="built_in">hash</span>: WT5Oi6Xclw17F+Il74FLlg==</span><br><span class="line"></span><br><span class="line">[root@cmp_10_20_10_16 bin]<span class="comment"># rabbitmqctl stop</span></span><br><span class="line">Stopping and halting node rabbit@cmp_10_20_10_16 ...</span><br><span class="line">Error: unable to connect to node rabbit@cmp_10_20_10_16: nodedown</span><br><span class="line"></span><br><span class="line">DIAGNOSTICS</span><br><span class="line">===========</span><br><span class="line"></span><br><span class="line">attempted to contact: [rabbit@cmp_10_20_10_16]</span><br><span class="line"></span><br><span class="line">rabbit@cmp_10_20_10_16:</span><br><span class="line">  * connected to epmd (port 4369) on cmp_10_20_10_16</span><br><span class="line">  * epmd reports: node <span class="string">'rabbit'</span> not running at all</span><br><span class="line">                  other nodes on cmp_10_20_10_16: [<span class="string">'rabbitmq-cli-97'</span>]</span><br><span class="line">  * suggestion: start the node</span><br><span class="line"></span><br><span class="line">current node details:</span><br><span class="line">- node name: <span class="string">'rabbitmq-cli-97@localhost'</span></span><br><span class="line">- home dir: /root</span><br><span class="line">- cookie <span class="built_in">hash</span>: WT5Oi6Xclw17F+Il74FLlg==</span><br></pre></td></tr></table></figure>
+
+<p>第二个：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">=INFO REPORT==== 18-Nov-2019::10:05:17 ===</span><br><span class="line">Error description:</span><br><span class="line">   &#123;error,</span><br><span class="line">       &#123;cannot_delete_plugins_expand_dir,</span><br><span class="line">           [<span class="string">"/var/lib/rabbitmq/mnesia/rabbit@cmp_10_20_10_16-plugins-expand"</span>,</span><br><span class="line">            &#123;cannot_delete,</span><br><span class="line">                <span class="string">"/var/lib/rabbitmq/mnesia/rabbit@cmp_10_20_10_16-plugins-expand/webmachine-1.10.3/priv/www/index.html"</span>,</span><br><span class="line">                eacces&#125;]&#125;&#125;</span><br><span class="line"></span><br><span class="line">Log files (may contain more information):</span><br><span class="line">   /var/<span class="built_in">log</span>/rabbitmq/rabbit@cmp_10_20_10_16.log</span><br><span class="line">   /var/<span class="built_in">log</span>/rabbitmq/rabbit@cmp_10_20_10_16-sasl.log</span><br><span class="line"></span><br><span class="line">Stack trace:</span><br><span class="line">   [&#123;rabbit_plugins,setup,0,[&#123;file,<span class="string">"src/rabbit_plugins.erl"</span>&#125;,&#123;line,71&#125;]&#125;,</span><br><span class="line">    &#123;rabbit,broker_start,0,[&#123;file,<span class="string">"src/rabbit.erl"</span>&#125;,&#123;line,280&#125;]&#125;,</span><br><span class="line">    &#123;rabbit,start_it,1,[&#123;file,<span class="string">"src/rabbit.erl"</span>&#125;,&#123;line,403&#125;]&#125;,</span><br><span class="line">    &#123;init,start_it,1,[]&#125;,</span><br><span class="line">    &#123;init,start_em,1,[]&#125;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h4><p><code>rm -rf /var/lib/rabbitmq/*</code> (网上的版本： <code>rm /var/lib/rabbitmq/mnesia</code> )，我是把这个目录下的东西全部删除了。</p>
+<p>参考：<a href="https://blog.csdn.net/IOT_LI/article/details/100159381#commentBox" target="_blank" rel="noopener">RabbitMQ-1-解决报错：{error, {cannot_delete_plugins_expand_dir cannot_delete-李会刚</a></p>
+<p>其他觉得靠谱的解决方案：<br><a href="https://blog.csdn.net/weixin_34137799/article/details/85876152" target="_blank" rel="noopener">https://blog.csdn.net/weixin_34137799/article/details/85876152</a></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>rabbitmq</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blogger Introduce</title>
     <url>/2019/12/25/Blogger-Introduce/</url>
     <content><![CDATA[<p>博主主修Java，辅修*</p>

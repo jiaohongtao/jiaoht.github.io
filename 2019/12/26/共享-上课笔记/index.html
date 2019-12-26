@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/peach_128px.ico?v=7.3.0">
+  <!-- <meta name="baidu-site-verification" content="true"> -->
+  <meta name="baidu-site-verification" content="4c5HnvqRnw">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":true,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        // background: #ff009e; /*进度条颜色*/
+        background: #33FF33; /*进度条颜色*/
+        height: 1px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #ff009e, 0 0 5px #ff009e; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #ff009e;    /*上边框颜色*/
+        border-left-color: #ff009e;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "febbd42e"
+    });
+  daovoice('update');
+  </script>
+
+
+  <meta name="description" content="第一天运行 编译：javac -cp 目标目录 源文件的全路径（例如：javac -cp c:/java c:/java/test.java）  运行：java -cp class文件所在目录 类名称（例如：java -cp c:/java HelloWorld）   类与公开类 如果一个类是公开类，.java文件名字与公共类名字一致 一个.java文件只应该有一个公开类  生成帮助文档 java">
+<meta name="keywords" content="红桃,红桃jiao,焦洪涛博客,焦洪涛日志,焦洪涛,jiaohongtao">
+<meta property="og:type" content="article">
+<meta property="og:title" content="共享-上课笔记">
+<meta property="og:url" content="https://jiaoht.github.io/2019/12/26/共享-上课笔记/index.html">
+<meta property="og:site_name" content="红桃jiao的博客">
+<meta property="og:description" content="第一天运行 编译：javac -cp 目标目录 源文件的全路径（例如：javac -cp c:/java c:/java/test.java）  运行：java -cp class文件所在目录 类名称（例如：java -cp c:/java HelloWorld）   类与公开类 如果一个类是公开类，.java文件名字与公共类名字一致 一个.java文件只应该有一个公开类  生成帮助文档 java">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-26T08:55:44.141Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="共享-上课笔记">
+<meta name="twitter:description" content="第一天运行 编译：javac -cp 目标目录 源文件的全路径（例如：javac -cp c:/java c:/java/test.java）  运行：java -cp class文件所在目录 类名称（例如：java -cp c:/java HelloWorld）   类与公开类 如果一个类是公开类，.java文件名字与公共类名字一致 一个.java文件只应该有一个公开类  生成帮助文档 java">
+  <link rel="canonical" href="https://jiaoht.github.io/2019/12/26/共享-上课笔记/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>共享-上课笔记 | 红桃jiao的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-right">
+	  <!-- <div class="headband"></div> -->
+
+   <a href="https://github.com/jiaoht" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">红桃jiao的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaoht.github.io/2019/12/26/共享-上课笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Jiao">
+      <meta itemprop="description" content="理想必须热爱">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="红桃jiao的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">共享-上课笔记
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-26 16:55:00 / 修改时间：16:55:44" itemprop="dateCreated datePublished" datetime="2019-12-26T16:55:00+08:00">2019-12-26</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mixed/" itemprop="url" rel="index"><span itemprop="name">Mixed</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>15k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>13 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><ul>
+<li><p>编译：javac -cp 目标目录 源文件的全路径（例如：javac -cp c:/java c:/java/test.java）</p>
+</li>
+<li><p>运行：java -cp class文件所在目录 类名称（例如：java -cp c:/java HelloWorld）</p>
+</li>
+</ul>
+<h3 id="类与公开类"><a href="#类与公开类" class="headerlink" title="类与公开类"></a>类与公开类</h3><ul>
+<li>如果一个类是公开类，.java文件名字与公共类名字一致</li>
+<li>一个.java文件只应该有一个公开类</li>
+</ul>
+<h3 id="生成帮助文档"><a href="#生成帮助文档" class="headerlink" title="生成帮助文档"></a>生成帮助文档</h3><ul>
+<li>javadoc -d 目标文件 源文件(例如：javadoc -d c:/java/help c:java/Note.java）</li>
+<li>在其文件夹内运行，可简化为：    javadoc -d help Note.java</li>
+</ul>
+<hr>
+<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><h3 id="全局变量和局部变量的区别"><a href="#全局变量和局部变量的区别" class="headerlink" title="全局变量和局部变量的区别"></a>全局变量和局部变量的区别</h3><blockquote>
+<p>全局变量（成员变量）可以不用初始化值，其默认值为0，局部变量必须初始化值。（即：局部变量必须先定义再赋值后使用）</p>
+</blockquote>
+<h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><ul>
+<li>x += y与x = x + y不完全等价</li>
+<li>byte b = 0;<br>b =b + 1;不正确****b += 1;正确</li>
+</ul>
+<h4 id="以下哪一个数据类型不能作用在switch-case语句当中："><a href="#以下哪一个数据类型不能作用在switch-case语句当中：" class="headerlink" title="以下哪一个数据类型不能作用在switch case语句当中："></a>以下哪一个数据类型不能作用在switch case语句当中：</h4><p>A 枚举  B Sting  C int  D long  E byte  F char<br>选D</p>
+<hr>
+<h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><ul>
+<li><p>for一般应用于固定次数的循环，while一般应用于不固定次数的循环</p>
+</li>
+<li><p>使用lable可跳出多重循环</p>
+</li>
+<li><p>for循环增强（foreach），jdk1.5版本的遍历（迭代）</p>
+</li>
+</ul>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><ol>
+<li>数组所创建的内存空间只能存储相同类型的数据</li>
+<li>数组所分配的内存空间是连续的</li>
+<li>数组所分配的内存空间是不可扩充的</li>
+</ol>
+<h1 id="第四天"><a href="#第四天" class="headerlink" title="第四天"></a>第四天</h1><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><pre><code>byte short char int long float double boolean</code></pre><h3 id="类类型"><a href="#类类型" class="headerlink" title="类类型"></a>类类型</h3><pre><code>Byte Short Character Integer Long Float Double Boolean</code></pre><h3 id="升序排列-使用元素自然的顺序排列"><a href="#升序排列-使用元素自然的顺序排列" class="headerlink" title="升序排列(使用元素自然的顺序排列)"></a>升序排列(使用元素自然的顺序排列)</h3><pre><code>Arrays.sort(数组名);</code></pre><h3 id="降序排列（自定义排列顺序）"><a href="#降序排列（自定义排列顺序）" class="headerlink" title="降序排列（自定义排列顺序）"></a>降序排列（自定义排列顺序）</h3><pre><code>Arrays.sort(数组名,Collections.reverseOrder());</code></pre><blockquote>
+<p>reverseOrder为倒序</p>
+</blockquote>
+<h3 id="汉语排序"><a href="#汉语排序" class="headerlink" title="汉语排序"></a>汉语排序</h3><pre><code>Collator.getInstance(Locale.CHINA);</code></pre><h3 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h3><pre><code>// 执行拷贝(原数组，从原数组的第n位取元素，目标数组，从目标数组的第n位开始装入，拷贝原数组多少位)
+    System.arraycopy(array, 0, newArray, 1, array.length);</code></pre><h2 id="第五天"><a href="#第五天" class="headerlink" title="第五天"></a>第五天</h2><h3 id="线性结构的四大特征"><a href="#线性结构的四大特征" class="headerlink" title="线性结构的四大特征"></a>线性结构的四大特征</h3><p>有序的，连续的，随机访问的，插入和删除慢</p>
+<h3 id="函数的概念"><a href="#函数的概念" class="headerlink" title="函数的概念"></a>函数的概念</h3><p>函数是一个固定的程序段，它在可以实现固定运算的同时，带有一个入口和一个出口</p>
+<h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><p>方法+功能+动作</p>
+<h3 id="函数的语法"><a href="#函数的语法" class="headerlink" title="函数的语法"></a>函数的语法</h3><pre><code>返回值类型 函数名 (函数类型 参数名称1，函数类型 参数名称2) {
+
+    函数体
+
+}</code></pre><h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><ol>
+<li>包名：所有单词中的字母均小写，例如：java.util</li>
+<li>类名：所有单词的首字母大写，其他字母小写，例如：StudentService</li>
+<li>变量名称和方法名称：第一个单词的首字母小写，其他所有单词首字母大写，例如：stuName</li>
+<li>常量：所有单词的所有字母全部大写，单词和单词之间用下划线分隔，例如：PI,STU_SEX_MAN</li>
+</ol>
+<h2 id="第六天"><a href="#第六天" class="headerlink" title="第六天"></a>第六天</h2><h2 id="第七天"><a href="#第七天" class="headerlink" title="第七天"></a>第七天</h2><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><blockquote>
+<p>构造方法的意义：<br>给对象的数据(属性)进行初始化</p>
+<p>构造方法不用调用，一创建对象就执行</p>
+<p>如果在一个类中没有定义构造方法，系统会默认给一个空参的构造方法，格式是：public 类名(){}</p>
+</blockquote>
+<blockquote>
+<p>如果在一个类中定义了一个有参的构造方法，系统就不会默认再给空参的构造方法</p>
+</blockquote>
+<blockquote>
+<p>有参的构造方法是为了给对象中的属性进行初始化，空参在不需要给属性进行初始化，但是还要创建对象的时候使用</p>
+</blockquote>
+<h3 id="面向对象的四大特征"><a href="#面向对象的四大特征" class="headerlink" title="面向对象的四大特征"></a>面向对象的四大特征</h3><h4 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h4><ul>
+<li>对现实世界进行抽象，形成类</li>
+<li>研究事物的静态特征</li>
+<li>研究事物的动态特征</li>
+<li>类的对象之间的转换（产生对象之后就可以调用属性和方法）</li>
+</ul>
+<h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><ul>
+<li>提供构造方法</li>
+<li>静态块（做类的初始化工作）</li>
+<li>控制访问（private,default,protected,pubulic）(控制构造方法，控制属性的访问，控制方法的访问)</li>
+</ul>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><blockquote>
+<p>在遵守控制访问的前提下，子类能继承父类当中的属性(静态特征)和方法（动态特征）</p>
+</blockquote>
+<ul>
+<li>继承父类的属性（公开的和受保护的）</li>
+<li>继承父类的方法（公开的和受保护的）</li>
+<li>父子类在同一包当中，default也可以继承</li>
+</ul>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>动态是指同一个动作，作用在相同或不同的对象之间拥有不同的解释.</p>
+<ul>
+<li><p>重载，同一个类当中多态的体现（编译时多态）</p>
+</li>
+<li><p>重写,父子类当中多态的体现（运行时多态）</p>
+<p>多态的机制：</p>
+</li>
+<li><p>声明父类型的引用指向具体子类型的一个实例</p>
+</li>
+<li><p>运行时才去绑定</p>
+</li>
+<li><p>运行时可变</p>
+</li>
+</ul>
+<h2 id="第八天"><a href="#第八天" class="headerlink" title="第八天"></a>第八天</h2><h2 id="第九天"><a href="#第九天" class="headerlink" title="第九天"></a>第九天</h2><blockquote>
+<p>父类方法加abstract的原因是跟子类表明自己不会(不能实现)这个方法，强制子类重写这个方法</p>
+</blockquote>
+<p>接口本来就是抽象的，可省略abstract不写</p>
+<h2 id="第十二天"><a href="#第十二天" class="headerlink" title="第十二天"></a>第十二天</h2><h4 id="面试题-1"><a href="#面试题-1" class="headerlink" title="面试题"></a>面试题</h4><ul>
+<li>StringBuilder    在多线程下不能保证数据的安全(没有同步)，效率高</li>
+<li>StringBuffer    在多线程下不能保证数据的安全(同步)，效率低</li>
+</ul>
+<h2 id="第十三天"><a href="#第十三天" class="headerlink" title="第十三天"></a>第十三天</h2><h4 id="面试题-2"><a href="#面试题-2" class="headerlink" title="面试题"></a>面试题</h4><ul>
+<li>String str1 = “abc”;</li>
+<li>String str2 = new String(“abc”);</li>
+<li>Integer i1 = 128;</li>
+<li>Integer i2 = 128;</li>
+<li>String str3 = “a”;</li>
+<li>String str4 = “a”;</li>
+<li>System.out.println(str1.equals(str2));// true</li>
+<li>System.out.println(str1 == str2);// false</li>
+<li>System.out.println(i1 == i2);// false</li>
+<li>System.out.println(i1.equals(i2));// ture</li>
+<li>System.out.println(str3 == str4);// ture</li>
+<li>System.out.println(str3.equals(str4));// ture</li>
+</ul>
+<h4 id="类的调用公式"><a href="#类的调用公式" class="headerlink" title="类的调用公式"></a>类的调用公式</h4><p>1.普通类的调用</p>
+<pre><code>类名称 变量名称  = new 类名称();</code></pre><p>2.多态的调用</p>
+<pre><code>父类名称 变量名称 = new 子类名称();
+
+抽象类名称 变量名称 = new 子类名称();
+
+接口名称  变量名称 = new 子类名称();</code></pre><p>3.内部类的调用</p>
+<p>3.1 成员内部类</p>
+<pre><code>外部类名称.内部类名称 变量名称 = new 外部类名称().new 内部类名称();</code></pre><p>3.2 静态成员内部类</p>
+<pre><code>外部类名称.内部类名称 变量名称 = new 外部类名称.内部类名称();</code></pre><p>3.3 局部内部类</p>
+<pre><code>类名称 变量名称  = new 类名称();</code></pre><p>3.4 匿名内部类</p>
+<pre><code>1.抽象类名称 变量名称 = new 抽象类名称(){
+
+          //重写抽象方法
+};
+
+2.接口名称  变量名称 = new 接口名称(){
+         //重写抽象方法
+
+};</code></pre><h4 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h4><p>定义了算法族，分别封装起来，让它们之间可以互相替换（利用到了多态），此模式让算法的变化独立于使用算法的客户</p>
+<p>多态 ==&gt; 面向接口编程  interface</p>
+<h4 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h4><p>一种常用的对象创建型设计模式，此模式的核心精神是封装类中不变的部分，提取其中个性化善变的部分为独立类，通过依赖注入以达到解耦、复用和方便后期维护拓展的目的</p>
+<h2 id="第十四天"><a href="#第十四天" class="headerlink" title="第十四天"></a>第十四天</h2><h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><p>对象创建型的模式，把创建对象的责任掌握在自己手中（往回拉）</p>
+<p>官方定义：在它的核心结构中只包含一个被称为单例的特殊类。通过单例模式可以保证系统中一个类只有一个实例</p>
+<ul>
+<li><p>饿汉模式</p>
+<ul>
+<li>无论这个实例有没有被外部使用，一律创建<ul>
+<li>例如：<code>private static OnlineUser onlineUser = new OnlineUser();</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>懒汉模式</p>
+<ul>
+<li>啥时候用啥时候创建<ul>
+<li>例如：<code>private static OnlineUser onlineUser;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h4><p>提供一种方法顺序访问一个聚合（集合）对象中的各种元素，而又不暴露该对象的内部表示</p>
+<p>官方定义：当你需要访问一个聚合对象，而且不管这些对象是什么都需要遍历的时候，就应该考虑使用迭代器模式。另外，当需要对聚集有很多种方式遍历时，可以考虑去使用迭代器模式。迭代器模式为遍历不同的聚集结构提供如开始、下一个、是否结束、当前哪一项等统一的接口</p>
+<h4 id="多态的实现方式"><a href="#多态的实现方式" class="headerlink" title="多态的实现方式"></a>多态的实现方式</h4><blockquote>
+<p>实体类实现(entity)</p>
+</blockquote>
+<pre><code>class IntArray implements Iteerator&lt;Integer&gt; {//重写接口当中的抽象的方法}
+   1. new IntArray();</code></pre><blockquote>
+<p>匿名类实现</p>
+</blockquote>
+<pre><code>class ? implements Iterator&lt;Integer&gt; {//重写接口当中抽象的方法}
+    2. new Iterator&lt;Integer&gt;(){//重写接口当中抽象的方法}；</code></pre><ul>
+<li><p>Iterable:</p>
+<ul>
+<li>Iterator iterator(); //抽象的</li>
+</ul>
+</li>
+<li><p>Iterator:</p>
+<ul>
+<li>boolean hasNext();</li>
+<li>boolean next();</li>
+</ul>
+</li>
+</ul>
+<h4 id="面向对象-成员变量和局部变量的区别"><a href="#面向对象-成员变量和局部变量的区别" class="headerlink" title="面向对象(成员变量和局部变量的区别)"></a>面向对象(成员变量和局部变量的区别)</h4><p>成员变量和局部变量：<br>成员变量所属于对象，要看是否是对象的特性，比如人，人的姓名，年龄等<br>局部变量所属于方法，要看方法执行的时候，是否需要，如果需要就定义，好处是方法运行后就消失</p>
+<p>成员变量：</p>
+<p>类中方法外（位置），堆内存(成员变量属于对象，对象进堆内存)，有默认初始化值，<br>随着对象的调用而存在，随着对象的消失而消失</p>
+<p>局部变量：</p>
+<p>方法内定义或方法上声明（位置），栈内存(局部变量属于方法，对象进栈内存)，没有默认初始化值，<br>随着方法的调用而创建，随着方法的调用完毕（弹栈）而消失</p>
+<p>注意事项：<br>局部变量名称可以和成员变量名称一样，在方法中使用的时候，采用的是就近原则。</p>
+<p><strong>构造方法和setXxx方法的区别</strong> (构造方法Student s = new Student();)</p>
+<p>1.构造方法是用来给对象中的属性进行初始化的<br>2.setXxx是用来修改属性值的，在原对象的基础上</p>
+<p><strong>static</strong><br>共性用静态，特性用非静态</p>
+<h2 id="第十五天"><a href="#第十五天" class="headerlink" title="第十五天"></a>第十五天</h2><p>泛型的用法:</p>
+<p>1.泛型可以声明在类上面，也可以声明在方法上面<br>2.一个类可以有多个泛型，一个方法也可以有多个泛型<br>3.类在实例化之前必须指明泛型的具体类型<br>4.使用extends表示子类，super表示父类，?表示通配符</p>
+<h2 id="第十六天"><a href="#第十六天" class="headerlink" title="第十六天"></a>第十六天</h2><pre><code>Comparable =&gt; 实现了此接口的类的元素，拥有自然的顺序
+int comparaTo(T obj);
+
+ComParator =&gt; 此比较器规定了元素自定义的顺序
+int compare(T obj1, T obj2);</code></pre><h4 id="无限级分类"><a href="#无限级分类" class="headerlink" title="无限级分类"></a>无限级分类</h4><ul>
+<li><p>面向的对象</p>
+<ul>
+<li>抽象</li>
+<li>封装</li>
+<li>继承</li>
+</ul>
+</li>
+<li><p>双链表</p>
+</li>
+<li><p>递归</p>
+</li>
+</ul>
+<h2 id="第十七天"><a href="#第十七天" class="headerlink" title="第十七天"></a>第十七天</h2><ul>
+<li>HashSet无序</li>
+<li>所有的set当中的元素都不能重复，只能放一份儿</li>
+</ul>
+<p>HashiSet中庸</p>
+<h4 id="面试题-3"><a href="#面试题-3" class="headerlink" title="面试题"></a>面试题</h4><p>1.下面哪个集合类能保证以FIFO的顺序取出对象？</p>
+<p>A java.util.List<br>B java.util.LinkedHashSet<br>C java.util.HashSet<br>D java.util.TreeSet</p>
+<p>选B</p>
+<p>解析：<br>A List是接口<br>C 无序的<br>D 不是先进先出，是按照元素自然的顺序输出，或者加上排序器自定义顺序输出</p>
+<p>2.HashSet,LinkedHashSet,TreeSet的区别</p>
+<ul>
+<li>顺序：HashSet无序，LinkedHashSet有序(先进先出),TreeSet有序(自然顺序，自定义顺序)</li>
+<li>能否放null值：<ul>
+<li>Hash和LinkedHashSet能且只能放一个null值</li>
+<li>TreeSet当中只有一个元素的时候，能放null值，大于一个的时候不可以放(会比较，产生空指针异常)</li>
+</ul>
+</li>
+</ul>
+<p>3.ArrayList比LinkedList寻址(访问)快</p>
+<p>错：缺少随机两个字，应该是随机寻址快</p>
+<p>4.List是有序的</p>
+<p>错：List是接口，方法全是抽象的，可以说List的子类全是有序的</p>
+<p>5.Set是无序的</p>
+<p>错：Set是接口，它的子类，HashSet是无序的，LinkedHashSet和TreeSet是有序的</p>
+<p>6.List, Set, Map是否继承了Collection接口？</p>
+<p>错：Map没有继承</p>
+<p>7.Collection和Collcetions的区别？</p>
+<p>Collection是接口，是集合类当中顶层接口，<br>Collections是类，类中定义了很多跟集合类有关的静态方法</p>
+<p>8.Set怎样去重复</p>
+<p>Set当中的位置由hashCode()决定，</p>
+<p>去重需要两个方法：int hashCode();和 boolean equals()</p>
+<p>去重的保留：都只保留最后一个</p>
+<h2 id="第十八天"><a href="#第十八天" class="headerlink" title="第十八天"></a>第十八天</h2><p>Map中的key决定了Entry的位置</p>
+<p>单线程选择HashMap(无序，快)，多线程选择Hashtable(有序，不会出错)</p>
+<p>Set与Map的关系：<br>Set是一个特殊的Map，只有key，没有value的Map</p>
+<h2 id="第十九天"><a href="#第十九天" class="headerlink" title="第十九天"></a>第十九天</h2><ul>
+<li><p>线程2种实现方法：</p>
+<ul>
+<li>1.java.lang.Thread为java中的线程类，也就是说在java中实现线程要继承Thread</li>
+<li>2.实现java.lang.Runnable接口</li>
+</ul>
+</li>
+<li><p>线程的状态</p>
+<ul>
+<li>1.创建</li>
+<li>2.就绪（可调用）</li>
+<li>3.运行</li>
+<li>4.等待/睡眠，阻塞</li>
+<li>5.死亡</li>
+</ul>
+</li>
+<li><p>要保证锁定一定会被释放，就必须将unLock()放到finally{}中</p>
+</li>
+</ul>
+<p>异常捕捉格式：</p>
+<pre><code>try{
+ //可能产生异常的代码段
+ }catch(异常类型1 e){
+
+  //处理异常
+ }catch(异常类型2 e){
+   //处理异常
+ } finally{
+//无论有无异常都将执行的代码（任何情况都会执行）
+}</code></pre><ul>
+<li><p>try/catch:</p>
+<ul>
+<li><p>一个try语句可以跟多个catch语句。</p>
+</li>
+<li><p>catch异常时，先捕捉子类异常，再捕捉父类异常。否则会编译无法通过，报无法到达的捕捉块错误。</p>
+</li>
+<li><p>try，catch，finally必须紧跟，中间不能写除了注释之外的任何代码。</p>
+</li>
+<li><p>catch不能和finally同时省略。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>throw和throws的区别</p>
+<p>throw(抛出异常),用于向上抛异常，作用在catch语句当中。<br>throws(声明方法体会抛出哪些异常)，用于声明方法体所抛出的异常,作用在方法上面。</p>
+<p>throws :<br>1.throws(声明方法体会抛出哪些异常)，用于声明方法体所抛出的异常,作用在方法上面。</p>
+<p>2.throws子句中同时可以指明多个异常，之间用逗号隔开。</p>
+<p>3.如果声明了要抛出的异常，则本方法可以不处理，而由调用者处理。</p>
+<p>4.throws在向上抛的时候，可以向上抛抽象的异常（异常子类的父类）。</p>
+<p>5.若代码显式向上throw 异常时，则必须显式声明throws异常。</p>
+<h2 id="第二十天"><a href="#第二十天" class="headerlink" title="第二十天"></a>第二十天</h2><ul>
+<li><p>字符流：<br>  read()<br>  1.返回字符对应的ascii码(&gt;=0)<br>  2.当读取到末尾的时候，返回-1</p>
+<p>  read(char[] chars)<br>  1.返回读取的字符数<br>  2.当读取到文件末尾时返回-1</p>
+</li>
+<li><p>字节流：<br>  read() </p>
+<p>  1.返回的int(byte) [0,255]</p>
+<p>  2.当读取到文件末尾时返回-1</p>
+<p>  read(byte[] b)  </p>
+<p>  1.返回读取的字节数</p>
+<p>  2.当读取到文件末尾时返回-1</p>
+</li>
+<li><p>InputStream:<br>  我们把能够读取一个字节序列的对象称为输入流;Java中用java.io.InputStream来描述输入流基类 </p>
+</li>
+<li><p>OuputStream:<br>  我们把能够写入一个字节序列的对象称为输出流。java.io.OuputStream来描述输出流的基类</p>
+</li>
+</ul>
+<h2 id="第二十一天"><a href="#第二十一天" class="headerlink" title="第二十一天"></a>第二十一天</h2><p>int强转byte：<br>重复的：直接拿走</p>
+<p>溢出的：int型取反加一得出byte型<br>int    byte(取反加一)</p>
+<p>Data:byte char short int long float double String</p>
+<p>四个地址的区别：</p>
+<p>192.168.1.100 =&gt; 路由器给分配的IP<br>127.0.0.1 =&gt; 本机的IP<br>localhost =&gt; 域名<br><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a> =&gt; 万维网给的域名</p>
+<h2 id="第二十二天"><a href="#第二十二天" class="headerlink" title="第二十二天"></a>第二十二天</h2><p>使用sql语句的优点:<br>可以复用，不用再手动创建</p>
+<p>#<strong>进入数据库</strong></p>
+<p>数据定义语言DDL(Data Definition Language):用于创建对象，如：create table,alter table,drop table,create view,rename</p>
+<p>数据操纵语言DML(Data Manipulation Language)：如insert into,update,delete,select</p>
+<p>当字段的值当中出现了单引号’时，用单引号’对单引号’进行转译,与Java中的\转译类似</p>
+<ul>
+<li>算术运算符 + - * / 优先级：<ul>
+<li>乘和除的运算优先级高于加和减</li>
+<li>优先级相同的运算符是从左到右进行运算的</li>
+<li>可以使用小括号强制语句做出有限运算，并使语句运算顺序更为清晰</li>
+<li>日期计算，也可以使用+ -，单位为天(如：select sysdate + 1 from dual)</li>
+</ul>
+</li>
+</ul>
+<p>连接运算符||或concat(arg1, arg2)</p>
+<p>比较运算符&lt;,&gt;,&lt;=,&gt;=,=,!=,&lt;&gt;,is,is not,in,not in,between,like,any,all</p>
+<p>like(包含)：匹配运算符，只能用在字符串中<br>in：匹配列表值</p>
+<p>–% 通配符 匹配0个或无数个任意字符<br>–_ 通配符 匹配0个或1个任意字符</p>
+<hr>
+<p>添加数据</p>
+<pre><code>BEGIN
+  FOR i in 1..50
+    loop
+      INSERT into t_stu values(seq_stu.nextval,&apos;学生&apos; || i,i,&apos;001&apos; || i,&apos;&apos;,0,i,1);
+    end loop;
+END;</code></pre><p>导出数据</p>
+<ol>
+<li><p>用户<br> 创建用户名和密码<br> creat user ORACLE(用户名) identified by oracle(密码);<br> 为用户授予dba权限<br> grant dba to ORACLE with admin option;</p>
+</li>
+<li><p>对象(表，序列，存储过程，触发器，同义词，视图……)<br> 工具==&gt;导出用户对象</p>
+</li>
+<li><p>存储数据<br> 工具==&gt;导出表</p>
+</li>
+</ol>
+<p>笛卡儿积<br>{1，2} * {3，4，5}<br>{13，14，15，23，24，25}</p>
+<p>union与union的区别：<br>union去重，稍微慢一点儿</p>
+<p>表合并的前提条件：<br>总列数一样，列类型一样，列名一样</p>
+<p>–查询所有的学生,并按导师分组，显示每个组里面的平均年龄，最大学号，最晚入学日期，并显示导师的姓名，性别，年龄<br>–MAX(t.teacher_sex),MAX(t.teacher_age),因为是同一个老师，所以性别唯一，取一个就行，用随便一个组函数就行，比如max或min</p>
+<pre><code>SELECT AVG(s.stu_age),MAX(s.stu_code),MAX(s.stu_entry_date),t.teacher_id teacher_id,MAX(t.teacher_sex),MAX(t.teacher_age)
+FROM t_student3 s
+LEFT JOIN t_teacher3 t ON t.teacher_id = s.teacher_id
+GROUP BY t.teacher_id;</code></pre><h2 id="七周三天"><a href="#七周三天" class="headerlink" title="七周三天"></a>七周三天</h2><p>properties：键值对都是字符串的Map</p>
+<p>标识符无效：表名或列名错误</p>
+<p>Exception in thread “main” java.lang.ExceptionInInitializerError的原因：<br>一般是路径错了</p>
+<p>ORA-01747: user.table.column, table.column 或列说明无效<br>sql语句格式不正确</p>
+<h2 id="七周五天"><a href="#七周五天" class="headerlink" title="七周五天"></a>七周五天</h2><p>Integer的值可以为null，int的值不可以为null.</p>
+<h2 id="九周一天"><a href="#九周一天" class="headerlink" title="九周一天"></a>九周一天</h2><p>JavaScript</p>
+<p>通过字符串进行属性或方法的访问的时候创建的字符串对象是临时生成的，用完就会自动丢弃，原来的字符串并不会产生改变。</p>
+<h2 id="九周三天"><a href="#九周三天" class="headerlink" title="九周三天"></a>九周三天</h2><ul>
+<li><p>String的正则表达式匹配有两个</p>
+<ul>
+<li>matches(String regex)：通知此字符串是否匹配给定的正则表达式,参数regex用来匹配此字符串的正则表达式 返回：当且仅当此字符串匹配给定的正则表达式时，才返回 true </li>
+<li>search(regexp)：如果成功，搜索返回字符串中正则表达式的索引。否则，它返回- 1</li>
+</ul>
+</li>
+</ul>
+<p>正则表达式</p>
+<p>[]自带或含义，()表示组或优先</p>
+<h2 id="十周二天"><a href="#十周二天" class="headerlink" title="十周二天"></a>十周二天</h2><p>构造函数和原型方式各自的的缺陷：<br>构造函数：getXXX方法一样，每次定义多余<br>原型方式：静态属性XX都一样，太极端</p>
+<p>眼睛看不到的值：</p>
+<pre><code>disabled selected checked readonly [true,false]</code></pre><h2 id="十周四天"><a href="#十周四天" class="headerlink" title="十周四天"></a>十周四天</h2><pre><code>XXX（）;和onXXX的区别：
+submit(): 执行提交
+onsubmit: 执行提交完成后，还要执行什么</code></pre><h2 id="十一周一天"><a href="#十一周一天" class="headerlink" title="十一周一天"></a>十一周一天</h2><p>基本选择器的复合选择器之间用逗号隔开，取并集</p>
+<p>属性选择器的复合选择器之间直接连接，不能有任何符号或空格，取交集</p>
+<p><strong>regxp.exe()与regexp.test()的区别</strong></p>
+<p>RegExpObject.exec(string)：exec() 方法用于检索字符串中的正则表达式的匹配。检索字符串中指定的值。返回找到的值(该值是从0开始，然后加1(因为是区间))，并确定其位置</p>
+<p>RegExpObject.test(string)：test() 方法用于检测一个字符串是否匹配某个模式。检索字符串中指定的值。返回 true 或 false</p>
+<p>三种页面初始化方法</p>
+<p>1.window.onload = function(){};</p>
+<p>2.$(document).ready(function(){});</p>
+<p>3.$(function(){});</p>
+<h2 id="十一周三天"><a href="#十一周三天" class="headerlink" title="十一周三天"></a>十一周三天</h2><p>j2ee javaee Java企业版应用<br>j2se javase Java标准版应用</p>
+<h2 id="十二周一天"><a href="#十二周一天" class="headerlink" title="十二周一天"></a>十二周一天</h2><p>重定向：添加，修改，保存，删除<br>查询：查询</p>
+<p>1.存在主键外键(引用完整性约束)<br> 1.1 删除教师时，同时删除教师所带的学生<br> 1.2 删除教师时，把教师所带的学生的teacher_id设置为null<br> 在数据库里设置</p>
+<p>2.不存在主键外键<br> 2.1 删除教师时，同时删除教师所带的学生<br> 2.2 删除教师时，把教师所带的学生的teacher_id设置为null<br> 在代码中设置</p>
+<h2 id="十二周二天"><a href="#十二周二天" class="headerlink" title="十二周二天"></a>十二周二天</h2><pre><code>request.ContextPath = /项目名称</code></pre><p>session会话对象：</p>
+<p>作用于更广<br>三次握手，第三次开始正式的功能<br>保持时间为30分钟，但是关掉浏览器就直接销毁</p>
+<p>取根目录：</p>
+<p>链接里写${pageContext.request.contextPath}</p>
+<p>重定向里写request.getContextPath</p>
+<p>请求转发里不用写，直接在开始加/</p>
+<p>page = PageContext</p>
+<p>request = HttpServletRequest</p>
+<p>response = HttpServletResponse</p>
+<p>session = HttpSession（request.getSession();）</p>
+<p>application = ServletContext</p>
+<p>config = ServletConfig</p>
+<h3 id="SQL知识点"><a href="#SQL知识点" class="headerlink" title="SQL知识点"></a>SQL知识点</h3><p>按照伪序列rownum排序：<br><code>select page2.*
+  from (select page1.*,rownum rn
+      from (select s.* from T_STUDENT s order by s.stu_id) page1) page2
+where rn between ? and ?</code></p>
+<p>起始位置=(当前页号 - 1) * 每页个数 + 1<br>结束位置=当前页号 * 每页个数</p>
+<h3 id="总结知识点"><a href="#总结知识点" class="headerlink" title="总结知识点"></a>总结知识点</h3><p>1.unicode中文码%xx%xx%xx，为什么是六位？</p>
+<p>2.get请求是在head里，post请求是在body里</p>
+<h2 id="十四周三天"><a href="#十四周三天" class="headerlink" title="十四周三天"></a>十四周三天</h2><p>不建外键的原因：<br>环境多，导表麻烦</p>
+<p>适合放在缓存中的情况:<br>访问量大，更新次数少，网页缓存一般放在application中</p>
+<p>缓存的弊端:</p>
+<p>服务器重新启动，才能更新数据，这样太麻烦，所以直接更新缓存，不用重新启动服务器</p>
+<p>MyEclipse错误:</p>
+<p>Failed to initialize end point associated with Protocolhandler [“http-apr-80”] (Socket bind failed:):<br>因为MyEclipse异常退出，tomcat未停止，占用80端口，这时如果再启动tomcat会出现此错误。</p>
+<p><strong>控制台error：</strong></p>
+<p>无法转换为内部表示：可能是变量的数据类型转换不匹配（比如将Integer转换为String）</p>
+<p>java.lang.IllegalArgumentException: attempt to create saveOrUpdate event with null entity（尝试用空实体创建saveOrUpdate事件）异常的易被忽略的原因:<br>就是在Action的代码里面缺少实体类的set方法</p>
+<p><strong>servelt的4个步骤：</strong></p>
+<pre><code>1.接收参数
+2.调模型层
+3.转发参数
+4.做响应：请求转发（或重定向）</code></pre><hr>
+<h2 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate:"></a>Hibernate:</h2><p><strong>三个步骤：</strong></p>
+<p>1.注册驱动<br>2.执行连接 ==》打开会话</p>
+<p>3.编译sql<br>4.执行sql<br>5.从游标中遍历数据 ==》save/update/delete/select</p>
+<p>6.关闭游标，statement，连接 ==》关闭会话</p>
+<p><strong>Hibernate中FetchMode.JOIN FetchMode.SELECT FetchMode.SUBSELECT介绍</strong></p>
+<p>@Fetch(FetchMode.JOIN) 会使用left join查询 只产生一条sql语句<br>@Fetch(FetchMode.SELECT) 会产生N+1条sql语句<br>@Fetch(FetchMode.SUBSELECT) 产生两条sql语句 第二条语句使用id in (…..)查询出所有关联的数据</p>
+<h2 id="Struts"><a href="#Struts" class="headerlink" title="Struts"></a>Struts</h2><p><strong>struts基本流程：</strong></p>
+<p>1.view：填写正确的控制器连接(eg:/empl/list)<br>2.struts.xml：定义正确的/namespace/active，和要转发的视图(eg:/pages/employee/list.jsp)或要重定向的控制器<br>3.Controller：定义需要调用的方法</p>
+<p><strong>struts原理：</strong></p>
+<p>struts的本质是一个过滤器，将别的控制器(里面所有的请求)都拦截到自己的控制器里。</p>
+<p><strong>可做面试题：</strong></p>
+<p>el表达式：${[‘jiao’]}</p>
+<p>${param[‘a’]}与${param.a}:<br>[]里的引号不能省，表示常量，去掉就变成从四大作用域中取a的值</p>
+<p>左连接与左外连接，没有区别，</p>
+<p>save,update与saveOrUpdate：<br>没有区别，saveOrUpdate更方便</p>
+<p><strong>杂烩集锦：</strong></p>
+<p>delete:<br>只设置了id，别的属性没有怎么删的，为甚么不删除员工，因为sql语句：delete from Table where id=？</p>
+<p>集合：<br>Collection包含List,Set，所以尽量用Colletion，包容性好</p>
+<p>自增increment不能用于多线程</p>
+<p>接口中的修饰符不写默认是public</p>
+<p>匿名类在类里执行时的事件一般在做开始，相当于缓存的时间</p>
+<p>sql语句：</p>
+<p><code>select TEACHER_ID, TEACHER_NAME, TEACHER_AGE, ``TEACHER_SEX, TEACHER_CODE, COLLEGE_ID, TEACHER_LOGO,</code> <code>ATTACHMENT_PATH, ATTACHMENT_NAME from ORACLE.T_TEACHER</code><br><code>where (TEACHER_NAME like &#39;%&#39; || &#39;&#39;) or (1=1) or ``(teacher_name = &#39;&#39; || &#39;%&#39;)</code></p>
+<p>‘%’ || ‘’ : 做(字符串)与运算,变成’%’(即teacher_name like ‘%’),其中三个括号里的值都是true</p>
+<p><em>数据库翻页查询公式：</em></p>
+<pre><code>select pager2.* from (
+
+  select pager1.*,rownum rn from (
+         select * from 表名 order by 列名
+
+  )pager1
+
+)pager2
+
+where rn between (pageNo - 1) * (pageCount) + 1 and (pageNo) * (pageCount)</code></pre><p><em>数据库循环插值公式：</em></p>
+<pre><code>declare 
+    i number;
+    begin
+    for i in 1..50
+    loop
+       insert into 表名 (列名,......) 
+       values(列名的值,.....);
+    end loop;
+ end;</code></pre><p>集合中的参数使用了注解就不能使用默认的名字。</p>
+<p>数组越界String index out of range: -1 </p>
+<p><strong>length,length(),size()详解及区别：</strong></p>
+<p>length属性:用于获取数组长度。<br>length()方法：用于获取字符串长度。<br>size()方法：用于获取泛型集合有多少个元素。</p>
+<p><strong>什么时候用size()?什么时候用length?什么时候用length()?</strong></p>
+<p>String类有length的方法，<br>数组有length的属性，<br>集合(List)有size的方法</p>
+<p><strong>为什么控制器Controller没有spring的标识：</strong><br>因为spring扫描控制器是在spring—mvc.xml里，在web.xml启动时才被spring启用，只有在applicationContext.xml里才会自动加上spring标识</p>
+<p><strong>一对多，多对多，更新时：</strong></p>
+<p>先全删除以前(旧)的，再添加现在应有(新)的，</p>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><p><strong>error:</strong><br>Class’org.springframework.orm.hibernate3.LocalSessionFactoryBean’ not found:没有加Spring 3.1 Persistence Libraries（spring 持久化包）.</p>
+<p><strong>applicationContext.xml流程：</strong></p>
+<p>1.控制器引用Service<br>2.Service引用dao<br>3.dao引用session工厂<br>4.session工厂引用数据源<br>5.数据源查数据库</p>
+<p><strong>spring的xml3中注入方式：</strong></p>
+<p>1.xml注入<br>2.自动注入(byName,byType)<br>3.注解注入</p>
+<p><strong>error:</strong><br>Exception in thread “main” org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named ‘userController’ is defined</p>
+<p>文件命名空间，文件位置</p>
+<p><strong>byName与byType的区别:</strong></p>
+<p>byName: beans配置属性default-autowire:”byName” 按照bean的名称(唯一id)， 自动装配property</p>
+<p>byType: beans配置属性default-autowire:”byType” 按照bean的class类型， 自动装配property(前提是session的default-autowire属性是no)，byType配置不能有两个bean引用的class中有一样的类型的属性，否则报错</p>
+<p><strong>使用注解装配步骤：</strong></p>
+<p>1.包内加注解:<br>    @Controller,申请控制器<br>    @Service,申请service<br>    @Repository,申请dao，数据仓库<br>    @Autowired，自动注入<br>2.applicationContext.xml配置:</p>
+<p>命名空间：<br>    <code>xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</code><br>schema:<br>    <code>xsi:schemaLocation=&quot;http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd&quot;</code></p>
+<p>3.告诉spring那些类有注解：</p>
+<p>applicationContext.xml下配置：<br>    <code>&lt;context:component-scan base-package=&quot;要扫描的包含注解的包名(eg:com.oracle.model)&quot; /&gt;</code></p>
+<p>切面编程三个知识点：切面，切点，通知。</p>
+<p>反转是由spring给的。</p>
+<p>autoWired按照byType，byName</p>
+<p><strong>运行时绑定与运行时可变？</strong></p>
+<p>运行时才绑定，运行时才变出来，但可以是任何代理，代理可以不一样，所以是可变</p>
+<p><strong>没有ioc就没有aop？</strong></p>
+<p>因为有了控制反转(eg:IUserDao userDao)，才能有切面编程(运行时绑定，运行时可变)</p>
+<h1 id="SSH"><a href="#SSH" class="headerlink" title="SSH:"></a>SSH:</h1><p>因为ssh，struts和spring会因为控制器而冲突，发生空指针异常，所以需要引struts 2 spring Liability来解决</p>
+<h1 id="SSM"><a href="#SSM" class="headerlink" title="SSM:"></a>SSM:</h1><p><strong>Mapper.xml配置中的符号#和$:</strong></p>
+<pre><code># 使用了预编译
+
+$ 未使用预编译</code></pre><p><strong>运行时绑定和可变：</strong></p>
+<p>运行时绑定：运行时才会绑定了一个代理</p>
+<p>运行时可变：运行时可以有多个代理插入</p>
+<p><strong>连接池：</strong></p>
+<p>连接池是创建和管理一个连接的缓冲池的技术，这些连接准备好被任何需要它们的线程使用。</p>
+<p>连接池主要的优点有：<br>1.减少连接创建时间<br>虽然与其它数据库相比 GBase 提供了较为快速连接功能，但是创建新的 JDBC 连接仍会招致网络和 JDBC 驱动的开销。如果这类连接是“循环”使用的，使用该方式这些花销就可避免。<br>2.简化的编程模式<br>当使用连接池时，每一个单独的线程能够像创建了一个自己的 JDBC 连接一样操作，允许用户直接使用JDBC编程技术。<br>3.受控的资源使用<br>如果用户不使用连接池，而是每当线程需要时创建一个新的连接，那么用户的应用程序的资源使用会产生非常大的浪费并且可能会导致高负载下的异常发生。</p>
+<p>数据库连接池的主要操作如下：<br>（1）建立数据库连接池对象（服务器启动）。<br>（2）按照事先指定的参数创建初始数量的数据库连接（即：空闲连接数）。<br>（3）对于一个数据库访问请求，直接从连接池中得到一个连接。如果数据库连接池对象中没有空闲的连接，且连接数没有达到最大（即：最大活跃连接数），创建一个新的数据库连接。<br>（4）存取数据库。<br>（5）关闭数据库，释放所有数据库连接（此时的关闭数据库连接，并非真正关闭，而是将其放入空闲队列中。如实际空闲连接数大于初始空闲连接数则释放连接）。<br>（6）释放数据库连接池对象（服务器停止、维护期间，释放数据库连接池对象，并释放所有连接）。</p>
+<p>ssm遇到的问题：</p>
+<p>认识spring配置的注解：mvc：annotation-driven</p>
+<p>/表示不拦jsp<br>/*拦所有的文件</p>
+<p>struts：多例模式，有成员变量，来一次请求，实例化(new)一次</p>
+<p>spring：单例模式(只实例化一次)，没有成员变量,</p>
+<p>监听：在servlet初始化的时候，才发起请求，读controller</p>
+<hr>
+<p>控制器里的方法上的参数Integer stuId：</p>
+<p>写在参数里的参数是aop代理controller接收了参数</p>
+<p><strong>java反射：</strong></p>
+<p>getMethod:必须是public才能找到<br>getDeclaredMethod 声明过就能找到</p>
+<p>method.getParameterAnnotations()：获得方法的参数的注解[][]</p>
+<p>method.getAnnotations()：获得方法的注解[]</p>
+<p><strong>文件的位置关系：</strong></p>
+<p>WebRoot下的文件可以随意访问，这里一般放公共的东西，e</p>
+<p>WebRoot/WEB-INF下的文件不可以随便访问，这里面放的是配置的文件，只能控制器带着进去</p>
+<p>为什么做重定向：</p>
+<p>请求转发直奔最后一个环节，没有暴露在互联网下，需要通过查询控制器查到数据，再到视图<br>list.jsp=》controller(XX)=&gt;list=&gt;list.jsp</p>
+<p>重定向：<br>“redirect:list”：正确<br>“forward:list”：带参数，错误<br>“student/list”:直奔视图，错误</p>
+<p><strong>面试题：</strong></p>
+<p>jquery对象$()转dom对象：</p>
+<p>$()[0]<br>$().get(0)</p>
+<p>dom对象转jquery对象$():<br>$(dom)</p>
+<p><strong>mybatis 配置文件报错:”Referenced file contains errors(file:/D:/config/ mybatis-3-mapper.dtd)：</strong></p>
+<p>Widow=&gt;MyEclipse=&gt;Files and Editors=&gt;XML=&gt;XML Catalog=&gt;add…</p>
+<p>添加的是mybatis\org\apache\ibatis\builder\xmlmybatis-3-mapper.dtd</p>
+<p>@JsonIgnore：方法和变量上都可以标注</p>
+<p><strong>service和IService一样，为什么要创建两个？</strong></p>
+<p>因为aop需要执行切面编程，aop就是接口service的子类，所以创建IService的意义就在这</p>
+<p><strong>保存角色信息步骤：(没有设置，报错为无效列类型111)</strong></p>
+<p>1.保存角色</p>
+<p>xml配置：<br>使用生成主键useGeneratedKeys=”true”，主键列keyColumn=”role_id”，对应的对象属性keyProperty=”roleId”</p>
+<p>2.设置(保存)权限 2.1删除旧权限，2.2保存新权限</p>
+<p><strong>拦截的问题：</strong><br>优先走具体的路径(eg:<em>.js,/images/</em>)，再走抽象的路径(/)</p>
+<p><strong>打开二级缓存：</strong></p>
+<p>1.xxMapper.xml中的mapper下，加上<cache></cache></p>
+<p>2.xx.java实现序列化接口</p>
+<p><strong>Session缓存：</strong></p>
+<p>将信息放到session缓存中，直接登录时查一次</p>
+
+    </div>
+
+    
+    
+    
+      
+      <div>
+      
+        
+
+      
+      </div>
+
+      <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----------本文结束<i class="fa fa-hand-peace-o"></i>感谢您的阅读-----------</div>
+    
+</div>
+
+      
+      </div>
+        
+      
+
+      <footer class="post-footer">
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/12/26/rabbitmq服务启动失败/" rel="next" title="rabbitmq服务启动失败">
+                  <i class="fa fa-chevron-left"></i> rabbitmq服务启动失败
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/12/26/jira搭建教程/" rel="prev" title="jira搭建教程">
+                  jira搭建教程 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NjAwMy8yMjUxNA=="></div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="Mr.Jiao">
+  <p class="site-author-name" itemprop="name">Mr.Jiao</p>
+  <div class="site-description motion-element" itemprop="description">理想必须热爱</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">49</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://weibo.com/u/5731326417" title="Weibo &rarr; https://weibo.com/u/5731326417" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://github.com/jiaoht" title="GitHub &rarr; https://github.com/jiaoht" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://blog.csdn.net/weixin_40375601" title="CSDN &rarr; https://blog.csdn.net/weixin_40375601" rel="noopener" target="_blank"><i class="fa fa-fw fa-rotate-right"></i></a>
+      </span>
+    
+  </div>
+
+
+  <div class="links-of-blogroll motion-element links-of-blogroll-block">
+    <div class="links-of-blogroll-title">
+      <i class="fa  fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.jianshu.com/p/ace7e6b9b2bc" title="https://www.jianshu.com/p/ace7e6b9b2bc" rel="noopener" target="_blank">hexo-next主题创建个人博客</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://www.jianshu.com/p/1f8107a8778c" title="https://www.jianshu.com/p/1f8107a8778c" rel="noopener" target="_blank">hexo搭建个人博客</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" title="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" rel="noopener" target="_blank">hexo的next主题个性化配置教程</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一天"><span class="nav-number">1.</span> <span class="nav-text">第一天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">1.1.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类与公开类"><span class="nav-number">1.2.</span> <span class="nav-text">类与公开类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成帮助文档"><span class="nav-number">1.3.</span> <span class="nav-text">生成帮助文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二天"><span class="nav-number">2.</span> <span class="nav-text">第二天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局变量和局部变量的区别"><span class="nav-number">2.1.</span> <span class="nav-text">全局变量和局部变量的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试题"><span class="nav-number">2.2.</span> <span class="nav-text">面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#以下哪一个数据类型不能作用在switch-case语句当中："><span class="nav-number">2.2.1.</span> <span class="nav-text">以下哪一个数据类型不能作用在switch case语句当中：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三天"><span class="nav-number">3.</span> <span class="nav-text">第三天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">3.1.</span> <span class="nav-text">数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四天"><span class="nav-number"></span> <span class="nav-text">第四天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">0.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类类型"><span class="nav-number">0.2.</span> <span class="nav-text">类类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#升序排列-使用元素自然的顺序排列"><span class="nav-number">0.3.</span> <span class="nav-text">升序排列(使用元素自然的顺序排列)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#降序排列（自定义排列顺序）"><span class="nav-number">0.4.</span> <span class="nav-text">降序排列（自定义排列顺序）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#汉语排序"><span class="nav-number">0.5.</span> <span class="nav-text">汉语排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组拷贝"><span class="nav-number">0.6.</span> <span class="nav-text">数组拷贝</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五天"><span class="nav-number">1.</span> <span class="nav-text">第五天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性结构的四大特征"><span class="nav-number">1.1.</span> <span class="nav-text">线性结构的四大特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的概念"><span class="nav-number">1.2.</span> <span class="nav-text">函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的定义"><span class="nav-number">1.3.</span> <span class="nav-text">函数的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的语法"><span class="nav-number">1.4.</span> <span class="nav-text">函数的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名规范"><span class="nav-number">1.5.</span> <span class="nav-text">命名规范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六天"><span class="nav-number">2.</span> <span class="nav-text">第六天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七天"><span class="nav-number">3.</span> <span class="nav-text">第七天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">4.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象的四大特征"><span class="nav-number">4.1.</span> <span class="nav-text">面向对象的四大特征</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象"><span class="nav-number">4.1.1.</span> <span class="nav-text">抽象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装"><span class="nav-number">4.1.2.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">4.1.3.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态"><span class="nav-number">4.1.4.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八天"><span class="nav-number">5.</span> <span class="nav-text">第八天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第九天"><span class="nav-number">6.</span> <span class="nav-text">第九天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十二天"><span class="nav-number">7.</span> <span class="nav-text">第十二天</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#面试题-1"><span class="nav-number">7.0.1.</span> <span class="nav-text">面试题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十三天"><span class="nav-number">8.</span> <span class="nav-text">第十三天</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#面试题-2"><span class="nav-number">8.0.1.</span> <span class="nav-text">面试题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类的调用公式"><span class="nav-number">8.0.2.</span> <span class="nav-text">类的调用公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#策略模式"><span class="nav-number">8.0.3.</span> <span class="nav-text">策略模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工厂方法"><span class="nav-number">8.0.4.</span> <span class="nav-text">工厂方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十四天"><span class="nav-number">9.</span> <span class="nav-text">第十四天</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单例模式"><span class="nav-number">9.0.1.</span> <span class="nav-text">单例模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代器模式"><span class="nav-number">9.0.2.</span> <span class="nav-text">迭代器模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态的实现方式"><span class="nav-number">9.0.3.</span> <span class="nav-text">多态的实现方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#面向对象-成员变量和局部变量的区别"><span class="nav-number">9.0.4.</span> <span class="nav-text">面向对象(成员变量和局部变量的区别)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十五天"><span class="nav-number">10.</span> <span class="nav-text">第十五天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十六天"><span class="nav-number">11.</span> <span class="nav-text">第十六天</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无限级分类"><span class="nav-number">11.0.1.</span> <span class="nav-text">无限级分类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十七天"><span class="nav-number">12.</span> <span class="nav-text">第十七天</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#面试题-3"><span class="nav-number">12.0.1.</span> <span class="nav-text">面试题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十八天"><span class="nav-number">13.</span> <span class="nav-text">第十八天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十九天"><span class="nav-number">14.</span> <span class="nav-text">第十九天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二十天"><span class="nav-number">15.</span> <span class="nav-text">第二十天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二十一天"><span class="nav-number">16.</span> <span class="nav-text">第二十一天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二十二天"><span class="nav-number">17.</span> <span class="nav-text">第二十二天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七周三天"><span class="nav-number">18.</span> <span class="nav-text">七周三天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七周五天"><span class="nav-number">19.</span> <span class="nav-text">七周五天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九周一天"><span class="nav-number">20.</span> <span class="nav-text">九周一天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九周三天"><span class="nav-number">21.</span> <span class="nav-text">九周三天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十周二天"><span class="nav-number">22.</span> <span class="nav-text">十周二天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十周四天"><span class="nav-number">23.</span> <span class="nav-text">十周四天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一周一天"><span class="nav-number">24.</span> <span class="nav-text">十一周一天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一周三天"><span class="nav-number">25.</span> <span class="nav-text">十一周三天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二周一天"><span class="nav-number">26.</span> <span class="nav-text">十二周一天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二周二天"><span class="nav-number">27.</span> <span class="nav-text">十二周二天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL知识点"><span class="nav-number">27.1.</span> <span class="nav-text">SQL知识点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结知识点"><span class="nav-number">27.2.</span> <span class="nav-text">总结知识点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十四周三天"><span class="nav-number">28.</span> <span class="nav-text">十四周三天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hibernate"><span class="nav-number">29.</span> <span class="nav-text">Hibernate:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Struts"><span class="nav-number">30.</span> <span class="nav-text">Struts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">31.</span> <span class="nav-text">Spring</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH"><span class="nav-number"></span> <span class="nav-text">SSH:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSM"><span class="nav-number"></span> <span class="nav-text">SSM:</span></a></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Jiao</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">72k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">1:05</span>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共20.4k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+
+    
+  <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d537b4ea24d2f1f" async="async"></script>
+</div>
+
+  
+<script src="/lib/needsharebutton/needsharebutton.js"></script>
+<script>
+</script>
+
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 20304,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+  <script type="text/javascript" src="/js/src/click-love.js"></script>
+  
+  
+
+  <!--  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"> </script>  -->
+
+  <!--  -->
+
+</body>
+</html>
