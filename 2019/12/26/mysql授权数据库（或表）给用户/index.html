@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="红桃jiao的博客">
 <meta property="og:description" content="授权所有的数据库和表给所有的用户GRANT ALL PRIVILEGES ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED BY &amp;#39;passwd&amp;#39; WITH GRANT OPTION; 授权所有的db数据库的table表给所有的用户GRANT ALL PRIVILEGES ON db.table TO &amp;#39;root&amp;#39;@&amp;#">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-26T09:00:35.792Z">
+<meta property="og:updated_time" content="2019-12-27T03:23:54.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql授权数据库（或表）给用户">
 <meta name="twitter:description" content="授权所有的数据库和表给所有的用户GRANT ALL PRIVILEGES ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED BY &amp;#39;passwd&amp;#39; WITH GRANT OPTION; 授权所有的db数据库的table表给所有的用户GRANT ALL PRIVILEGES ON db.table TO &amp;#39;root&amp;#39;@&amp;#">
@@ -330,11 +330,19 @@
                 
               
 
-              <time title="创建时间：2019-12-26 17:00:00 / 修改时间：17:00:35" itemprop="dateCreated datePublished" datetime="2019-12-26T17:00:00+08:00">2019-12-26</time>
+              <time title="创建时间：2019-12-26 17:00:00" itemprop="dateCreated datePublished" datetime="2019-12-26T17:00:00+08:00">2019-12-26</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-27 11:23:54" itemprop="dateModified" datetime="2019-12-27T11:23:54+08:00">2019-12-27</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -368,7 +376,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>290</span>
+              <span>352</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -393,6 +401,7 @@
       
         <p>授权所有的数据库和表给所有的用户<br><code>GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;passwd&#39; WITH GRANT OPTION;</code></p>
 <p>授权所有的db数据库的table表给所有的用户<br><code>GRANT ALL PRIVILEGES ON db.table TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;passwd&#39; WITH GRANT OPTION;</code></p>
+<p>删除某个用户的所有权限：<br>DELETE FROM user Where User=’test’ and Host=’localhost’;</p>
 <p>刷新数据库<br><code>flush privileges;</code></p>
 <p>查询表权限<br><code>select User, host from mysql.user;</code></p>
 

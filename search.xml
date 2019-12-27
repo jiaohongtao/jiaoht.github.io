@@ -518,6 +518,7 @@
     <url>/2019/12/26/mysql%E6%8E%88%E6%9D%83%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E6%88%96%E8%A1%A8%EF%BC%89%E7%BB%99%E7%94%A8%E6%88%B7/</url>
     <content><![CDATA[<p>授权所有的数据库和表给所有的用户<br><code>GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;passwd&#39; WITH GRANT OPTION;</code></p>
 <p>授权所有的db数据库的table表给所有的用户<br><code>GRANT ALL PRIVILEGES ON db.table TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;passwd&#39; WITH GRANT OPTION;</code></p>
+<p>删除某个用户的所有权限：<br>DELETE FROM user Where User=’test’ and Host=’localhost’;</p>
 <p>刷新数据库<br><code>flush privileges;</code></p>
 <p>查询表权限<br><code>select User, host from mysql.user;</code></p>
 ]]></content>
