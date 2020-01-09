@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>jenkins搭建</title>
+    <url>/2020/01/09/jenkins%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p>下载jenkins(这个是清华的源)：<br><code>wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm</code></p>
+<p>提示：<del>如果没有wget，执行后再下载jenkins的rpm包：<br><code>yum install -y wget</code></del> </p>
+<p>安装jenkins：<br><code>rpm -ivh jenkins-2.190.2-1.1.noarch.rpm</code></p>
+<p>启动Jenkins：<br>systemctl start jenkins</p>
+<hr>
+<p><strong>问题解决：</strong></p>
+<ul>
+<li><p>Jenkins登录页面密码查看路径：<br><code>cat /var/lib/jenkins/secrets/initialAdminPassword</code></p>
+</li>
+<li><p>查看admin密码,这里是加密的密码：<br><code>cat /var/lib/jenkins/users/admin_*/config.xml</code></p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;passwordHash&gt;#jbcrypt:$2a$10$MiIVR0rr/UhQBqT.bBq0QehTiQVqgNpUGyWW2nJObaVAM/2xSQdSq&lt;/passwordHash&gt;</span><br></pre></td></tr></table></figure>
+
+<p>  如果忘记密码需要修改的话，可以将我的这个替换成你的这里部分重启，密码为123456。</p>
+</li>
+<li><p>如果提示该Jenkins示例似乎离线：<br>则需要将更新的源替换，我使用的是清华的源：<br>网页输入：<a href="http://ip:port/pluginManager/advanced" target="_blank" rel="noopener">http://ip:port/pluginManager/advanced</a><br>修改最下面的URL为：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json</a></p>
+</li>
+<li><p>如果需要java环境，则安装jdk：<br><code>yum install -y java-1.8.0-openjdk-devel.x86_64</code></p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>idea报错：java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java</title>
     <url>/2019/12/26/idea%E6%8A%A5%E9%94%99%EF%BC%9Ajava-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/</url>
     <content><![CDATA[<p>java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java.library.path, no leveldbjni-1.8 in java.library.path, C:\Windows\System32\leveldbjni.dll: Can’t find dependent libraries, C:\Users\dajiaotao\AppData\Local\Temp\leveldbjni-64-1-1989621817943305095.8: Can’t find dependent libraries]</p>

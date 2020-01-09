@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaoht.github.io/"/>
-  <updated>2019-12-26T09:37:06.585Z</updated>
+  <updated>2020-01-09T09:39:19.944Z</updated>
   <id>https://jiaoht.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jenkins搭建</title>
+    <link href="https://jiaoht.github.io/2020/01/09/jenkins%E6%90%AD%E5%BB%BA/"/>
+    <id>https://jiaoht.github.io/2020/01/09/jenkins搭建/</id>
+    <published>2020-01-09T09:39:06.000Z</published>
+    <updated>2020-01-09T09:39:19.944Z</updated>
+    
+    <content type="html"><![CDATA[<p>下载jenkins(这个是清华的源)：<br><code>wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm</code></p><p>提示：<del>如果没有wget，执行后再下载jenkins的rpm包：<br><code>yum install -y wget</code></del> </p><p>安装jenkins：<br><code>rpm -ivh jenkins-2.190.2-1.1.noarch.rpm</code></p><p>启动Jenkins：<br>systemctl start jenkins</p><hr><p><strong>问题解决：</strong></p><ul><li><p>Jenkins登录页面密码查看路径：<br><code>cat /var/lib/jenkins/secrets/initialAdminPassword</code></p></li><li><p>查看admin密码,这里是加密的密码：<br><code>cat /var/lib/jenkins/users/admin_*/config.xml</code></p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;passwordHash&gt;#jbcrypt:$2a$10$MiIVR0rr/UhQBqT.bBq0QehTiQVqgNpUGyWW2nJObaVAM/2xSQdSq&lt;/passwordHash&gt;</span><br></pre></td></tr></table></figure><p>  如果忘记密码需要修改的话，可以将我的这个替换成你的这里部分重启，密码为123456。</p></li><li><p>如果提示该Jenkins示例似乎离线：<br>则需要将更新的源替换，我使用的是清华的源：<br>网页输入：<a href="http://ip:port/pluginManager/advanced" target="_blank" rel="noopener">http://ip:port/pluginManager/advanced</a><br>修改最下面的URL为：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json</a></p></li><li><p>如果需要java环境，则安装jdk：<br><code>yum install -y java-1.8.0-openjdk-devel.x86_64</code></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;下载jenkins(这个是清华的源)：&lt;br&gt;&lt;code&gt;wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm&lt;/code&gt;&lt;/p&gt;
+&lt;p
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>idea报错：java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java</title>
@@ -523,34 +545,6 @@
     
     
       <category term="Dialog的使用方法" scheme="https://jiaoht.github.io/tags/Dialog%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python ValueError: too many values to unpack</title>
-    <link href="https://jiaoht.github.io/2019/12/26/ValueError-too-many-values-to-unpack/"/>
-    <id>https://jiaoht.github.io/2019/12/26/ValueError-too-many-values-to-unpack/</id>
-    <published>2019-12-26T09:10:00.000Z</published>
-    <updated>2019-12-26T09:11:23.180Z</updated>
-    
-    <content type="html"><![CDATA[<p>错误代码:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def update_handle(request):</span><br><span class="line">_get = request.POST</span><br><span class="line">TaskDetailTwo.objects.get(_get[&quot;id&quot;])</span><br><span class="line">略略略</span><br></pre></td></tr></table></figure><p>正确代码:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def update_handle(request):</span><br><span class="line">_get = request.POST</span><br><span class="line">TaskDetailTwo.objects.get(id=_get[&quot;id&quot;])</span><br><span class="line">略略略</span><br></pre></td></tr></table></figure><p>这是因为该方法的条件中未写对应数据库的字段名，filter等方法等同。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;错误代码:&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;b
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="https://jiaoht.github.io/categories/Python/"/>
-    
-    
-      <category term="ValueError: too many values to unpack" scheme="https://jiaoht.github.io/tags/ValueError-too-many-values-to-unpack/"/>
-    
-      <category term="Python" scheme="https://jiaoht.github.io/tags/Python/"/>
     
   </entry>
   
