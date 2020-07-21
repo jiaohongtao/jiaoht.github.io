@@ -92,18 +92,18 @@
   </script>
 
 
-  <meta name="description" content="默认情况下，@Controller返回页面，@RestController返回数据。 但是在有些情况下需要在被@RestController的注解时返回页面的，我们就需要用到视图ModelAndView： 12345@RequestMapping(value=&amp;quot;/tologin&amp;quot;, method=RequestMethod.GET)    public ModelAndView">
+  <meta name="description" content="默认情况下，@Controller返回页面，@RestController返回数据。 但是在有些情况下需要在被@RestController的注解时返回页面的，我们就需要用到视图ModelAndView： 12345@RequestMapping(value=&quot;/tologin&quot;, method=RequestMethod.GET)    public ModelAndView login()&amp;#">
 <meta name="keywords" content="@Controller与@RestController,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于注解@Controller和@RestController返回页面">
 <meta property="og:url" content="https://jiaoht.github.io/2019/12/26/关于注解-Controller和-RestController返回页面/index.html">
 <meta property="og:site_name" content="红桃jiao的博客">
-<meta property="og:description" content="默认情况下，@Controller返回页面，@RestController返回数据。 但是在有些情况下需要在被@RestController的注解时返回页面的，我们就需要用到视图ModelAndView： 12345@RequestMapping(value=&amp;quot;/tologin&amp;quot;, method=RequestMethod.GET)    public ModelAndView">
+<meta property="og:description" content="默认情况下，@Controller返回页面，@RestController返回数据。 但是在有些情况下需要在被@RestController的注解时返回页面的，我们就需要用到视图ModelAndView： 12345@RequestMapping(value=&quot;/tologin&quot;, method=RequestMethod.GET)    public ModelAndView login()&amp;#">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2020-07-21T01:27:05.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于注解@Controller和@RestController返回页面">
-<meta name="twitter:description" content="默认情况下，@Controller返回页面，@RestController返回数据。 但是在有些情况下需要在被@RestController的注解时返回页面的，我们就需要用到视图ModelAndView： 12345@RequestMapping(value=&amp;quot;/tologin&amp;quot;, method=RequestMethod.GET)    public ModelAndView">
+<meta name="twitter:description" content="默认情况下，@Controller返回页面，@RestController返回数据。 但是在有些情况下需要在被@RestController的注解时返回页面的，我们就需要用到视图ModelAndView： 12345@RequestMapping(value=&quot;/tologin&quot;, method=RequestMethod.GET)    public ModelAndView login()&amp;#">
   <link rel="canonical" href="https://jiaoht.github.io/2019/12/26/关于注解-Controller和-RestController返回页面/">
 
 
@@ -386,7 +386,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>660</span>
+              <span>600</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -411,10 +411,10 @@
       
         <p>默认情况下，@Controller返回页面，@RestController返回数据。</p>
 <p>但是在有些情况下需要在被@RestController的注解时返回页面的，我们就需要用到视图ModelAndView：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(value=&quot;/tologin&quot;, method=RequestMethod.GET)</span><br><span class="line">    public ModelAndView login()&#123;</span><br><span class="line">    ModelAndView mv = new ModelAndView(&quot;index&quot;);</span><br><span class="line">    return mv;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/tologin"</span>, method=RequestMethod.GET)</span><br><span class="line">    <span class="keyword">public</span> <span class="function">ModelAndView <span class="title">login</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">"index"</span>);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>那如果要是在被@Controller注解下的方法返回数据呢？(我看你是爱吃鱼挑刺)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(&quot;/goshopping&quot;, method=RequestMethod.POST)</span><br><span class="line">@ResponseBody // 其实就差个这个(鄙人觉得)</span><br><span class="line">public Map&lt;String, Object&gt; goshopping(Me me, Money money) &#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">    map.put(&quot;me&quot;, &quot;me&quot;);</span><br><span class="line">    map.put(&quot;money&quot;, money);</span><br><span class="line">    return map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(<span class="string">"/goshopping"</span>, method=RequestMethod.POST)</span><br><span class="line">@ResponseBody <span class="comment">// 其实就差个这个(鄙人觉得)</span></span><br><span class="line"><span class="keyword">public</span> Map&lt;<span class="keyword">String</span>, <span class="keyword">Object</span>&gt; goshopping(Me me, Money money) &#123;</span><br><span class="line">    Map&lt;<span class="keyword">String</span>, <span class="keyword">Object</span>&gt; <span class="built_in">map</span> = <span class="keyword">new</span> <span class="keyword">HashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="built_in">map</span>.put(<span class="string">"me"</span>, <span class="string">"me"</span>);</span><br><span class="line">    <span class="built_in">map</span>.put(<span class="string">"money"</span>, money);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">map</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -756,19 +756,19 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">75k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.6k字</span>
+  <span class="post-count">博客全站共20.1k字</span>
 </div>
 
         

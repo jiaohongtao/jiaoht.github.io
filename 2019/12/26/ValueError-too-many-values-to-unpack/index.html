@@ -92,18 +92,18 @@
   </script>
 
 
-  <meta name="description" content="错误代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(_get[&amp;quot;id&amp;quot;])	略略略  正确代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(id=_g">
+  <meta name="description" content="错误代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(_get[&quot;id&quot;])	略略略  正确代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(id=_get[&quot;id&quot;])">
 <meta name="keywords" content="ValueError: too many values to unpack,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python ValueError: too many values to unpack">
 <meta property="og:url" content="https://jiaoht.github.io/2019/12/26/ValueError-too-many-values-to-unpack/index.html">
 <meta property="og:site_name" content="红桃jiao的博客">
-<meta property="og:description" content="错误代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(_get[&amp;quot;id&amp;quot;])	略略略  正确代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(id=_g">
+<meta property="og:description" content="错误代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(_get[&quot;id&quot;])	略略略  正确代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(id=_get[&quot;id&quot;])">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2020-07-21T01:27:05.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python ValueError: too many values to unpack">
-<meta name="twitter:description" content="错误代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(_get[&amp;quot;id&amp;quot;])	略略略  正确代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(id=_g">
+<meta name="twitter:description" content="错误代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(_get[&quot;id&quot;])	略略略  正确代码: 1234def update_handle(request):	_get = request.POST	TaskDetailTwo.objects.get(id=_get[&quot;id&quot;])">
   <link rel="canonical" href="https://jiaoht.github.io/2019/12/26/ValueError-too-many-values-to-unpack/">
 
 
@@ -386,7 +386,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>253</span>
+              <span>233</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -410,10 +410,10 @@
 
       
         <p>错误代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def update_handle(request):</span><br><span class="line">	_get = request.POST</span><br><span class="line">	TaskDetailTwo.objects.get(_get[&quot;id&quot;])</span><br><span class="line">	略略略</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_handle</span><span class="params">(request)</span></span><span class="symbol">:</span></span><br><span class="line">	_get = request.POST</span><br><span class="line">	TaskDetailTwo.objects.get(_get[<span class="string">"id"</span>])</span><br><span class="line">	略略略</span><br></pre></td></tr></table></figure>
 
 <p>正确代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def update_handle(request):</span><br><span class="line">	_get = request.POST</span><br><span class="line">	TaskDetailTwo.objects.get(id=_get[&quot;id&quot;])</span><br><span class="line">	略略略</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def update_handle(request):</span><br><span class="line">	_get = request.POST</span><br><span class="line">	TaskDetailTwo.objects.<span class="builtin-name">get</span>(<span class="attribute">id</span>=_get[<span class="string">"id"</span>])</span><br><span class="line">	略略略</span><br></pre></td></tr></table></figure>
 
 <p>这是因为该方法的条件中未写对应数据库的字段名，filter等方法等同。</p>
 
@@ -758,19 +758,19 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">75k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.6k字</span>
+  <span class="post-count">博客全站共20.1k字</span>
 </div>
 
         

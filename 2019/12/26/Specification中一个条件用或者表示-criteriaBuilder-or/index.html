@@ -92,18 +92,18 @@
   </script>
 
 
-  <meta name="description" content="123456789101112Specification spec = (root, criteriaQuery, criteriaBuilder) -&amp;gt; &amp;#123;	List&amp;lt;Predicate&amp;gt; predicate = new ArrayList&amp;lt;&amp;gt;();	Predicate pred1 = criteriaBuilder.equal(root.get(&amp;quo">
+  <meta name="description" content="123456789101112Specification spec = (root, criteriaQuery, criteriaBuilder) -&amp;gt; &amp;#123;	List&amp;lt;Predicate&amp;gt; predicate = new ArrayList&amp;lt;&amp;gt;();	Predicate pred1 = criteriaBuilder.equal(root.get(&quot;biz">
 <meta name="keywords" content="Specification,criteriaBuilder.or,JPA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Specification中一个条件用或者表示(criteriaBuilder.or)">
 <meta property="og:url" content="https://jiaoht.github.io/2019/12/26/Specification中一个条件用或者表示-criteriaBuilder-or/index.html">
 <meta property="og:site_name" content="红桃jiao的博客">
-<meta property="og:description" content="123456789101112Specification spec = (root, criteriaQuery, criteriaBuilder) -&amp;gt; &amp;#123;	List&amp;lt;Predicate&amp;gt; predicate = new ArrayList&amp;lt;&amp;gt;();	Predicate pred1 = criteriaBuilder.equal(root.get(&amp;quo">
+<meta property="og:description" content="123456789101112Specification spec = (root, criteriaQuery, criteriaBuilder) -&amp;gt; &amp;#123;	List&amp;lt;Predicate&amp;gt; predicate = new ArrayList&amp;lt;&amp;gt;();	Predicate pred1 = criteriaBuilder.equal(root.get(&quot;biz">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2020-07-21T07:47:10.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Specification中一个条件用或者表示(criteriaBuilder.or)">
-<meta name="twitter:description" content="123456789101112Specification spec = (root, criteriaQuery, criteriaBuilder) -&amp;gt; &amp;#123;	List&amp;lt;Predicate&amp;gt; predicate = new ArrayList&amp;lt;&amp;gt;();	Predicate pred1 = criteriaBuilder.equal(root.get(&amp;quo">
+<meta name="twitter:description" content="123456789101112Specification spec = (root, criteriaQuery, criteriaBuilder) -&amp;gt; &amp;#123;	List&amp;lt;Predicate&amp;gt; predicate = new ArrayList&amp;lt;&amp;gt;();	Predicate pred1 = criteriaBuilder.equal(root.get(&quot;biz">
   <link rel="canonical" href="https://jiaoht.github.io/2019/12/26/Specification中一个条件用或者表示-criteriaBuilder-or/">
 
 
@@ -386,7 +386,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>456</span>
+              <span>436</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -409,7 +409,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Specification spec = (root, criteriaQuery, criteriaBuilder) -&gt; &#123;</span><br><span class="line"></span><br><span class="line">	List&lt;Predicate&gt; predicate = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">	Predicate pred1 = criteriaBuilder.equal(root.get(&quot;bizId&quot;), user.getBizId());</span><br><span class="line">	Predicate pred2 = criteriaBuilder.equal(root.get(&quot;bizId&quot;), 0);</span><br><span class="line">	predicate.add(criteriaBuilder.or(pred1, pred2));</span><br><span class="line"></span><br><span class="line">	Predicate[] pre = new Predicate[predicate.size()];</span><br><span class="line">	criteriaQuery.where(predicate.toArray(pre));</span><br><span class="line">	return null;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Specification spec = (root, criteriaQuery, criteriaBuilder) -&gt; &#123;</span><br><span class="line"></span><br><span class="line">	List&lt;Predicate&gt; predicate = new ArrayList&lt;&gt;()<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">	Predicate pred1 = criteriaBuilder.equal(root.get(<span class="string">"bizId"</span>), user.getBizId())<span class="comment">;</span></span><br><span class="line">	Predicate pred2 = criteriaBuilder.equal(root.get(<span class="string">"bizId"</span>), <span class="number">0</span>)<span class="comment">;</span></span><br><span class="line">	predicate.<span class="keyword">add(criteriaBuilder.or(pred1, </span>pred2))<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">	Predicate[] pre = new Predicate[predicate.size()]<span class="comment">;</span></span><br><span class="line">	criteriaQuery.where(predicate.toArray(pre))<span class="comment">;</span></span><br><span class="line">	return null<span class="comment">;</span></span><br><span class="line">&#125;<span class="comment">;</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -753,19 +753,19 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">75k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.6k字</span>
+  <span class="post-count">博客全站共20.1k字</span>
 </div>
 
         

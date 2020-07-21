@@ -413,17 +413,17 @@
 <p>尊重原创：<a href="https://www.jb51.net/article/140960.htm" target="_blank" rel="noopener">https://www.jb51.net/article/140960.htm</a></p>
 </blockquote>
 <p>如果你想要重新生成表，就直接删除数据库对应的表，然后执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage<span class="selector-class">.py</span> makemigrations</span><br><span class="line">python manage<span class="selector-class">.py</span> migrate</span><br></pre></td></tr></table></figure>
 
 <p>有些人是会成功的，但是我总觉得一般情况下是不会成功的，所有，我们直接往下看-&gt;</p>
 <hr>
 <p>一般情况下，在我们删除表和生成的0001_initial.py文件以后，执行:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage<span class="selector-class">.py</span> makemigrations</span><br><span class="line">python manage<span class="selector-class">.py</span> migrate</span><br></pre></td></tr></table></figure>
 
 <p>还是不能生成表,提示:No changes detected</p>
 <p>最后一步：<br>我们进入数据库，然后发现有一张django_migrations表,里面记录这有关创建表的记录,删除对应的数据<strong>表</strong> （原文说删表，其实是把这条数据删掉）:<br>命令：<code>delete from django_migrations where app=&#39;yourappname&#39;;</code></p>
 <p>然后再执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage<span class="selector-class">.py</span> makemigrations</span><br><span class="line">python manage<span class="selector-class">.py</span> migrate</span><br></pre></td></tr></table></figure>
 
 <p>成功重新创建表，hurray！</p>
 
@@ -768,19 +768,19 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">75k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.6k字</span>
+  <span class="post-count">博客全站共20.1k字</span>
 </div>
 
         

@@ -92,18 +92,18 @@
   </script>
 
 
-  <meta name="description" content="12345678910111213141516171819202122File files = new File(String pathname); // 例如：&amp;quot;C:\\Users\\用户名\\Desktop\\a.sql&amp;quot;BufferedReader reader = null;StringBuffer sbf = new StringBuffer();try &amp;#123;">
+  <meta name="description" content="12345678910111213141516171819202122File files = new File(String pathname); // 例如：&quot;C:\\Users\\用户名\\Desktop\\a.sql&quot;BufferedReader reader = null;StringBuffer sbf = new StringBuffer();try &amp;#123;	reader =">
 <meta name="keywords" content="Java读取文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java读取文件内容">
 <meta property="og:url" content="https://jiaoht.github.io/2019/12/26/java读取文件内容/index.html">
 <meta property="og:site_name" content="红桃jiao的博客">
-<meta property="og:description" content="12345678910111213141516171819202122File files = new File(String pathname); // 例如：&amp;quot;C:\\Users\\用户名\\Desktop\\a.sql&amp;quot;BufferedReader reader = null;StringBuffer sbf = new StringBuffer();try &amp;#123;">
+<meta property="og:description" content="12345678910111213141516171819202122File files = new File(String pathname); // 例如：&quot;C:\\Users\\用户名\\Desktop\\a.sql&quot;BufferedReader reader = null;StringBuffer sbf = new StringBuffer();try &amp;#123;	reader =">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2020-07-21T01:27:05.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java读取文件内容">
-<meta name="twitter:description" content="12345678910111213141516171819202122File files = new File(String pathname); // 例如：&amp;quot;C:\\Users\\用户名\\Desktop\\a.sql&amp;quot;BufferedReader reader = null;StringBuffer sbf = new StringBuffer();try &amp;#123;">
+<meta name="twitter:description" content="12345678910111213141516171819202122File files = new File(String pathname); // 例如：&quot;C:\\Users\\用户名\\Desktop\\a.sql&quot;BufferedReader reader = null;StringBuffer sbf = new StringBuffer();try &amp;#123;	reader =">
   <link rel="canonical" href="https://jiaoht.github.io/2019/12/26/java读取文件内容/">
 
 
@@ -386,7 +386,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>654</span>
+              <span>634</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -409,7 +409,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">File files = new File(String pathname); // 例如：&quot;C:\\Users\\用户名\\Desktop\\a.sql&quot;</span><br><span class="line">BufferedReader reader = null;</span><br><span class="line">StringBuffer sbf = new StringBuffer();</span><br><span class="line">try &#123;</span><br><span class="line">	reader = new BufferedReader(new FileReader(files));</span><br><span class="line">	String tempStr;</span><br><span class="line">	while ((tempStr = reader.readLine()) != null) &#123;</span><br><span class="line">		sbf.append(tempStr);</span><br><span class="line">	&#125;</span><br><span class="line">	reader.close();</span><br><span class="line">&#125; catch (IOException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;  finally &#123;</span><br><span class="line">    if (reader != null) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            reader.close();</span><br><span class="line">        &#125; catch (IOException e1) &#123;</span><br><span class="line">            e1.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;=========\n&quot; + sbf); //sbf就是文件的内容</span><br></pre></td></tr></table></figure>
+        <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">File files = <span class="keyword">new</span> File(<span class="keyword">String</span> pathname); <span class="comment">// 例如："C:\\Users\\用户名\\Desktop\\a.sql"</span></span><br><span class="line"><span class="keyword">BufferedReader</span> reader = <span class="keyword">null</span>;</span><br><span class="line">StringBuffer sbf = <span class="keyword">new</span> StringBuffer();</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">	reader = <span class="keyword">new</span> <span class="keyword">BufferedReader</span>(<span class="keyword">new</span> FileReader(files));</span><br><span class="line">	<span class="keyword">String</span> tempStr;</span><br><span class="line">	<span class="keyword">while</span> ((tempStr = reader.readLine()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">		sbf.<span class="built_in">append</span>(tempStr);</span><br><span class="line">	&#125;</span><br><span class="line">	reader.close();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;  <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (reader != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            reader.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">            e1.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.<span class="built_in">println</span>(<span class="string">"=========\n"</span> + sbf); <span class="comment">//sbf就是文件的内容</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -749,19 +749,19 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">75k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.6k字</span>
+  <span class="post-count">博客全站共20.1k字</span>
 </div>
 
         

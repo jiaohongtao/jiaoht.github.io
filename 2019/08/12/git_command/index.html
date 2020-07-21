@@ -92,18 +92,18 @@
   </script>
 
 
-  <meta name="description" content="如有错误，斧正不甚感激  总结来自廖雪峰老师的官方网站Git教程  配置用户名和密码：  12git config --global user.name &amp;quot;Your Name&amp;quot;git config --global user.email &amp;quot;email@example.com&amp;quot;  git init：把当前目录变成Git可以管理的仓库  git add xx：">
+  <meta name="description" content="如有错误，斧正不甚感激  总结来自廖雪峰老师的官方网站Git教程  配置用户名和密码：  12git config --global user.name &quot;Your Name&quot;git config --global user.email &quot;email@example.com&quot;  git init：把当前目录变成Git可以管理的仓库  git add xx：将文件xx添加到暂存区，可反复多次使用，">
 <meta name="keywords" content="红桃,红桃jiao,焦洪涛博客,焦洪涛日志,焦洪涛,jiaohongtao">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git总结">
 <meta property="og:url" content="https://jiaoht.github.io/2019/08/12/git_command/index.html">
 <meta property="og:site_name" content="红桃jiao的博客">
-<meta property="og:description" content="如有错误，斧正不甚感激  总结来自廖雪峰老师的官方网站Git教程  配置用户名和密码：  12git config --global user.name &amp;quot;Your Name&amp;quot;git config --global user.email &amp;quot;email@example.com&amp;quot;  git init：把当前目录变成Git可以管理的仓库  git add xx：">
+<meta property="og:description" content="如有错误，斧正不甚感激  总结来自廖雪峰老师的官方网站Git教程  配置用户名和密码：  12git config --global user.name &quot;Your Name&quot;git config --global user.email &quot;email@example.com&quot;  git init：把当前目录变成Git可以管理的仓库  git add xx：将文件xx添加到暂存区，可反复多次使用，">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2020-07-21T01:27:05.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git总结">
-<meta name="twitter:description" content="如有错误，斧正不甚感激  总结来自廖雪峰老师的官方网站Git教程  配置用户名和密码：  12git config --global user.name &amp;quot;Your Name&amp;quot;git config --global user.email &amp;quot;email@example.com&amp;quot;  git init：把当前目录变成Git可以管理的仓库  git add xx：">
+<meta name="twitter:description" content="如有错误，斧正不甚感激  总结来自廖雪峰老师的官方网站Git教程  配置用户名和密码：  12git config --global user.name &quot;Your Name&quot;git config --global user.email &quot;email@example.com&quot;  git init：把当前目录变成Git可以管理的仓库  git add xx：将文件xx添加到暂存区，可反复多次使用，">
   <link rel="canonical" href="https://jiaoht.github.io/2019/08/12/git_command/">
 
 
@@ -415,7 +415,7 @@
 <p>总结来自<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b0" target="_blank" rel="noopener">廖雪峰老师的官方网站Git教程</a></p>
 <ol>
 <li><p>配置用户名和密码：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"Your Name"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>git init：把当前目录变成Git可以管理的仓库</p>
 </li>
@@ -440,10 +440,10 @@
 <li><p>git rm xx：删除xx文件(之后执行git commit提交完成)</p>
 </li>
 <li><p>配置公钥：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ssh-keygen</span> <span class="selector-tag">-t</span> <span class="selector-tag">rsa</span> <span class="selector-tag">-C</span> "<span class="selector-tag">youremail</span>@<span class="keyword">example</span>.<span class="keyword">com</span>"</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>连接远程仓库：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:jiaoht/learngit.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="keyword">add</span><span class="bash"> origin git@github.com:jiaoht/learngit.git</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>git push -u origin master：把本地库的所有内容推送到远程库上(第一次推送master分支时，加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令)</p>
 </li>
@@ -1000,19 +1000,19 @@ git pull origin master
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">75k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.6k字</span>
+  <span class="post-count">博客全站共20.1k字</span>
 </div>
 
         
