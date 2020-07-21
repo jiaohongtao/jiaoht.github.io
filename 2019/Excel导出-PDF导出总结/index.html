@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next muse" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/peach_128px.ico?v=7.3.0">
+  <!-- <meta name="baidu-site-verification" content="true"> -->
+  <meta name="baidu-site-verification" content="4c5HnvqRnw">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":true,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        // background: #ff009e; /*进度条颜色*/
+        background: #33FF33; /*进度条颜色*/
+        height: 1px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #ff009e, 0 0 5px #ff009e; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #ff009e;    /*上边框颜色*/
+        border-left-color: #ff009e;    /*左边框颜色*/
+    }
+</style>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "febbd42e"
+    });
+  daovoice('update');
+  </script>
+
+
+  <meta name="description" content="自我总结：结构可能比较复杂，不过涵盖知识点多  PDF导出12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899">
+<meta name="keywords" content="excel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java导出 Excel，PDF">
+<meta property="og:url" content="https://jiaoht.github.io/2019/Excel导出-PDF导出总结/index.html">
+<meta property="og:site_name" content="红桃jiao的博客">
+<meta property="og:description" content="自我总结：结构可能比较复杂，不过涵盖知识点多  PDF导出12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-21T01:27:05.949Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java导出 Excel，PDF">
+<meta name="twitter:description" content="自我总结：结构可能比较复杂，不过涵盖知识点多  PDF导出12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899">
+  <link rel="canonical" href="https://jiaoht.github.io/2019/Excel导出-PDF导出总结/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Java导出 Excel，PDF | 红桃jiao的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-right">
+	  <!-- <div class="headband"></div> -->
+
+   <a href="https://github.com/jiaoht" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">红桃jiao的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-something">
+      
+    
+
+    <a href="/something/" rel="section"><i class="menu-item-icon fa fa-fw fa-leanpub"></i> <br>有料</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaoht.github.io/2019/Excel导出-PDF导出总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Jiao">
+      <meta itemprop="description" content="理想必须热爱">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="红桃jiao的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">Java导出 Excel，PDF
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-26 17:19:00" itemprop="dateCreated datePublished" datetime="2019-12-26T17:19:00+08:00">2019-12-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-21 09:27:05" itemprop="dateModified" datetime="2020-07-21T09:27:05+08:00">2020-07-21</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>21k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>19 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>自我总结：结构可能比较复杂，不过涵盖知识点多</p>
+</blockquote>
+<h4 id="PDF导出"><a href="#PDF导出" class="headerlink" title="PDF导出"></a>PDF导出</h4><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com<span class="variable">.alibaba</span><span class="variable">.fastjson</span><span class="variable">.JSONObject</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com<span class="variable">.itextpdf</span><span class="variable">.text</span>.*;</span><br><span class="line"><span class="keyword">import</span> com<span class="variable">.itextpdf</span><span class="variable">.text</span><span class="variable">.pdf</span><span class="variable">.BaseFont</span>;</span><br><span class="line"><span class="keyword">import</span> com<span class="variable">.itextpdf</span><span class="variable">.text</span><span class="variable">.pdf</span><span class="variable">.PdfPCell</span>;</span><br><span class="line"><span class="keyword">import</span> com<span class="variable">.itextpdf</span><span class="variable">.text</span><span class="variable">.pdf</span><span class="variable">.PdfPTable</span>;</span><br><span class="line"><span class="keyword">import</span> com<span class="variable">.itextpdf</span><span class="variable">.text</span><span class="variable">.pdf</span><span class="variable">.PdfWriter</span>;</span><br><span class="line"><span class="keyword">import</span> org<span class="variable">.springframework</span><span class="variable">.beans</span><span class="variable">.factory</span><span class="variable">.annotation</span><span class="variable">.Autowired</span>;</span><br><span class="line"><span class="keyword">import</span> org<span class="variable">.springframework</span><span class="variable">.web</span><span class="variable">.bind</span><span class="variable">.annotation</span>.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax<span class="variable">.servlet</span><span class="variable">.http</span><span class="variable">.HttpServletResponse</span>;</span><br><span class="line"><span class="keyword">import</span> java<span class="variable">.io</span><span class="variable">.IOException</span>;</span><br><span class="line"><span class="keyword">import</span> java<span class="variable">.io</span><span class="variable">.OutputStream</span>;</span><br><span class="line"><span class="keyword">import</span> java<span class="variable">.net</span><span class="variable">.URLEncoder</span>;</span><br><span class="line"><span class="keyword">import</span> java<span class="variable">.text</span><span class="variable">.SimpleDateFormat</span>;</span><br><span class="line"><span class="keyword">import</span> java<span class="variable">.util</span><span class="variable">.ArrayList</span>;</span><br><span class="line"><span class="keyword">import</span> java<span class="variable">.util</span><span class="variable">.Collections</span>;</span><br><span class="line"><span class="keyword">import</span> java<span class="variable">.util</span><span class="variable">.List</span>;</span><br><span class="line"><span class="keyword">import</span> java<span class="variable">.util</span><span class="variable">.Set</span>;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">public <span class="keyword">class</span> InspectRecordPdfController <span class="keyword">extends</span> BaseController &#123;</span><br><span class="line"></span><br><span class="line">	@Autowired</span><br><span class="line">	InspectRecordService inspectRecordService;</span><br><span class="line"></span><br><span class="line">	@RequestMapping(value = <span class="string">"/url/pdf/&#123;id&#125;"</span>, method = &#123;RequestMethod<span class="variable">.GET</span>&#125;)</span><br><span class="line">	@ResponseBody</span><br><span class="line">	public <span class="keyword">void</span> pdfExport(@PathVariable(<span class="string">"id"</span>) Long id, HttpServletResponse response) &#123;</span><br><span class="line"></span><br><span class="line">		RespDto&lt;InspectRecord&gt; respDto = inspectRecordService<span class="variable">.get</span>(id);</span><br><span class="line">		<span class="keyword">if</span> (respDto<span class="variable">.getSuccess</span>()) &#123;</span><br><span class="line">			InspectRecord record = respDto<span class="variable">.getData</span>();</span><br><span class="line">			try &#123;</span><br><span class="line">				covertPdf(record, response);</span><br><span class="line">			&#125; catch (Exception e) &#123;</span><br><span class="line">				e<span class="variable">.printStackTrace</span>();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private <span class="keyword">void</span> covertPdf(InspectRecord record, HttpServletResponse response) throws IOException, DocumentException &#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 第一步，实例化一个document对象</span></span><br><span class="line">		Document document = <span class="keyword">new</span> Document();</span><br><span class="line"></span><br><span class="line">		String filename = record<span class="variable">.getName</span>() + <span class="string">".pdf"</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 清空response，否则可能会对程序有影响，因为在此之前有可能也用到了response，若不reset，后面的setCntentoType()有可能失效</span></span><br><span class="line">		response<span class="variable">.reset</span>();</span><br><span class="line">		response<span class="variable">.setContentType</span>(<span class="string">"application/pdf"</span>);</span><br><span class="line">		response<span class="variable">.setHeader</span>(<span class="string">"Content-Disposition"</span>, <span class="string">"attachment;filename="</span> + URLEncoder<span class="variable">.encode</span>(filename, <span class="string">"utf-8"</span>));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 第二步，设置要到出的路径</span></span><br><span class="line">		<span class="comment">// 如果是浏览器通过request请求需要在浏览器中输出则使用下面方式</span></span><br><span class="line">		OutputStream out = response<span class="variable">.getOutputStream</span>();</span><br><span class="line">		<span class="comment">// 第三步,设置字符,宋体</span></span><br><span class="line">		BaseFont bfChinese = BaseFont<span class="variable">.createFont</span>(<span class="string">"STSong-Light"</span>, <span class="string">"UniGB-UCS2-H"</span>, BaseFont<span class="variable">.NOT_EMBEDDED</span>);</span><br><span class="line">		Font fontZH = <span class="keyword">new</span> Font(bfChinese, <span class="number">12</span><span class="variable">.0F</span>, Font<span class="variable">.NORMAL</span>);</span><br><span class="line">		<span class="comment">// 第四步，将pdf文件输出到磁盘</span></span><br><span class="line">		PdfWriter<span class="variable">.getInstance</span>(document, out);</span><br><span class="line">		<span class="comment">// 第五步，打开生成的pdf文件</span></span><br><span class="line">		document<span class="variable">.open</span>();</span><br><span class="line"></span><br><span class="line">		Font greenFont = <span class="keyword">new</span> Font(bfChinese);</span><br><span class="line">		greenFont<span class="variable">.setColor</span>(BaseColor<span class="variable">.GREEN</span>);</span><br><span class="line">		Font redFont = <span class="keyword">new</span> Font(bfChinese);</span><br><span class="line">		redFont<span class="variable">.setColor</span>(BaseColor<span class="variable">.RED</span>);</span><br><span class="line">		Font orangeFont = <span class="keyword">new</span> Font(bfChinese);</span><br><span class="line">		orangeFont<span class="variable">.setColor</span>(BaseColor<span class="variable">.ORANGE</span>);</span><br><span class="line"></span><br><span class="line">		String title = <span class="string">"巡检信息"</span>;</span><br><span class="line">		Paragraph paragraph = <span class="keyword">new</span> Paragraph();</span><br><span class="line">		paragraph<span class="variable">.setAlignment</span>(Element<span class="variable">.ALIGN_CENTER</span>);</span><br><span class="line">		paragraph<span class="variable">.add</span>(<span class="keyword">new</span> Chunk(title, fontZH)<span class="variable">.setLocalDestination</span>(title));</span><br><span class="line">		<span class="comment">// paragraph.add(new Chunk(title, new Font(bfChinese, 20F, Font.BOLD)).setLocalDestination(title));</span></span><br><span class="line">		document<span class="variable">.add</span>(paragraph);</span><br><span class="line">		document<span class="variable">.add</span>(<span class="keyword">new</span> Paragraph(<span class="string">"\n"</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		PdfPTable <span class="keyword">table</span> = <span class="keyword">new</span> PdfPTable(<span class="number">2</span>);</span><br><span class="line">		<span class="keyword">table</span><span class="variable">.setHorizontalAlignment</span>(Element<span class="variable">.ALIGN_CENTER</span>);</span><br><span class="line">		float[] widths = &#123;<span class="number">20</span>f, <span class="number">90</span>f&#125;;</span><br><span class="line">		<span class="keyword">table</span><span class="variable">.setWidths</span>(widths);</span><br><span class="line"></span><br><span class="line">		PdfPCell <span class="keyword">cell</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"巡检名称"</span>, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(record<span class="variable">.getName</span>(), fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"巡检类型"</span>, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		Integer recordType = record<span class="variable">.getType</span>();</span><br><span class="line">		String typeText = <span class="string">"-"</span>;</span><br><span class="line">		<span class="keyword">if</span> (recordType == <span class="number">0</span>) &#123;</span><br><span class="line">			typeText = <span class="string">"快速巡检-脚本"</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (recordType == <span class="number">1</span>) &#123;</span><br><span class="line">			typeText = <span class="string">"常规巡检"</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (recordType == <span class="number">2</span>) &#123;</span><br><span class="line">			typeText = <span class="string">"定时巡检"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(typeText, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"执行人员"</span>, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(record<span class="variable">.getUserName</span>(), fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"巡检状态"</span>, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		Integer recordStatus = record<span class="variable">.getStatus</span>();</span><br><span class="line">		<span class="keyword">if</span> (recordStatus == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"启动中"</span>, fontZH));</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (recordStatus == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"执行中"</span>, fontZH));</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (recordStatus == <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"成功"</span>, greenFont));</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (recordStatus == <span class="number">3</span>) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"错误"</span>, redFont));</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"-"</span>, fontZH));</span><br><span class="line">		&#125;</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"告警状态"</span>, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		Boolean recordWarning = record<span class="variable">.getWarning</span>();</span><br><span class="line">		<span class="keyword">if</span> (!recordWarning) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"正常"</span>, greenFont));</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"告警"</span>, orangeFont));</span><br><span class="line">		&#125;</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"创建时间"</span>, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		SimpleDateFormat simpleDateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</span><br><span class="line"></span><br><span class="line">		String createTime = simpleDateFormat<span class="variable">.format</span>(record<span class="variable">.getCreateTime</span>());</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(createTime, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"执行时长"</span>, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		Double totalTime = record<span class="variable">.getTotalTime</span>();</span><br><span class="line">		<span class="keyword">if</span> (totalTime != <span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(totalTime<span class="variable">.toString</span>() + <span class="string">" 秒"</span>, fontZH));</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"-"</span>, fontZH));</span><br><span class="line">		&#125;</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 告警开始</span></span><br><span class="line">		List&lt;InspectRecordWarning&gt; warnList = record<span class="variable">.getInspectRecordWarnings</span>();</span><br><span class="line">		<span class="keyword">if</span> (warnList<span class="variable">.size</span>() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"告警信息"</span>, fontZH));</span><br><span class="line">			setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">			PdfPTable warnTable = <span class="keyword">new</span> PdfPTable(<span class="number">3</span>);</span><br><span class="line">			warnTable<span class="variable">.setWidths</span>(<span class="keyword">new</span> float[]&#123;<span class="number">22</span>f, <span class="number">23</span>f, <span class="number">55</span>f&#125;);</span><br><span class="line">			setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">new</span> PdfPCell(getWarningInfo(warnList, warnTable, fontZH)));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		List&lt;InspectRecordItem&gt; list = record<span class="variable">.getInspectRecordItems</span>();</span><br><span class="line">		List&lt;Object&gt; objects = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (Object item : list) &#123;</span><br><span class="line"></span><br><span class="line">			objects<span class="variable">.add</span>(item);</span><br><span class="line">			objects<span class="variable">.removeAll</span>(Collections<span class="variable">.singleton</span>(<span class="literal">null</span>));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (objects<span class="variable">.size</span>() &gt; <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"执行错误"</span>, fontZH));</span><br><span class="line">			setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">			PdfPTable errorTable = <span class="keyword">new</span> PdfPTable(<span class="number">3</span>);</span><br><span class="line">			errorTable<span class="variable">.setWidths</span>(<span class="keyword">new</span> float[]&#123;<span class="number">22</span>f, <span class="number">23</span>f, <span class="number">55</span>f&#125;);</span><br><span class="line">			setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">new</span> PdfPCell(getErrorInfo(list, errorTable, fontZH)));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"执行详情"</span>, fontZH));</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">cell</span>);</span><br><span class="line">		PdfPTable detailTable = <span class="keyword">new</span> PdfPTable(<span class="number">3</span>);</span><br><span class="line">		detailTable<span class="variable">.setWidths</span>(<span class="keyword">new</span> float[]&#123;<span class="number">22</span>f, <span class="number">23</span>f, <span class="number">55</span>f&#125;);</span><br><span class="line">		setAndAddCellStyle(<span class="keyword">table</span>, <span class="keyword">new</span> PdfPCell(getDetailInfo(list, detailTable, fontZH)));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 添加大表格</span></span><br><span class="line">		document<span class="variable">.add</span>(<span class="keyword">table</span>);</span><br><span class="line">		<span class="comment">// 第七步，关闭document</span></span><br><span class="line">		document<span class="variable">.close</span>();</span><br><span class="line"></span><br><span class="line">		System<span class="variable">.out</span><span class="variable">.println</span>(<span class="string">"导出pdf成功~"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private PdfPTable getWarningInfo(List&lt;InspectRecordWarning&gt; list, PdfPTable warningTable, Font fontZH) &#123;</span><br><span class="line"></span><br><span class="line">		PdfPCell <span class="keyword">cell</span>;</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"主机ip"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		warningTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"指标项"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"告警信息"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		warningTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">for</span> (InspectRecordWarning item : list) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(item<span class="variable">.getIp</span>(), fontZH));</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			warningTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(item<span class="variable">.getInspectItemName</span>(), fontZH));</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			warningTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">			String content = item<span class="variable">.getContent</span>();</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(content != <span class="literal">null</span> ? content : <span class="string">"-"</span>, fontZH));</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			warningTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> warningTable;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	获取执行错误信息</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	private PdfPTable getErrorInfo(List&lt;InspectRecordItem&gt; list, PdfPTable errorTable, Font fontZH) &#123;</span><br><span class="line"></span><br><span class="line">		PdfPCell <span class="keyword">cell</span>;</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"主机ip"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		errorTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"指标项"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		errorTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"执行错误信息"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		errorTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">for</span> (InspectRecordItem item : list) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(item<span class="variable">.getIp</span>(), fontZH));</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			errorTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(item<span class="variable">.getInspectItemName</span>(), fontZH));</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			errorTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">			String errorInfo = item<span class="variable">.getScriptErrorInfo</span>();</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(errorInfo !=<span class="literal">null</span> ? errorInfo : <span class="string">"-"</span>, fontZH));</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			errorTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> errorTable;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private PdfPTable getDetailInfo(List&lt;InspectRecordItem&gt; list, PdfPTable detailTable, Font fontZH) &#123;</span><br><span class="line"></span><br><span class="line">		PdfPCell <span class="keyword">cell</span>;</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"主机ip"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		detailTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"指标项"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		detailTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"详情"</span>, fontZH));</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		detailTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (InspectRecordItem item : list) &#123;</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(item<span class="variable">.getIp</span>(), fontZH));</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			detailTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">			<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(item<span class="variable">.getInspectItemName</span>(), fontZH));</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			detailTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 详情</span></span><br><span class="line">			String log = item<span class="variable">.getLog</span>();</span><br><span class="line">			<span class="keyword">if</span> (log != <span class="literal">null</span>) &#123;</span><br><span class="line">				JSONObject logJsonObj = JSONObject<span class="variable">.parseObject</span>(log);</span><br><span class="line"></span><br><span class="line">				Set&lt;String&gt; logSet = logJsonObj<span class="variable">.keySet</span>();</span><br><span class="line">				Object logObj;</span><br><span class="line">				String logStr = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">for</span> (String key : logSet) &#123;</span><br><span class="line">					logObj = logJsonObj<span class="variable">.get</span>(key);</span><br><span class="line">					logStr += key + <span class="string">" : "</span> + logObj<span class="variable">.toString</span>() + <span class="string">"\n"</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">""</span><span class="variable">.equals</span>(logStr) ? <span class="string">"-"</span> : logStr, fontZH));</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">cell</span> = <span class="keyword">new</span> PdfPCell(<span class="keyword">new</span> Paragraph(<span class="string">"-"</span>, fontZH));</span><br><span class="line">			&#125;</span><br><span class="line">			setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">			detailTable<span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> detailTable;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private <span class="keyword">void</span> setAndAddCellStyle(PdfPTable <span class="keyword">table</span>, PdfPCell <span class="keyword">cell</span>) &#123;</span><br><span class="line">		<span class="keyword">cell</span><span class="variable">.setMinimumHeight</span>(<span class="number">30</span><span class="variable">.0F</span>);</span><br><span class="line">		<span class="keyword">cell</span><span class="variable">.setPaddingTop</span>(<span class="number">10</span>f);</span><br><span class="line">		<span class="keyword">cell</span><span class="variable">.setPaddingBottom</span>(<span class="number">10</span>f);</span><br><span class="line">		setCellCenter(<span class="keyword">cell</span>);</span><br><span class="line">		<span class="keyword">cell</span><span class="variable">.setBorder</span>(Rectangle<span class="variable">.NO_BORDER</span>);</span><br><span class="line">		<span class="keyword">table</span><span class="variable">.addCell</span>(<span class="keyword">cell</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private <span class="keyword">void</span> setCellCenter(PdfPCell <span class="keyword">cell</span>) &#123;</span><br><span class="line">		<span class="keyword">cell</span><span class="variable">.setHorizontalAlignment</span>(Element<span class="variable">.ALIGN_CENTER</span>);</span><br><span class="line">		<span class="keyword">cell</span><span class="variable">.setVerticalAlignment</span>(Element<span class="variable">.ALIGN_MIDDLE</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Excel导出"><a href="#Excel导出" class="headerlink" title="Excel导出"></a>Excel导出</h4><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"></span><br><span class="line"><span class="built_in">import</span> org.apache.poi.hssf.usermodel.*;</span><br><span class="line"><span class="built_in">import</span> org.apache.poi.hssf.util.HSSFColor;</span><br><span class="line"><span class="built_in">import</span> org.apache.poi.ss.usermodel.HorizontalAlignment;</span><br><span class="line"><span class="built_in">import</span> org.apache.poi.ss.usermodel.VerticalAlignment;</span><br><span class="line"><span class="built_in">import</span> org.apache.poi.ss.util.CellRangeAddress;</span><br><span class="line"><span class="built_in">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="built_in">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="built_in">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="built_in">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="built_in">import</span> java.io.IOException;</span><br><span class="line"><span class="built_in">import</span> java.io.OutputStream;</span><br><span class="line"><span class="built_in">import</span> java.net.URLEncoder;</span><br><span class="line"><span class="built_in">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="built_in">import</span> java.util.ArrayList;</span><br><span class="line"><span class="built_in">import</span> java.util.Collections;</span><br><span class="line"><span class="built_in">import</span> java.util.List;</span><br><span class="line"><span class="built_in">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line">@RestController</span><br><span class="line">public class InspectRecordExcelController extends BaseController &#123;</span><br><span class="line"></span><br><span class="line">	@Autowired</span><br><span class="line">	InspectRecordService inspectRecordService;</span><br><span class="line"></span><br><span class="line">	public static final short <span class="attr">BOLD_FONT</span> = <span class="number">20</span>;</span><br><span class="line">	public static final short <span class="attr">NORMAL_FONT</span> = <span class="number">12</span>;</span><br><span class="line"></span><br><span class="line">	// 创建表头</span><br><span class="line">	@RequestMapping(<span class="attr">value</span> = <span class="string">"/inspect/record/excel/&#123;id&#125;"</span>, <span class="attr">method</span> = &#123;RequestMethod.GET&#125;)</span><br><span class="line">	@ResponseBody</span><br><span class="line">	public void createTitle(@PathVariable(<span class="string">"id"</span>) Long id, HttpServletResponse response) throws IOException &#123;</span><br><span class="line"></span><br><span class="line">		HSSFWorkbook <span class="attr">workbook</span> = new HSSFWorkbook();</span><br><span class="line"></span><br><span class="line">		HSSFSheet <span class="attr">sheet</span> = workbook.createSheet();</span><br><span class="line"></span><br><span class="line">		sheet.setColumnWidth(<span class="number">0</span>, <span class="number">16</span> * <span class="number">256</span>);</span><br><span class="line">		sheet.setColumnWidth(<span class="number">1</span>, <span class="number">20</span> * <span class="number">256</span>);</span><br><span class="line">		sheet.setColumnWidth(<span class="number">2</span>, <span class="number">30</span> * <span class="number">256</span>);</span><br><span class="line">		sheet.setColumnWidth(<span class="number">3</span>, <span class="number">40</span> * <span class="number">256</span>);</span><br><span class="line"></span><br><span class="line">		InspectRecord <span class="attr">record</span> = inspectRecordService.get(id).getData();</span><br><span class="line"></span><br><span class="line">		sheet.addMergedRegion(new CellRangeAddress(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">		for (int <span class="attr">i</span> = <span class="number">2</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">			sheet.addMergedRegion(new CellRangeAddress(i, i, <span class="number">1</span>, <span class="number">3</span>));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row</span> = sheet.createRow(<span class="number">0</span>);</span><br><span class="line">		HSSFCell <span class="attr">cell</span> = row.createCell(<span class="number">0</span>);</span><br><span class="line">		cell.setCellStyle(getStyle(workbook, BOLD_FONT, <span class="literal">true</span>));</span><br><span class="line">		cell.setCellValue(<span class="string">"巡检信息"</span>);</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row2</span> = sheet.createRow(<span class="number">2</span>);</span><br><span class="line">		HSSFCell <span class="attr">cell2</span> = row2.createCell(<span class="number">0</span>);</span><br><span class="line">		cell2.setCellValue(<span class="string">"巡检名称"</span>);</span><br><span class="line">		cell2.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell2</span> = row2.createCell(<span class="number">1</span>);</span><br><span class="line">		cell2.setCellValue(record.getName());</span><br><span class="line">		cell2.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row3</span> = sheet.createRow(<span class="number">3</span>);</span><br><span class="line">		HSSFCell <span class="attr">cell3</span> = row3.createCell(<span class="number">0</span>);</span><br><span class="line">		cell3.setCellValue(<span class="string">"巡检类型"</span>);</span><br><span class="line">		cell3.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell3</span> = row3.createCell(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		Integer <span class="attr">recordType</span> = record.getType();</span><br><span class="line">		<span class="keyword">if</span> (<span class="attr">recordType</span> == <span class="number">0</span>) &#123;</span><br><span class="line">			cell3.setCellValue(<span class="string">"快速巡检-脚本"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="attr">recordType</span> == <span class="number">1</span>) &#123;</span><br><span class="line">			cell3.setCellValue(<span class="string">"常规巡检"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="attr">recordType</span> == <span class="number">2</span>) &#123;</span><br><span class="line">			cell3.setCellValue(<span class="string">"定时巡检"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			cell3.setCellValue(<span class="string">"-"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		cell3.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row4</span> = sheet.createRow(<span class="number">4</span>);</span><br><span class="line">		HSSFCell <span class="attr">cell4</span> = row4.createCell(<span class="number">0</span>);</span><br><span class="line">		cell4.setCellValue(<span class="string">"用户名"</span>);</span><br><span class="line">		cell4.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell4</span> = row4.createCell(<span class="number">1</span>);</span><br><span class="line">		cell4.setCellValue(record.getUserName());</span><br><span class="line">		cell4.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row5</span> = sheet.createRow(<span class="number">5</span>);</span><br><span class="line">		HSSFCell <span class="attr">cell5</span> = row5.createCell(<span class="number">0</span>);</span><br><span class="line">		cell5.setCellValue(<span class="string">"巡检状态"</span>);</span><br><span class="line">		cell5.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell5</span> = row5.createCell(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		Integer <span class="attr">status</span> = record.getStatus();</span><br><span class="line">		<span class="keyword">if</span> (<span class="attr">status</span> == <span class="number">0</span>) &#123;</span><br><span class="line">			cell5.setCellValue(<span class="string">"启动中"</span>);</span><br><span class="line">			cell5.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="attr">status</span> == <span class="number">1</span>) &#123;</span><br><span class="line">			cell5.setCellValue(<span class="string">"执行中"</span>);</span><br><span class="line">			cell5.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="attr">status</span> == <span class="number">2</span>) &#123;</span><br><span class="line">			setStatus(workbook, cell5, <span class="string">"成功"</span>, HSSFColor.GREEN.index);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="attr">status</span> == <span class="number">3</span>) &#123;</span><br><span class="line">			setStatus(workbook, cell5, <span class="string">"错误"</span>, HSSFColor.RED.index);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			cell5.setCellValue(<span class="string">"-"</span>);</span><br><span class="line">			cell5.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row6</span> = sheet.createRow(<span class="number">6</span>);</span><br><span class="line">		HSSFCell <span class="attr">cell6</span> = row6.createCell(<span class="number">0</span>);</span><br><span class="line">		cell6.setCellValue(<span class="string">"告警状态"</span>);</span><br><span class="line">		cell6.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell6</span> = row6.createCell(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (!record.getWarning()) &#123;</span><br><span class="line">			setStatus(workbook, cell6, <span class="string">"正常"</span>, HSSFColor.GREEN.index);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			setStatus(workbook, cell6, <span class="string">"告警"</span>, HSSFColor.ORANGE.index);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row7</span> = sheet.createRow(<span class="number">7</span>);</span><br><span class="line">		HSSFCell <span class="attr">cell7</span> = row7.createCell(<span class="number">0</span>);</span><br><span class="line">		cell7.setCellValue(<span class="string">"创建时间"</span>);</span><br><span class="line">		cell7.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell7</span> = row7.createCell(<span class="number">1</span>);</span><br><span class="line">		SimpleDateFormat <span class="attr">sdf</span> = new SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</span><br><span class="line">		cell7.setCellValue(sdf.format(record.getCreateTime()));</span><br><span class="line">		cell7.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row8</span> = sheet.createRow(<span class="number">8</span>);</span><br><span class="line">		HSSFCell <span class="attr">cell8</span> = row8.createCell(<span class="number">0</span>);</span><br><span class="line">		cell8.setCellValue(<span class="string">"执行时长"</span>);</span><br><span class="line">		cell8.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell8</span> = row8.createCell(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		Double <span class="attr">totalTime</span> = record.getTotalTime();</span><br><span class="line">		<span class="keyword">if</span> (totalTime != <span class="literal">null</span>) &#123;</span><br><span class="line">			cell8.setCellValue(totalTime + <span class="string">"秒"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			cell8.setCellValue(<span class="string">"-"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		cell8.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line">		// 嵌套</span><br><span class="line">		List&lt;InspectRecordWarning&gt; <span class="attr">warnings</span> = record.getInspectRecordWarnings();</span><br><span class="line">		int <span class="attr">warnSize</span> = warnings.size();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (warnSize &gt; <span class="number">0</span>) &#123; // 如果有告警信息才显示对象</span><br><span class="line"></span><br><span class="line">			sheet.addMergedRegion(new CellRangeAddress(<span class="number">10</span>, <span class="number">10</span> + warnSize, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">			HSSFRow <span class="attr">row10</span> = sheet.createRow(<span class="number">10</span>);</span><br><span class="line">			HSSFCell <span class="attr">cell10</span> = row10.createCell(<span class="number">0</span>);</span><br><span class="line">			cell10.setCellValue(<span class="string">"告警信息"</span>);</span><br><span class="line">			cell10.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">			<span class="attr">cell10</span> = row10.createCell(<span class="number">1</span>);</span><br><span class="line">			cell10.setCellValue(<span class="string">"主机ip"</span>);</span><br><span class="line">			cell10.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">			<span class="attr">cell10</span> = row10.createCell(<span class="number">2</span>);</span><br><span class="line">			cell10.setCellValue(<span class="string">"指标项"</span>);</span><br><span class="line">			cell10.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">			<span class="attr">cell10</span> = row10.createCell(<span class="number">3</span>);</span><br><span class="line">			cell10.setCellValue(<span class="string">"告警信息"</span>);</span><br><span class="line">			cell10.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line"></span><br><span class="line">			for (int <span class="attr">i</span> = <span class="number">0</span>; i &lt; warnSize;) &#123;</span><br><span class="line">				InspectRecordWarning <span class="attr">warning</span> = warnings.get(i);</span><br><span class="line">				i += <span class="number">1</span>;</span><br><span class="line">				HSSFRow <span class="attr">row11</span> = sheet.createRow(<span class="number">10</span> + i);</span><br><span class="line">				HSSFCell <span class="attr">cell11</span> = row11.createCell(<span class="number">1</span>);</span><br><span class="line">				cell11.setCellValue(warning.getIp());</span><br><span class="line">				cell11.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">				<span class="attr">cell11</span> = row11.createCell(<span class="number">2</span>);</span><br><span class="line">				cell11.setCellValue(warning.getInspectItemName());</span><br><span class="line">				cell11.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">				<span class="attr">cell11</span> = row11.createCell(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">				String <span class="attr">warnInfo</span> = warning.getContent();</span><br><span class="line">				cell11.setCellValue(<span class="attr">warnInfo</span> == <span class="literal">null</span> ? <span class="string">"-"</span> : warnInfo);</span><br><span class="line">				cell11.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		// 错误开始</span><br><span class="line">		List&lt;InspectRecordItem&gt; <span class="attr">list</span> = record.getInspectRecordItems();</span><br><span class="line"></span><br><span class="line">		int <span class="attr">listSize</span> = list.size();</span><br><span class="line">		List&lt;Object&gt; <span class="attr">objects</span> = new ArrayList&lt;&gt;();</span><br><span class="line">		for (InspectRecordItem item : list) &#123;</span><br><span class="line"></span><br><span class="line">			objects.add(item);</span><br><span class="line">			objects.removeAll(Collections.singleton(<span class="literal">null</span>));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		int <span class="attr">errorSize</span> = objects.size();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (objects.size() &gt; <span class="number">0</span>) &#123; // 如果有错误信息才展示列表</span><br><span class="line"></span><br><span class="line">			sheet.addMergedRegion(new CellRangeAddress(<span class="number">11</span> + warnSize, <span class="number">11</span> + warnSize + errorSize, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">			HSSFRow <span class="attr">row12</span> = sheet.createRow(<span class="number">11</span> + warnSize);</span><br><span class="line">			HSSFCell <span class="attr">cell12</span> = row12.createCell(<span class="number">0</span>);</span><br><span class="line">			cell12.setCellValue(<span class="string">"错误信息"</span>);</span><br><span class="line">			cell12.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">			<span class="attr">cell12</span> = row12.createCell(<span class="number">1</span>);</span><br><span class="line">			cell12.setCellValue(<span class="string">"主机ip"</span>);</span><br><span class="line">			cell12.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">			<span class="attr">cell12</span> = row12.createCell(<span class="number">2</span>);</span><br><span class="line">			cell12.setCellValue(<span class="string">"指标项"</span>);</span><br><span class="line">			cell12.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">			<span class="attr">cell12</span> = row12.createCell(<span class="number">3</span>);</span><br><span class="line">			cell12.setCellValue(<span class="string">"错误信息"</span>);</span><br><span class="line">			cell12.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line"></span><br><span class="line">			for (int <span class="attr">i</span> = <span class="number">0</span>; i &lt; listSize; ) &#123;</span><br><span class="line">				InspectRecordItem <span class="attr">item</span> = list.get(i);</span><br><span class="line">				i += <span class="number">1</span>;</span><br><span class="line">				HSSFRow <span class="attr">row13</span> = sheet.createRow(<span class="number">11</span> + i + warnSize);</span><br><span class="line">				HSSFCell <span class="attr">cell13</span> = row13.createCell(<span class="number">1</span>);</span><br><span class="line">				cell13.setCellValue(item.getIp());</span><br><span class="line">				cell13.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">				<span class="attr">cell13</span> = row13.createCell(<span class="number">2</span>);</span><br><span class="line">				cell13.setCellValue(item.getInspectItemName());</span><br><span class="line">				cell13.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">				<span class="attr">cell13</span> = row13.createCell(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">				String <span class="attr">errorInfo</span> = item.getScriptErrorInfo();</span><br><span class="line">				cell13.setCellValue(<span class="attr">errorInfo</span> == <span class="literal">null</span> ? <span class="string">"-"</span> : errorInfo);</span><br><span class="line">				cell13.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		// 详情必须显示</span><br><span class="line">		sheet.addMergedRegion(new CellRangeAddress(<span class="number">12</span> + warnSize + errorSize, <span class="number">12</span> + warnSize + errorSize + listSize, <span class="number">0</span>,</span><br><span class="line">				<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">		HSSFRow <span class="attr">row13</span> = sheet.createRow(<span class="number">12</span> + warnSize + errorSize);</span><br><span class="line">		HSSFCell <span class="attr">cell14</span> = row13.createCell(<span class="number">0</span>);</span><br><span class="line">		cell14.setCellValue(<span class="string">"详细信息"</span>);</span><br><span class="line">		cell14.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell14</span> = row13.createCell(<span class="number">1</span>);</span><br><span class="line">		cell14.setCellValue(<span class="string">"主机ip"</span>);</span><br><span class="line">		cell14.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell14</span> = row13.createCell(<span class="number">2</span>);</span><br><span class="line">		cell14.setCellValue(<span class="string">"指标项"</span>);</span><br><span class="line">		cell14.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line">		<span class="attr">cell14</span> = row13.createCell(<span class="number">3</span>);</span><br><span class="line">		cell14.setCellValue(<span class="string">"详细信息"</span>);</span><br><span class="line">		cell14.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">true</span>));</span><br><span class="line"></span><br><span class="line">		for (int <span class="attr">i</span> = <span class="number">0</span>; i &lt; listSize;) &#123;</span><br><span class="line">			InspectRecordItem <span class="attr">item</span> = list.get(i);</span><br><span class="line">			i += <span class="number">1</span>;</span><br><span class="line">			HSSFRow <span class="attr">row14</span> = sheet.createRow(<span class="number">12</span> + i + warnSize + errorSize);</span><br><span class="line">			HSSFCell <span class="attr">cell15</span> = row14.createCell(<span class="number">1</span>);</span><br><span class="line">			cell15.setCellValue(item.getIp());</span><br><span class="line">			cell15.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">			<span class="attr">cell15</span> = row14.createCell(<span class="number">2</span>);</span><br><span class="line">			cell15.setCellValue(item.getInspectItemName());</span><br><span class="line">			cell15.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">			<span class="attr">cell15</span> = row14.createCell(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">			String <span class="attr">log</span> = item.getLog();</span><br><span class="line">			<span class="keyword">if</span> (log != <span class="literal">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">				JSONObject <span class="attr">logJsonObj</span> = JSONObject.parseObject(log);</span><br><span class="line">				Set&lt;String&gt; <span class="attr">logSet</span> = logJsonObj.keySet();</span><br><span class="line"></span><br><span class="line">				Object logObj;</span><br><span class="line">				String <span class="attr">logStr</span> = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">				for (String key : logSet) &#123;</span><br><span class="line">					<span class="attr">logObj</span> = logJsonObj.get(key);</span><br><span class="line">					logStr += key + <span class="string">"："</span> + logObj.<span class="built_in">toString</span>() + <span class="string">"\n"</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				cell15.setCellValue(<span class="string">""</span>.equals(logStr) ? <span class="string">"-"</span> : logStr);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				cell15.setCellValue(<span class="string">"-"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			cell15.setCellStyle(getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		String <span class="attr">filename</span> = record.getName() + <span class="string">".xls"</span>;</span><br><span class="line">		buildExcelDocument(filename, workbook, response);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * @param cellValue  单元格填充值</span></span><br><span class="line"><span class="comment">	 * @param workbook   工作表</span></span><br><span class="line"><span class="comment">	 * @param cell       单元格</span></span><br><span class="line"><span class="comment">	 * @param colorIndex 单元格字体颜色</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	private void setStatus(HSSFWorkbook workbook, HSSFCell cell, String cellValue, short colorIndex) &#123;</span><br><span class="line">		cell.setCellValue(cellValue);</span><br><span class="line">		HSSFFont <span class="attr">font</span> = workbook.createFont();</span><br><span class="line">		font.setColor(colorIndex);</span><br><span class="line">		HSSFCellStyle <span class="attr">style</span> = getStyle(workbook, NORMAL_FONT, <span class="literal">false</span>);</span><br><span class="line">		style.setFont(font);</span><br><span class="line">		cell.setCellStyle(style);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 标题或者第一列数据信息单元格样式</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * @param fontHeight 标题20， 第一列12，第二列12</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	private HSSFCellStyle getStyle(HSSFWorkbook workbook, short fontHeight, boolean isBold) &#123;</span><br><span class="line"></span><br><span class="line">		HSSFFont <span class="attr">font</span> = workbook.createFont();</span><br><span class="line">		font.setFontHeightInPoints((fontHeight));</span><br><span class="line">		font.setBold(isBold);</span><br><span class="line">		font.setFontName(<span class="string">"宋体"</span>);</span><br><span class="line"></span><br><span class="line">		HSSFCellStyle <span class="attr">style</span> = workbook.createCellStyle();</span><br><span class="line">		style.setFont(font);</span><br><span class="line">		style.setWrapText(<span class="literal">true</span>);</span><br><span class="line">		style.setAlignment(HorizontalAlignment.CENTER);</span><br><span class="line">		style.setVerticalAlignment(VerticalAlignment.CENTER);</span><br><span class="line">		return style;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 浏览器下载excel</span><br><span class="line">	private void buildExcelDocument(String filename, HSSFWorkbook workbook, HttpServletResponse response) throws</span><br><span class="line">			IOException &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// 清空response，否则可能会对程序有影响，因为在此之前有可能也用到了response，若不reset，后面的setCntentoType()有可能失效</span><br><span class="line">		response.reset();</span><br><span class="line">		response.setContentType(<span class="string">"application/vnd.ms-excel"</span>);</span><br><span class="line">		response.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">"attachment;filename="</span> + URLEncoder.encode(filename, <span class="string">"utf-8"</span>));</span><br><span class="line">		OutputStream <span class="attr">os</span> = response.getOutputStream();</span><br><span class="line">		workbook.write(os);</span><br><span class="line">		os.flush();</span><br><span class="line">		os.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+      
+      <div>
+      
+        
+
+      
+      </div>
+
+      <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----------本文结束<i class="fa fa-hand-peace-o"></i>感谢您的阅读-----------</div>
+    
+</div>
+
+      
+      </div>
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/excel/" rel="tag"># excel</a>
+            
+          </div>
+        
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/Untitled/" rel="next" title="Java两种发送邮件的方式">
+                  <i class="fa fa-chevron-left"></i> Java两种发送邮件的方式
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/jQuery-button实现target为-blank-点击button弹出新窗口/" rel="prev" title="jQuery: 点击button弹出新窗口">
+                  jQuery: 点击button弹出新窗口 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NjAwMy8yMjUxNA=="></div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="Mr.Jiao">
+  <p class="site-author-name" itemprop="name">Mr.Jiao</p>
+  <div class="site-description motion-element" itemprop="description">理想必须热爱</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">47</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://weibo.com/u/5731326417" title="Weibo &rarr; https://weibo.com/u/5731326417" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://github.com/jiaoht" title="GitHub &rarr; https://github.com/jiaoht" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <a href="https://blog.csdn.net/weixin_40375601" title="CSDN &rarr; https://blog.csdn.net/weixin_40375601" rel="noopener" target="_blank"><i class="fa fa-fw fa-rotate-right"></i></a>
+      </span>
+    
+  </div>
+
+
+  <div class="links-of-blogroll motion-element links-of-blogroll-block">
+    <div class="links-of-blogroll-title">
+      <i class="fa  fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.jianshu.com/p/ace7e6b9b2bc" title="https://www.jianshu.com/p/ace7e6b9b2bc" rel="noopener" target="_blank">2019-3.3_hexo-next主题创建个人博客</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://www.jianshu.com/p/1f8107a8778c" title="https://www.jianshu.com/p/1f8107a8778c" rel="noopener" target="_blank">hexo搭建个人博客--NexT主题优化</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" title="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" rel="noopener" target="_blank">hexo的next主题个性化配置教程</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#PDF导出"><span class="nav-number">1.</span> <span class="nav-text">PDF导出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Excel导出"><span class="nav-number">2.</span> <span class="nav-text">Excel导出</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Jiao</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">75k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">1:09</span>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共20.1k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+  <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d537b4ea24d2f1f" async="async"></script>
+</div>
+
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 20304,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+  <script type="text/javascript" src="/js/src/click-love.js"></script>
+  
+  
+
+  <!--  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"> </script>  -->
+
+  <!--  -->
+
+</body>
+</html>
