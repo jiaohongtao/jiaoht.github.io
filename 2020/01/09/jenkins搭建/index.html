@@ -92,18 +92,18 @@
   </script>
 
 
-  <meta name="description" content="下载jenkins(这个是清华的源)： 123456789101112131415161718192021````wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm`提示：~~如果没有wget，执行后再下载jenkins的rpm包：`yum install -y">
+  <meta name="description" content="下载jenkins(这个是清华的源)： wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm 提示：如果没有wget，执行后再下载jenkins的rpm包：yum install -y wget  安装jenkins：rpm -ivh jenkins-2.190.">
 <meta name="keywords" content="红桃,红桃jiao,焦洪涛博客,焦洪涛日志,焦洪涛,jiaohongtao">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jenkins搭建">
 <meta property="og:url" content="https://jiaoht.github.io/2020/01/09/jenkins搭建/index.html">
 <meta property="og:site_name" content="红桃jiao的博客">
-<meta property="og:description" content="下载jenkins(这个是清华的源)： 123456789101112131415161718192021````wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm`提示：~~如果没有wget，执行后再下载jenkins的rpm包：`yum install -y">
+<meta property="og:description" content="下载jenkins(这个是清华的源)： wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm 提示：如果没有wget，执行后再下载jenkins的rpm包：yum install -y wget  安装jenkins：rpm -ivh jenkins-2.190.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-21T01:27:05.961Z">
+<meta property="og:updated_time" content="2020-07-21T01:52:52.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jenkins搭建">
-<meta name="twitter:description" content="下载jenkins(这个是清华的源)： 123456789101112131415161718192021````wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm`提示：~~如果没有wget，执行后再下载jenkins的rpm包：`yum install -y">
+<meta name="twitter:description" content="下载jenkins(这个是清华的源)： wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm 提示：如果没有wget，执行后再下载jenkins的rpm包：yum install -y wget  安装jenkins：rpm -ivh jenkins-2.190.">
   <link rel="canonical" href="https://jiaoht.github.io/2020/01/09/jenkins搭建/">
 
 
@@ -340,7 +340,7 @@
                 
               
 
-              <time title="创建时间：2020-01-09 17:39:06" itemprop="dateCreated datePublished" datetime="2020-01-09T17:39:06+08:00">2020-01-09</time>
+              <time title="创建时间：2020-01-09 17:39:00" itemprop="dateCreated datePublished" datetime="2020-01-09T17:39:00+08:00">2020-01-09</time>
             </span>
           
             
@@ -351,7 +351,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-21 09:27:05" itemprop="dateModified" datetime="2020-07-21T09:27:05+08:00">2020-07-21</time>
+                <time title="修改时间：2020-07-21 09:52:52" itemprop="dateModified" datetime="2020-07-21T09:52:52+08:00">2020-07-21</time>
               </span>
             
           
@@ -373,7 +373,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>826</span>
+              <span>783</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -397,11 +397,21 @@
 
       
         <p>下载jenkins(这个是清华的源)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">`wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm`</span><br><span class="line"></span><br><span class="line">提示：~~如果没有wget，执行后再下载jenkins的rpm包：</span><br><span class="line">`yum install -y wget`~~ </span><br><span class="line"></span><br><span class="line">安装jenkins：</span><br><span class="line">`rpm -ivh jenkins-2.190.2-1.1.noarch.rpm`</span><br><span class="line"></span><br><span class="line">启动Jenkins：</span><br><span class="line">systemctl start jenkins</span><br><span class="line"></span><br><span class="line">-------------------------</span><br><span class="line"></span><br><span class="line">**问题解决：**</span><br><span class="line"></span><br><span class="line">- Jenkins登录页面密码查看路径：</span><br><span class="line">`cat /var/lib/jenkins/secrets/initialAdminPassword`</span><br><span class="line"></span><br><span class="line">- 查看admin密码,这里是加密的密码：</span><br><span class="line">`cat /var/lib/jenkins/users/admin_*/config.xml`</span><br></pre></td></tr></table></figure>
+<p><code>wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm</code></p>
+<p>提示：<del>如果没有wget，执行后再下载jenkins的rpm包：<br><code>yum install -y wget</code></del> </p>
+<p>安装jenkins：<br><code>rpm -ivh jenkins-2.190.2-1.1.noarch.rpm</code></p>
+<p>启动Jenkins：<br>systemctl start jenkins</p>
+<hr>
+<p><strong>问题解决：</strong></p>
+<ul>
+<li><p>Jenkins登录页面密码查看路径：<br><code>cat /var/lib/jenkins/secrets/initialAdminPassword</code></p>
+</li>
+<li><p>查看admin密码,这里是加密的密码：<br><code>cat /var/lib/jenkins/users/admin_*/config.xml</code></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;passwordHash&gt;#jbcrypt:$2a$10$MiIVR0rr/UhQBqT.bBq0QehTiQVqgNpUGyWW2nJObaVAM/2xSQdSq&lt;/passwordHash&gt;</span><br></pre></td></tr></table></figure>
 
-<pre><code>&lt;passwordHash&gt;#jbcrypt:$2a$10$MiIVR0rr/UhQBqT.bBq0QehTiQVqgNpUGyWW2nJObaVAM/2xSQdSq&lt;/passwordHash&gt;
-```
-如果忘记密码需要修改的话，可以将我的这个替换成你的这里部分重启，密码为123456。</code></pre><ul>
+<pre><code>如果忘记密码需要修改的话，可以将我的这个替换成你的这里部分重启，密码为123456。</code></pre><ul>
 <li><p>如果提示该Jenkins示例似乎离线：<br>则需要将更新的源替换，我使用的是清华的源：<br>网页输入：<a href="http://ip:port/pluginManager/advanced" target="_blank" rel="noopener">http://ip:port/pluginManager/advanced</a><br>修改最下面的URL为：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json</a></p>
 </li>
 <li><p>如果需要java环境，则安装jdk：<br><code>yum install -y java-1.8.0-openjdk-devel.x86_64</code></p>
