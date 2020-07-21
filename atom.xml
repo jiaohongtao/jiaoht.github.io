@@ -18,8 +18,8 @@
   
   <entry>
     <title>jenkins搭建</title>
-    <link href="https://jiaoht.github.io/2020/01/09/jenkins%E6%90%AD%E5%BB%BA/"/>
-    <id>https://jiaoht.github.io/2020/01/09/jenkins搭建/</id>
+    <link href="https://jiaoht.github.io/uncategorized/jenkins%E6%90%AD%E5%BB%BA/"/>
+    <id>https://jiaoht.github.io/uncategorized/jenkins搭建/</id>
     <published>2020-01-09T09:39:00.000Z</published>
     <updated>2020-07-21T01:55:09.597Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>idea报错：java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java</title>
-    <link href="https://jiaoht.github.io/2019/12/26/idea%E6%8A%A5%E9%94%99%EF%BC%9Ajava-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/"/>
-    <id>https://jiaoht.github.io/2019/12/26/idea报错：java-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/</id>
+    <link href="https://jiaoht.github.io/Java/idea%E6%8A%A5%E9%94%99%EF%BC%9Ajava-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/"/>
+    <id>https://jiaoht.github.io/Java/idea报错：java-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/</id>
     <published>2019-12-26T09:36:00.000Z</published>
     <updated>2020-07-21T01:27:05.959Z</updated>
     
@@ -65,8 +65,8 @@
   
   <entry>
     <title>javabean作用和优势,什么时候该对数据封装?</title>
-    <link href="https://jiaoht.github.io/2019/12/26/javabean%E4%BD%9C%E7%94%A8%E5%92%8C%E4%BC%98%E5%8A%BF-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85/"/>
-    <id>https://jiaoht.github.io/2019/12/26/javabean作用和优势-什么时候该对数据封装/</id>
+    <link href="https://jiaoht.github.io/Java/javabean%E4%BD%9C%E7%94%A8%E5%92%8C%E4%BC%98%E5%8A%BF-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85/"/>
+    <id>https://jiaoht.github.io/Java/javabean作用和优势-什么时候该对数据封装/</id>
     <published>2019-12-26T09:35:00.000Z</published>
     <updated>2020-07-21T01:27:05.960Z</updated>
     
@@ -92,8 +92,8 @@
   
   <entry>
     <title>IDEA、WebStorm永久激活</title>
-    <link href="https://jiaoht.github.io/2019/12/26/IDEA%E3%80%81WebStorm%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/"/>
-    <id>https://jiaoht.github.io/2019/12/26/IDEA、WebStorm永久激活/</id>
+    <link href="https://jiaoht.github.io/uncategorized/IDEA%E3%80%81WebStorm%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/"/>
+    <id>https://jiaoht.github.io/uncategorized/IDEA、WebStorm永久激活/</id>
     <published>2019-12-26T09:34:00.000Z</published>
     <updated>2020-07-21T01:27:05.950Z</updated>
     
@@ -117,8 +117,8 @@
   
   <entry>
     <title>关于postman的请求参数的格式问题</title>
-    <link href="https://jiaoht.github.io/2019/12/26/%E5%85%B3%E4%BA%8Epostman%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/"/>
-    <id>https://jiaoht.github.io/2019/12/26/关于postman的请求参数的格式问题/</id>
+    <link href="https://jiaoht.github.io/Miexd/%E5%85%B3%E4%BA%8Epostman%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/"/>
+    <id>https://jiaoht.github.io/Miexd/关于postman的请求参数的格式问题/</id>
     <published>2019-12-26T09:33:00.000Z</published>
     <updated>2020-07-21T01:27:05.967Z</updated>
     
@@ -143,8 +143,8 @@
   
   <entry>
     <title>zookeeper连接不上/Session 0x0 for server null, unexpected error, closing socket connection</title>
-    <link href="https://jiaoht.github.io/2019/12/26/zookeeper%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-Session-0x0-for-server-null-unexpected-error-closing-socket-connection/"/>
-    <id>https://jiaoht.github.io/2019/12/26/zookeeper连接不上-Session-0x0-for-server-null-unexpected-error-closing-socket-connection/</id>
+    <link href="https://jiaoht.github.io/Linux/zookeeper%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-Session-0x0-for-server-null-unexpected-error-closing-socket-connection/"/>
+    <id>https://jiaoht.github.io/Linux/zookeeper连接不上-Session-0x0-for-server-null-unexpected-error-closing-socket-connection/</id>
     <published>2019-12-26T09:32:00.000Z</published>
     <updated>2020-07-21T01:27:05.965Z</updated>
     
@@ -171,8 +171,8 @@
   
   <entry>
     <title>为Linux服务器设置静态IP的方法,并且ping通外网</title>
-    <link href="https://jiaoht.github.io/2019/12/26/%E4%B8%BALinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E7%9A%84%E6%96%B9%E6%B3%95-%E5%B9%B6%E4%B8%94ping%E9%80%9A%E5%A4%96%E7%BD%91/"/>
-    <id>https://jiaoht.github.io/2019/12/26/为Linux服务器设置静态IP的方法-并且ping通外网/</id>
+    <link href="https://jiaoht.github.io/Linux/%E4%B8%BALinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E7%9A%84%E6%96%B9%E6%B3%95-%E5%B9%B6%E4%B8%94ping%E9%80%9A%E5%A4%96%E7%BD%91/"/>
+    <id>https://jiaoht.github.io/Linux/为Linux服务器设置静态IP的方法-并且ping通外网/</id>
     <published>2019-12-26T09:31:00.000Z</published>
     <updated>2020-07-21T01:27:05.965Z</updated>
     
@@ -201,8 +201,8 @@
   
   <entry>
     <title>spring @Configuration的使用</title>
-    <link href="https://jiaoht.github.io/2019/12/26/spring-Configuration%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>https://jiaoht.github.io/2019/12/26/spring-Configuration的使用/</id>
+    <link href="https://jiaoht.github.io/Java/spring-Configuration%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>https://jiaoht.github.io/Java/spring-Configuration的使用/</id>
     <published>2019-12-26T09:29:00.000Z</published>
     <updated>2020-07-21T01:27:05.963Z</updated>
     
@@ -229,8 +229,8 @@
   
   <entry>
     <title>Specification中一个条件用或者表示(criteriaBuilder.or)</title>
-    <link href="https://jiaoht.github.io/2019/12/26/Specification%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E7%94%A8%E6%88%96%E8%80%85%E8%A1%A8%E7%A4%BA-criteriaBuilder-or/"/>
-    <id>https://jiaoht.github.io/2019/12/26/Specification中一个条件用或者表示-criteriaBuilder-or/</id>
+    <link href="https://jiaoht.github.io/Java/Specification%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E7%94%A8%E6%88%96%E8%80%85%E8%A1%A8%E7%A4%BA-criteriaBuilder-or/"/>
+    <id>https://jiaoht.github.io/Java/Specification中一个条件用或者表示-criteriaBuilder-or/</id>
     <published>2019-12-26T09:28:00.000Z</published>
     <updated>2020-07-21T07:47:10.387Z</updated>
     
@@ -258,8 +258,8 @@
   
   <entry>
     <title>Java + Selenium + WebDriver自动版本化</title>
-    <link href="https://jiaoht.github.io/2019/12/26/Java-Selenium-WebDriver%E8%87%AA%E5%8A%A8%E7%89%88%E6%9C%AC%E5%8C%96/"/>
-    <id>https://jiaoht.github.io/2019/12/26/Java-Selenium-WebDriver自动版本化/</id>
+    <link href="https://jiaoht.github.io/Java/Java-Selenium-WebDriver%E8%87%AA%E5%8A%A8%E7%89%88%E6%9C%AC%E5%8C%96/"/>
+    <id>https://jiaoht.github.io/Java/Java-Selenium-WebDriver自动版本化/</id>
     <published>2019-12-26T09:26:00.000Z</published>
     <updated>2020-07-21T01:27:05.951Z</updated>
     
@@ -287,8 +287,8 @@
   
   <entry>
     <title>jQuery: 点击button弹出新窗口</title>
-    <link href="https://jiaoht.github.io/2019/12/26/jQuery-button%E5%AE%9E%E7%8E%B0target%E4%B8%BA-blank-%E7%82%B9%E5%87%BBbutton%E5%BC%B9%E5%87%BA%E6%96%B0%E7%AA%97%E5%8F%A3/"/>
-    <id>https://jiaoht.github.io/2019/12/26/jQuery-button实现target为-blank-点击button弹出新窗口/</id>
+    <link href="https://jiaoht.github.io/html-css-js/jQuery-button%E5%AE%9E%E7%8E%B0target%E4%B8%BA-blank-%E7%82%B9%E5%87%BBbutton%E5%BC%B9%E5%87%BA%E6%96%B0%E7%AA%97%E5%8F%A3/"/>
+    <id>https://jiaoht.github.io/html-css-js/jQuery-button实现target为-blank-点击button弹出新窗口/</id>
     <published>2019-12-26T09:24:00.000Z</published>
     <updated>2020-07-21T01:27:05.959Z</updated>
     
@@ -313,8 +313,8 @@
   
   <entry>
     <title>Java导出 Excel，PDF</title>
-    <link href="https://jiaoht.github.io/2019/12/26/Excel%E5%AF%BC%E5%87%BA-PDF%E5%AF%BC%E5%87%BA%E6%80%BB%E7%BB%93/"/>
-    <id>https://jiaoht.github.io/2019/12/26/Excel导出-PDF导出总结/</id>
+    <link href="https://jiaoht.github.io/Java/Excel%E5%AF%BC%E5%87%BA-PDF%E5%AF%BC%E5%87%BA%E6%80%BB%E7%BB%93/"/>
+    <id>https://jiaoht.github.io/Java/Excel导出-PDF导出总结/</id>
     <published>2019-12-26T09:19:00.000Z</published>
     <updated>2020-07-21T01:27:05.949Z</updated>
     
@@ -341,8 +341,8 @@
   
   <entry>
     <title>Java两种发送邮件的方式</title>
-    <link href="https://jiaoht.github.io/2019/12/26/Untitled/"/>
-    <id>https://jiaoht.github.io/2019/12/26/Untitled/</id>
+    <link href="https://jiaoht.github.io/Java/Untitled/"/>
+    <id>https://jiaoht.github.io/Java/Untitled/</id>
     <published>2019-12-26T09:18:00.000Z</published>
     <updated>2020-07-21T01:27:05.954Z</updated>
     
@@ -366,8 +366,8 @@
   
   <entry>
     <title>Mix Note</title>
-    <link href="https://jiaoht.github.io/2019/12/26/Mix-Note/"/>
-    <id>https://jiaoht.github.io/2019/12/26/Mix-Note/</id>
+    <link href="https://jiaoht.github.io/Mixed/Mix-Note/"/>
+    <id>https://jiaoht.github.io/Mixed/Mix-Note/</id>
     <published>2019-12-26T09:17:00.000Z</published>
     <updated>2020-07-21T01:27:05.952Z</updated>
     
@@ -392,8 +392,8 @@
   
   <entry>
     <title>在高德地图使用: AMap is not defined</title>
-    <link href="https://jiaoht.github.io/2019/12/26/%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%BD%BF%E7%94%A8-AMap-is-not-defined/"/>
-    <id>https://jiaoht.github.io/2019/12/26/在高德地图使用-AMap-is-not-defined/</id>
+    <link href="https://jiaoht.github.io/html-css-js/%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%BD%BF%E7%94%A8-AMap-is-not-defined/"/>
+    <id>https://jiaoht.github.io/html-css-js/在高德地图使用-AMap-is-not-defined/</id>
     <published>2019-12-26T09:16:00.000Z</published>
     <updated>2020-07-21T01:27:05.968Z</updated>
     
@@ -418,8 +418,8 @@
   
   <entry>
     <title>取整取余问题</title>
-    <link href="https://jiaoht.github.io/2019/12/26/%E5%8F%96%E6%95%B4%E5%8F%96%E4%BD%99%E9%97%AE%E9%A2%98/"/>
-    <id>https://jiaoht.github.io/2019/12/26/取整取余问题/</id>
+    <link href="https://jiaoht.github.io/Java/%E5%8F%96%E6%95%B4%E5%8F%96%E4%BD%99%E9%97%AE%E9%A2%98/"/>
+    <id>https://jiaoht.github.io/Java/取整取余问题/</id>
     <published>2019-12-26T09:14:00.000Z</published>
     <updated>2020-07-21T01:27:05.968Z</updated>
     
@@ -445,8 +445,8 @@
   
   <entry>
     <title>转换模型时,Django model_to_dict会跳过所有DateTimeField</title>
-    <link href="https://jiaoht.github.io/2019/12/26/%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%9E%8B%E6%97%B6-Django-model-to-dict%E4%BC%9A%E8%B7%B3%E8%BF%87%E6%89%80%E6%9C%89DateTimeField/"/>
-    <id>https://jiaoht.github.io/2019/12/26/转换模型时-Django-model-to-dict会跳过所有DateTimeField/</id>
+    <link href="https://jiaoht.github.io/Python/%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%9E%8B%E6%97%B6-Django-model-to-dict%E4%BC%9A%E8%B7%B3%E8%BF%87%E6%89%80%E6%9C%89DateTimeField/"/>
+    <id>https://jiaoht.github.io/Python/转换模型时-Django-model-to-dict会跳过所有DateTimeField/</id>
     <published>2019-12-26T09:14:00.000Z</published>
     <updated>2020-07-21T01:27:05.970Z</updated>
     
@@ -471,8 +471,8 @@
   
   <entry>
     <title>Pycharm 2019.1中打开.md文件出现卡死的情况</title>
-    <link href="https://jiaoht.github.io/2019/12/26/Pycharm-2019-1%E4%B8%AD%E6%89%93%E5%BC%80-md%E6%96%87%E4%BB%B6%E5%87%BA%E7%8E%B0%E5%8D%A1%E6%AD%BB%E7%9A%84%E6%83%85%E5%86%B5/"/>
-    <id>https://jiaoht.github.io/2019/12/26/Pycharm-2019-1中打开-md文件出现卡死的情况/</id>
+    <link href="https://jiaoht.github.io/Python/Pycharm-2019-1%E4%B8%AD%E6%89%93%E5%BC%80-md%E6%96%87%E4%BB%B6%E5%87%BA%E7%8E%B0%E5%8D%A1%E6%AD%BB%E7%9A%84%E6%83%85%E5%86%B5/"/>
+    <id>https://jiaoht.github.io/Python/Pycharm-2019-1中打开-md文件出现卡死的情况/</id>
     <published>2019-12-26T09:13:00.000Z</published>
     <updated>2020-07-21T01:27:05.953Z</updated>
     
@@ -497,8 +497,8 @@
   
   <entry>
     <title>关于python manage.py makemigrations，python manage.py migrate不能建表</title>
-    <link href="https://jiaoht.github.io/2019/12/26/%E5%85%B3%E4%BA%8Epython-manage-py-makemigrations%EF%BC%8Cpython-manage-py-migrate%E4%B8%8D%E8%83%BD%E5%BB%BA%E8%A1%A8/"/>
-    <id>https://jiaoht.github.io/2019/12/26/关于python-manage-py-makemigrations，python-manage-py-migrate不能建表/</id>
+    <link href="https://jiaoht.github.io/Python/%E5%85%B3%E4%BA%8Epython-manage-py-makemigrations%EF%BC%8Cpython-manage-py-migrate%E4%B8%8D%E8%83%BD%E5%BB%BA%E8%A1%A8/"/>
+    <id>https://jiaoht.github.io/Python/关于python-manage-py-makemigrations，python-manage-py-migrate不能建表/</id>
     <published>2019-12-26T09:12:00.000Z</published>
     <updated>2020-07-21T07:48:35.529Z</updated>
     
@@ -525,8 +525,8 @@
   
   <entry>
     <title>Dialog的使用方法</title>
-    <link href="https://jiaoht.github.io/2019/12/26/Dialog%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <id>https://jiaoht.github.io/2019/12/26/Dialog的使用方法/</id>
+    <link href="https://jiaoht.github.io/html-css-js/Dialog%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>https://jiaoht.github.io/html-css-js/Dialog的使用方法/</id>
     <published>2019-12-26T09:11:00.000Z</published>
     <updated>2020-07-21T01:27:05.948Z</updated>
     
