@@ -1,87 +1,26 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jiaoht.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="ganymed-ssh2,">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="红桃jiao的博客" type="application/atom+xml">
-
-
-
-
-
-
-<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta name="keywords" content="ganymed-ssh2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java对ganymed-ssh2的使用">
@@ -94,39 +33,18 @@
 <meta name="twitter:title" content="Java对ganymed-ssh2的使用">
 <meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 
+<link rel="canonical" href="https://jiaoht.github.io/2019/Java对ganymed-ssh2的使用/">
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
-
-
-
-  <link rel="canonical" href="https://jiaoht.github.io/2019/Java对ganymed-ssh2的使用/">
-
-
-
-
 
   <title>Java对ganymed-ssh2的使用 | 红桃jiao的博客</title>
   
@@ -136,194 +54,163 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">红桃jiao的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">红桃jiao的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            Home
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            Archives
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://jiaoht.github.io/2019/Java对ganymed-ssh2的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.Jiao">
-      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mr.Jiao">
+      <meta itemprop="description" content="理想必须热爱">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="红桃jiao的博客">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Java对ganymed-ssh2的使用</h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          Java对ganymed-ssh2的使用
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-26T17:05:00+08:00">
-                2019-12-26
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="创建时间：2019-12-26 17:05:00" itemprop="dateCreated datePublished" datetime="2019-12-26T17:05:00+08:00">2019-12-26</time>
             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                <a href="/2019/Java对ganymed-ssh2的使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/Java对ganymed-ssh2的使用/" itemprop="commentCount"></span>
-                </a>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-21 09:27:05" itemprop="dateModified" datetime="2020-07-21T09:27:05+08:00">2020-07-21</time>
               </span>
-            
-          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
 
-          
-          
-
-          
-
-          
-
-          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
 
         </div>
       </header>
-    
 
     
     
@@ -331,250 +218,179 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.utils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.ethz.ssh2.Connection;</span><br><span class="line"><span class="keyword">import</span> ch.ethz.ssh2.Session;</span><br><span class="line"><span class="keyword">import</span> ch.ethz.ssh2.StreamGobbler;</span><br><span class="line"><span class="keyword">import</span> com.bocloud.common.model.BocloudResult;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.<span class="keyword">BufferedReader</span>;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.net.ConnectException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @author jiao</span></span><br><span class="line"><span class="comment"> * @since 2019/9/20 16:06</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> class GanymedUtil &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Connection login(<span class="keyword">String</span> ip, <span class="built_in">int</span> port, <span class="keyword">String</span> username, <span class="keyword">String</span> password) &#123;</span><br><span class="line">		<span class="built_in">boolean</span> flag;</span><br><span class="line">		Connection connection = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			connection = <span class="keyword">new</span> Connection(ip, port);</span><br><span class="line">			connection.connect();<span class="comment">// 连接</span></span><br><span class="line">			flag = connection.authenticateWithPassword(username, password);<span class="comment">// 认证</span></span><br><span class="line">			<span class="keyword">if</span> (flag) &#123;</span><br><span class="line">				System.out.<span class="built_in">println</span>(<span class="string">"================登录成功=================="</span>);</span><br><span class="line">				<span class="keyword">return</span> connection;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">			System.out.<span class="built_in">println</span>(<span class="string">"登录失败,请检查IP或端口是否有误："</span> + e);</span><br><span class="line">			connection.close();</span><br><span class="line">			System.<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> connection;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 远程执行shell脚本或者命令</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * @param command 即将执行的命令</span></span><br><span class="line"><span class="comment">	 * @return 命令执行完后返回的结果值</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> execCommand(Connection connection, <span class="keyword">String</span> command) &#123;</span><br><span class="line">		<span class="keyword">String</span> result = <span class="string">""</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> (connection != <span class="keyword">null</span>) &#123;</span><br><span class="line">				Session session = <span class="keyword">null</span>;<span class="comment">// 打开一个会话</span></span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					session = connection.openSession();</span><br><span class="line">				&#125; <span class="keyword">catch</span> (IllegalStateException ise) &#123;</span><br><span class="line">					System.out.<span class="built_in">println</span>(<span class="string">"请检查用户名或密码是否有误"</span>);</span><br><span class="line"></span><br><span class="line">					ise.printStackTrace();</span><br><span class="line">					System.<span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					session.execCommand(command);<span class="comment">// 执行命令</span></span><br><span class="line">				&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">String</span> DEFAULT_CHART = <span class="string">"UTF-8"</span>;</span><br><span class="line">				result = processStdout(session.getStdout(), DEFAULT_CHART);</span><br><span class="line">				<span class="keyword">if</span> (<span class="string">""</span>.equals(result)) &#123;</span><br><span class="line">					System.out.<span class="built_in">println</span>(<span class="string">"请检查脚本内容是否有误"</span>);</span><br><span class="line">					System.<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				connection.close();</span><br><span class="line">				session.close();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">			System.out.<span class="built_in">println</span>(<span class="string">"执行命令失败,链接conn:"</span> + connection + <span class="string">",执行的命令："</span> + command + <span class="string">"   "</span> + e);</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 解析脚本执行返回的结果集</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * @param in      输入流对象</span></span><br><span class="line"><span class="comment">	 * @param charset 编码</span></span><br><span class="line"><span class="comment">	 * @return 以纯文本的格式返回</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> processStdout(InputStream in, <span class="keyword">String</span> charset) &#123;</span><br><span class="line">		InputStream stdout = <span class="keyword">new</span> StreamGobbler(in);</span><br><span class="line">		StringBuilder buffer = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">BufferedReader</span> br = <span class="keyword">new</span> <span class="keyword">BufferedReader</span>(<span class="keyword">new</span> InputStreamReader(stdout, charset));</span><br><span class="line">			<span class="keyword">String</span> <span class="built_in">line</span>;</span><br><span class="line">			<span class="keyword">while</span> ((<span class="built_in">line</span> = br.readLine()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">				buffer.<span class="built_in">append</span>(<span class="built_in">line</span>).<span class="built_in">append</span>(<span class="string">"\n"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			br.close();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">			System.out.<span class="built_in">println</span>(<span class="string">"解析脚本出错："</span> + e.getMessage());</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> buffer.toString();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> BocloudResult ganymedExecCommand(<span class="keyword">String</span> host, <span class="built_in">int</span> port, <span class="keyword">String</span> username, <span class="keyword">String</span> password, <span class="keyword">String</span> command) &#123;</span><br><span class="line"></span><br><span class="line">		Connection connection = login(host, port, username, password);</span><br><span class="line">		<span class="keyword">String</span> execCommand = execCommand(connection, command);</span><br><span class="line">		<span class="keyword">if</span> (execCommand.contains(<span class="string">"successfully"</span>)) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> BocloudResult(<span class="keyword">true</span>, <span class="string">"安装成功"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> BocloudResult(<span class="keyword">false</span>, <span class="string">"安装失败"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">		<span class="keyword">String</span> ip = <span class="string">"192.168.112.130"</span>;</span><br><span class="line">		<span class="keyword">String</span> username = <span class="string">"root"</span>;</span><br><span class="line">		<span class="keyword">String</span> password = <span class="string">"root"</span>;</span><br><span class="line">		<span class="built_in">int</span> port = <span class="number">22</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/*String url = "ls /;";*/</span></span><br><span class="line">		<span class="keyword">String</span> url = <span class="string">"https://github.com/jiaoht/LinuxUse/raw/master/CatDisk"</span>;</span><br><span class="line">		<span class="keyword">String</span> getArgsExecScript = <span class="string">" wget -c "</span> + install_url + <span class="string">" -O installer; sh installer;\n"</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">String</span> rmInstaller = <span class="string">" rm -rf installer;\n"</span>;</span><br><span class="line">		<span class="keyword">String</span> getAndRm = getArgsExecScript + rmInstaller;</span><br><span class="line">		<span class="keyword">String</span> command = <span class="string">"cd /tmp;\n"</span> +</span><br><span class="line">				<span class="string">"if [ ! -f 'installer' ];then\n"</span> +</span><br><span class="line">				getAndRm +</span><br><span class="line">				<span class="string">"else\n"</span> +</span><br><span class="line">				rmInstaller + getAndRm +</span><br><span class="line">				<span class="string">"fi"</span>;</span><br><span class="line"></span><br><span class="line">		System.out.<span class="built_in">println</span>(ganymedExecCommand(ip, port, username, password, command));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line">package com.utils;</span><br><span class="line"></span><br><span class="line">import ch.ethz.ssh2.Connection;</span><br><span class="line">import ch.ethz.ssh2.Session;</span><br><span class="line">import ch.ethz.ssh2.StreamGobbler;</span><br><span class="line">import com.bocloud.common.model.BocloudResult;</span><br><span class="line"></span><br><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStream;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.net.ConnectException;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author jiao</span><br><span class="line"> * @since 2019/9/20 16:06</span><br><span class="line"> */</span><br><span class="line">public class GanymedUtil &#123;</span><br><span class="line"></span><br><span class="line">	private static Connection login(String ip, int port, String username, String password) &#123;</span><br><span class="line">		boolean flag;</span><br><span class="line">		Connection connection = null;</span><br><span class="line">		try &#123;</span><br><span class="line">			connection = new Connection(ip, port);</span><br><span class="line">			connection.connect();// 连接</span><br><span class="line">			flag = connection.authenticateWithPassword(username, password);// 认证</span><br><span class="line">			if (flag) &#123;</span><br><span class="line">				System.out.println(&quot;================登录成功==================&quot;);</span><br><span class="line">				return connection;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			System.out.println(&quot;登录失败,请检查IP或端口是否有误：&quot; + e);</span><br><span class="line">			connection.close();</span><br><span class="line">			System.exit(-1);</span><br><span class="line">		&#125;</span><br><span class="line">		return connection;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 远程执行shell脚本或者命令</span><br><span class="line">	 *</span><br><span class="line">	 * @param command 即将执行的命令</span><br><span class="line">	 * @return 命令执行完后返回的结果值</span><br><span class="line">	 */</span><br><span class="line">	private static String execCommand(Connection connection, String command) &#123;</span><br><span class="line">		String result = &quot;&quot;;</span><br><span class="line">		try &#123;</span><br><span class="line">			if (connection != null) &#123;</span><br><span class="line">				Session session = null;// 打开一个会话</span><br><span class="line">				try &#123;</span><br><span class="line">					session = connection.openSession();</span><br><span class="line">				&#125; catch (IllegalStateException ise) &#123;</span><br><span class="line">					System.out.println(&quot;请检查用户名或密码是否有误&quot;);</span><br><span class="line"></span><br><span class="line">					ise.printStackTrace();</span><br><span class="line">					System.exit(-1);</span><br><span class="line">				&#125;</span><br><span class="line">				try &#123;</span><br><span class="line">					session.execCommand(command);// 执行命令</span><br><span class="line">				&#125; catch (IOException e) &#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">				String DEFAULT_CHART = &quot;UTF-8&quot;;</span><br><span class="line">				result = processStdout(session.getStdout(), DEFAULT_CHART);</span><br><span class="line">				if (&quot;&quot;.equals(result)) &#123;</span><br><span class="line">					System.out.println(&quot;请检查脚本内容是否有误&quot;);</span><br><span class="line">					System.exit(1);</span><br><span class="line">				&#125;</span><br><span class="line">				connection.close();</span><br><span class="line">				session.close();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			System.out.println(&quot;执行命令失败,链接conn:&quot; + connection + &quot;,执行的命令：&quot; + command + &quot;   &quot; + e);</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		return result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 解析脚本执行返回的结果集</span><br><span class="line">	 *</span><br><span class="line">	 * @param in      输入流对象</span><br><span class="line">	 * @param charset 编码</span><br><span class="line">	 * @return 以纯文本的格式返回</span><br><span class="line">	 */</span><br><span class="line">	private static String processStdout(InputStream in, String charset) &#123;</span><br><span class="line">		InputStream stdout = new StreamGobbler(in);</span><br><span class="line">		StringBuilder buffer = new StringBuilder();</span><br><span class="line">		try &#123;</span><br><span class="line">			BufferedReader br = new BufferedReader(new InputStreamReader(stdout, charset));</span><br><span class="line">			String line;</span><br><span class="line">			while ((line = br.readLine()) != null) &#123;</span><br><span class="line">				buffer.append(line).append(&quot;\n&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">			br.close();</span><br><span class="line">		&#125; catch (IOException e) &#123;</span><br><span class="line">			System.out.println(&quot;解析脚本出错：&quot; + e.getMessage());</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		return buffer.toString();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static BocloudResult ganymedExecCommand(String host, int port, String username, String password, String command) &#123;</span><br><span class="line"></span><br><span class="line">		Connection connection = login(host, port, username, password);</span><br><span class="line">		String execCommand = execCommand(connection, command);</span><br><span class="line">		if (execCommand.contains(&quot;successfully&quot;)) &#123;</span><br><span class="line">			return new BocloudResult(true, &quot;安装成功&quot;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			return new BocloudResult(false, &quot;安装失败&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String ip = &quot;192.168.112.130&quot;;</span><br><span class="line">		String username = &quot;root&quot;;</span><br><span class="line">		String password = &quot;root&quot;;</span><br><span class="line">		int port = 22;</span><br><span class="line"></span><br><span class="line">		/*String url = &quot;ls /;&quot;;*/</span><br><span class="line">		String url = &quot;https://github.com/jiaoht/LinuxUse/raw/master/CatDisk&quot;;</span><br><span class="line">		String getArgsExecScript = &quot; wget -c &quot; + install_url + &quot; -O installer; sh installer;\n&quot;;</span><br><span class="line"></span><br><span class="line">		String rmInstaller = &quot; rm -rf installer;\n&quot;;</span><br><span class="line">		String getAndRm = getArgsExecScript + rmInstaller;</span><br><span class="line">		String command = &quot;cd /tmp;\n&quot; +</span><br><span class="line">				&quot;if [ ! -f &apos;installer&apos; ];then\n&quot; +</span><br><span class="line">				getAndRm +</span><br><span class="line">				&quot;else\n&quot; +</span><br><span class="line">				rmInstaller + getAndRm +</span><br><span class="line">				&quot;fi&quot;;</span><br><span class="line"></span><br><span class="line">		System.out.println(ganymedExecCommand(ip, port, username, password, command));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
+
     
     
     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/ganymed-ssh2/" rel="tag"># ganymed-ssh2</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/ginx搭建文件服务器-指定目录/" rel="next" title="nginx搭建文件服务器(指定目录)">
-                <i class="fa fa-chevron-left"></i> nginx搭建文件服务器(指定目录)
-              </a>
-            
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ganymed-ssh2/" rel="tag"># ganymed-ssh2</a>
           </div>
 
-          <span class="post-nav-divider"></span>
+        
 
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/java读取文件内容/" rel="prev" title="java读取文件内容">
-                java读取文件内容 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
 
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/ginx搭建文件服务器-指定目录/" rel="prev" title="nginx搭建文件服务器(指定目录)">
+      <i class="fa fa-chevron-left"></i> nginx搭建文件服务器(指定目录)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/java读取文件内容/" rel="next" title="java读取文件内容">
+      java读取文件内容 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
   </article>
+  
+  
+  
 
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
 
 
           </div>
           
 
-
-          
-
-  
-    <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2019/Java对ganymed-ssh2的使用/" data-title="Java对ganymed-ssh2的使用" data-url="https://jiaoht.github.io/2019/Java对ganymed-ssh2的使用/">
-      </div>
-    </div>
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Mr.Jiao</p>
-              <p class="site-description motion-element" itemprop="description">理想必须热爱</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">41</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">47</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Mr.Jiao</span>
-
-  
-</div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mr.Jiao</p>
+  <div class="site-description" itemprop="description">理想必须热爱</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">47</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Jiao</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">78k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:11</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
 
 
 
 
 
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -591,121 +407,8 @@
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"快来评论"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 
