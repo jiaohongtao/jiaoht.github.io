@@ -5,19 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/peach_128px.ico">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-mac-osx.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"jiaoht.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"jiaoht.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="理想必须热爱">
@@ -164,6 +163,93 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jiaoht.github.io/2019/Specification中一个条件用或者表示-criteriaBuilder-or/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Mr.Jiao">
+      <meta itemprop="description" content="理想必须热爱">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="红桃jiao的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/Specification%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E7%94%A8%E6%88%96%E8%80%85%E8%A1%A8%E7%A4%BA-criteriaBuilder-or/" class="post-title-link" itemprop="url">Specification中一个条件用或者表示(criteriaBuilder.or)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-26 17:28:00" itemprop="dateCreated datePublished" datetime="2019-12-26T17:28:00+08:00">2019-12-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-21 15:47:10" itemprop="dateModified" datetime="2020-07-21T15:47:10+08:00">2020-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>439</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Specification spec = (root, criteriaQuery, criteriaBuilder) -&gt; &#123;</span><br><span class="line"></span><br><span class="line">	List&lt;Predicate&gt; predicate = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">	Predicate pred1 = criteriaBuilder.equal(root.get(&quot;bizId&quot;), user.getBizId());</span><br><span class="line">	Predicate pred2 = criteriaBuilder.equal(root.get(&quot;bizId&quot;), 0);</span><br><span class="line">	predicate.add(criteriaBuilder.or(pred1, pred2));</span><br><span class="line"></span><br><span class="line">	Predicate[] pre = new Predicate[predicate.size()];</span><br><span class="line">	criteriaQuery.where(predicate.toArray(pre));</span><br><span class="line">	return null;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://jiaoht.github.io/2019/Java-Selenium-WebDriver自动版本化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -178,7 +264,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/Java-Selenium-WebDriver自动版本化/" class="post-title-link" itemprop="url">Java + Selenium + WebDriver自动版本化</a>
+            <a href="/2019/Java-Selenium-WebDriver%E8%87%AA%E5%8A%A8%E7%89%88%E6%9C%AC%E5%8C%96/" class="post-title-link" itemprop="url">Java + Selenium + WebDriver自动版本化</a>
         </h2>
 
         <div class="post-meta">
@@ -268,7 +354,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/jQuery-button实现target为-blank-点击button弹出新窗口/" class="post-title-link" itemprop="url">jQuery: 点击button弹出新窗口</a>
+            <a href="/2019/jQuery-button%E5%AE%9E%E7%8E%B0target%E4%B8%BA-blank-%E7%82%B9%E5%87%BBbutton%E5%BC%B9%E5%87%BA%E6%96%B0%E7%AA%97%E5%8F%A3/" class="post-title-link" itemprop="url">jQuery: 点击button弹出新窗口</a>
         </h2>
 
         <div class="post-meta">
@@ -303,7 +389,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>174</span>
+              <span>172</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -356,7 +442,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/Excel导出-PDF导出总结/" class="post-title-link" itemprop="url">Java导出 Excel，PDF</a>
+            <a href="/2019/Excel%E5%AF%BC%E5%87%BA-PDF%E5%AF%BC%E5%87%BA%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">Java导出 Excel，PDF</a>
         </h2>
 
         <div class="post-meta">
@@ -483,7 +569,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
+              <span>2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -582,7 +668,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>545</span>
+              <span>511</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -647,7 +733,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/在高德地图使用-AMap-is-not-defined/" class="post-title-link" itemprop="url">在高德地图使用: AMap is not defined</a>
+            <a href="/2019/%E5%9C%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E4%BD%BF%E7%94%A8-AMap-is-not-defined/" class="post-title-link" itemprop="url">在高德地图使用: AMap is not defined</a>
         </h2>
 
         <div class="post-meta">
@@ -682,7 +768,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>408</span>
+              <span>400</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -740,7 +826,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/取整取余问题/" class="post-title-link" itemprop="url">取整取余问题</a>
+            <a href="/2019/%E5%8F%96%E6%95%B4%E5%8F%96%E4%BD%99%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">取整取余问题</a>
         </h2>
 
         <div class="post-meta">
@@ -775,7 +861,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>533</span>
+              <span>519</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -833,7 +919,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/转换模型时-Django-model-to-dict会跳过所有DateTimeField/" class="post-title-link" itemprop="url">转换模型时,Django model_to_dict会跳过所有DateTimeField</a>
+            <a href="/2019/%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%9E%8B%E6%97%B6-Django-model-to-dict%E4%BC%9A%E8%B7%B3%E8%BF%87%E6%89%80%E6%9C%89DateTimeField/" class="post-title-link" itemprop="url">转换模型时,Django model_to_dict会跳过所有DateTimeField</a>
         </h2>
 
         <div class="post-meta">
@@ -868,7 +954,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>57</span>
+              <span>54</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -923,7 +1009,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/Pycharm-2019-1中打开-md文件出现卡死的情况/" class="post-title-link" itemprop="url">Pycharm 2019.1中打开.md文件出现卡死的情况</a>
+            <a href="/2019/Pycharm-2019-1%E4%B8%AD%E6%89%93%E5%BC%80-md%E6%96%87%E4%BB%B6%E5%87%BA%E7%8E%B0%E5%8D%A1%E6%AD%BB%E7%9A%84%E6%83%85%E5%86%B5/" class="post-title-link" itemprop="url">Pycharm 2019.1中打开.md文件出现卡死的情况</a>
         </h2>
 
         <div class="post-meta">
@@ -958,7 +1044,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>69</span>
+              <span>66</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -980,110 +1066,6 @@
           <blockquote>
 <p>尊重原创<br>源地址：<a href="https://blog.csdn.net/qq_41897629/article/details/89163939" target="_blank" rel="noopener">https://blog.csdn.net/qq_41897629/article/details/89163939</a></p>
 </blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://jiaoht.github.io/2019/关于python-manage-py-makemigrations，python-manage-py-migrate不能建表/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Mr.Jiao">
-      <meta itemprop="description" content="理想必须热爱">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="红桃jiao的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/关于python-manage-py-makemigrations，python-manage-py-migrate不能建表/" class="post-title-link" itemprop="url">关于python manage.py makemigrations，python manage.py migrate不能建表</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-12-26 17:12:00" itemprop="dateCreated datePublished" datetime="2019-12-26T17:12:00+08:00">2019-12-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-21 15:48:35" itemprop="dateModified" datetime="2020-07-21T15:48:35+08:00">2020-07-21</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>532</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>尊重原创：<a href="https://www.jb51.net/article/140960.htm" target="_blank" rel="noopener">https://www.jb51.net/article/140960.htm</a></p>
-</blockquote>
-<p>如果你想要重新生成表，就直接删除数据库对应的表，然后执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
-
-<p>有些人是会成功的，但是我总觉得一般情况下是不会成功的，所有，我们直接往下看-&gt;</p>
-<hr>
-<p>一般情况下，在我们删除表和生成的0001_initial.py文件以后，执行:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
-
-<p>还是不能生成表,提示:No changes detected</p>
-<p>最后一步：<br>我们进入数据库，然后发现有一张django_migrations表,里面记录这有关创建表的记录,删除对应的数据<strong>表</strong> （原文说删表，其实是把这条数据删掉）:<br>命令：<code>delete from django_migrations where app=&#39;yourappname&#39;;</code></p>
-<p>然后再执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
-
-<p>成功重新创建表，hurray！</p>
 
       
     </div>
@@ -1170,7 +1152,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1190,13 +1172,13 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/jiaoht" title="GitHub → https://github.com/jiaoht" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/jiaoht" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiaoht" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/u/5731326417" title="Weibo → https://weibo.com/u/5731326417" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <a href="https://weibo.com/u/5731326417" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5731326417" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://blog.csdn.net/weixin_40375601" title="Csdn → https://blog.csdn.net/weixin_40375601" rel="noopener" target="_blank"><i class="fab fa-codiepie fa-fw"></i>Csdn</a>
+        <a href="https://blog.csdn.net/weixin_40375601" title="Csdn → https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_40375601" rel="noopener" target="_blank"><i class="fab fa-codiepie fa-fw"></i>Csdn</a>
       </span>
   </div>
 
@@ -1207,7 +1189,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="https://me.csdn.net/weixin_43866211" title="https://me.csdn.net/weixin_43866211" rel="noopener" target="_blank">Chao Hsin-fang</a>
+          <a href="https://me.csdn.net/weixin_43866211" title="https:&#x2F;&#x2F;me.csdn.net&#x2F;weixin_43866211" rel="noopener" target="_blank">Chao Hsin-fang</a>
         </li>
     </ul>
   </div>
@@ -1233,19 +1215,19 @@
   &copy; 2019 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-heartbeat"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Mr.Jiao</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">78k</span>
+    <span title="站点总字数">73k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:06</span>
 </div>
 
 

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>红桃jiao的博客</title>
+    <link>https://jiaoht.github.io/</link>
+    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>理想必须热爱</description>
+    <pubDate>Tue, 28 Jul 2020 06:32:13 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>移除两个key相同的Map中value相同的键值对，并解决null</title>
+      <link>https://jiaoht.github.io/2020/%E7%A7%BB%E9%99%A4%E4%B8%A4%E4%B8%AAMap%E4%B8%ADvalue%E7%9B%B8%E5%90%8C%E7%9A%84%E9%94%AE%E5%80%BC%E5%AF%B9%EF%BC%8C%E5%B9%B6%E8%A7%A3%E5%86%B3nul/</link>
+      <guid>https://jiaoht.github.io/2020/%E7%A7%BB%E9%99%A4%E4%B8%A4%E4%B8%AAMap%E4%B8%ADvalue%E7%9B%B8%E5%90%8C%E7%9A%84%E9%94%AE%E5%80%BC%E5%AF%B9%EF%BC%8C%E5%B9%B6%E8%A7%A3%E5%86%B3nul/</guid>
+      <pubDate>Tue, 28 Jul 2020 06:26:41 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, Object&gt; beforeMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">Map&lt;String, Object&gt; afterMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">Set&lt;String&gt; keySet = <span class="keyword">new</span> HashSet&lt;&gt;(beforeMap.keySet());</span><br><span class="line"><span class="keyword">for</span> (String key : keySet) &#123;</span><br><span class="line">    Object beforeIt = beforeMap.get(key);</span><br><span class="line">    Object afterIt = afterMap.get(key);</span><br><span class="line">    <span class="keyword">if</span> (beforeIt != <span class="keyword">null</span> &amp;&amp; afterIt != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (beforeIt.equals(afterIt)) &#123;</span><br><span class="line">            beforeMap.remove(key);</span><br><span class="line">            afterMap.remove(key);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (beforeIt == <span class="keyword">null</span> &amp;&amp; afterIt == <span class="keyword">null</span>) &#123;</span><br><span class="line">        beforeMap.remove(key);</span><br><span class="line">        afterMap.remove(key);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// beforeData.add(JSONObject.toJSONString(beforeMap));</span></span><br><span class="line"><span class="comment">// afterData.add(JSONObject.toJSONString(afterMap));</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2020/%E7%A7%BB%E9%99%A4%E4%B8%A4%E4%B8%AAMap%E4%B8%ADvalue%E7%9B%B8%E5%90%8C%E7%9A%84%E9%94%AE%E5%80%BC%E5%AF%B9%EF%BC%8C%E5%B9%B6%E8%A7%A3%E5%86%B3nul/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>jenkins搭建</title>
+      <link>https://jiaoht.github.io/2020/jenkins%E6%90%AD%E5%BB%BA/</link>
+      <guid>https://jiaoht.github.io/2020/jenkins%E6%90%AD%E5%BB%BA/</guid>
+      <pubDate>Thu, 09 Jan 2020 09:39:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;下载jenkins(这个是清华的源)：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm&lt;/code&gt;&lt;/p
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>下载jenkins(这个是清华的源)：</p><p><code>wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.190.2-1.1.noarch.rpm</code></p><p>提示：<del>如果没有wget，执行后再下载jenkins的rpm包：<br><code>yum install -y wget</code></del> </p><p>安装jenkins：<br><code>rpm -ivh jenkins-2.190.2-1.1.noarch.rpm</code></p><p>启动Jenkins：<br>systemctl start jenkins</p><hr><p><strong>问题解决：</strong></p><ul><li><p>Jenkins登录页面密码查看路径：<br><code>cat /var/lib/jenkins/secrets/initialAdminPassword</code></p></li><li><p>查看admin密码,这里是加密的密码：<br><code>cat /var/lib/jenkins/users/admin_*/config.xml</code></p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;passwordHash&gt;#jbcrypt:$2a$10$MiIVR0rr/UhQBqT.bBq0QehTiQVqgNpUGyWW2nJObaVAM/2xSQdSq&lt;/passwordHash&gt;</span><br></pre></td></tr></table></figure><p>   如果忘记密码需要修改的话，可以将我的这个替换成你的这里部分重启，密码为123456。</p><ul><li><p>如果提示该Jenkins示例似乎离线：<br>则需要将更新的源替换，我使用的是清华的源：<br>网页输入：<a href="http://ip:port/pluginManager/advanced" target="_blank" rel="noopener">http://ip:port/pluginManager/advanced</a><br>修改最下面的URL为：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json</a></p></li><li><p>如果需要java环境，则安装jdk：<br><code>yum install -y java-1.8.0-openjdk-devel.x86_64</code></p></li></ul>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2020/jenkins%E6%90%AD%E5%BB%BA/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>idea报错：java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java</title>
+      <link>https://jiaoht.github.io/2019/idea%E6%8A%A5%E9%94%99%EF%BC%9Ajava-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/</link>
+      <guid>https://jiaoht.github.io/2019/idea%E6%8A%A5%E9%94%99%EF%BC%9Ajava-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/</guid>
+      <pubDate>Thu, 26 Dec 2019 09:36:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java.library.path, no leveldbjni-1.8 in java.lib
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>java.lang.UnsatisfiedLinkError: Could not load library. Reasons: [no leveldbjni64-1.8 in java.library.path, no leveldbjni-1.8 in java.library.path, C:\Windows\System32\leveldbjni.dll: Can’t find dependent libraries, C:\Users\dajiaotao\AppData\Local\Temp\leveldbjni-64-1-1989621817943305095.8: Can’t find dependent libraries]</p><p>==================================================</p><p>这个折磨我两天的问题，就是少了dll。。。。</p><p>下载网址：<a href="http://www.onlinedown.net/soft/120082.htm" target="_blank" rel="noopener">http://www.onlinedown.net/soft/120082.htm</a></p>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2019/idea%E6%8A%A5%E9%94%99%EF%BC%9Ajava-lang-UnsatisfiedLinkError-Could-not-load-library-Reasons-no-leveldbjni64-1-8-in-java/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>javabean作用和优势,什么时候该对数据封装?</title>
+      <link>https://jiaoht.github.io/2019/javabean%E4%BD%9C%E7%94%A8%E5%92%8C%E4%BC%98%E5%8A%BF-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85/</link>
+      <guid>https://jiaoht.github.io/2019/javabean%E4%BD%9C%E7%94%A8%E5%92%8C%E4%BC%98%E5%8A%BF-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85/</guid>
+      <pubDate>Thu, 26 Dec 2019 09:35:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h4 id=&quot;javabean作用和优势-什么时候该对数据封装&quot;&gt;&lt;a href=&quot;#javabean作用和优势-什么时候该对数据封装&quot; class=&quot;headerlink&quot; title=&quot;javabean作用和优势,什么时候该对数据封装?&quot;&gt;&lt;/a&gt;javabean作用和优势
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h4 id="javabean作用和优势-什么时候该对数据封装"><a href="#javabean作用和优势-什么时候该对数据封装" class="headerlink" title="javabean作用和优势,什么时候该对数据封装?"></a>javabean作用和优势,什么时候该对数据封装?</h4><blockquote><p>参考（侵权删）：<a href="https://zhidao.baidu.com/question/51726153.html" target="_blank" rel="noopener">https://zhidao.baidu.com/question/51726153.html</a></p></blockquote><p>首先这是一个编程思想，也就是所谓‘面向对象’的问题。javabean本身是一个java对象，他对数据进行的封装。我们需要访问数据的时候只要访问这个对象就可以了。<br>其次，如果你的表单数据比较少还好，如果多一些，比如10个，那么你在servlet的方法调用，比如调用数据库insert操作，你要建立一个具有10个参数的方法吗？还是创建一个只有一个javabean做参数的方法简单？<br>在你的例子中，比如A页面提交跳转如B页面，期间A页面的表单数据封装进一个javabean，那么在B页面只需要访问这个javabean，然后调用其相关get方法就可以了。而如果不用javabean，你在servlet终究要不厌其烦的request.setParameter().<br>而且，将来你肯定会接触到一些数据库持久层的开源框架，现在用的最多的比如hibernate，他对数据库的增删改查全是基于javabean的，比如你要保存一个student的学号，姓名，性别的信息。原来的做法是<br>insert into t_student (id,name,sex) value(1,’jack’,1).<br>而使用Hibernate这类框架，只需要调用一个方法save(student).<br>其中student就是一个javabean,它具有3个成员变量，id,name,sex.是不是很方便？<br>扯远了。</p>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2019/javabean%E4%BD%9C%E7%94%A8%E5%92%8C%E4%BC%98%E5%8A%BF-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>IDEA、WebStorm永久激活</title>
+      <link>https://jiaoht.github.io/2019/IDEA%E3%80%81WebStorm%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/</link>
+      <guid>https://jiaoht.github.io/2019/IDEA%E3%80%81WebStorm%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/</guid>
+      <pubDate>Thu, 26 Dec 2019 09:34:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;Web Storm 激活步骤与此相同&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;版权声明：感谢博主 张未-大道五十,天衍四九,人遁其一-成都,中国&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文转自：&lt;a href=&quot;https://blog.weechang.xyz/201
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>Web Storm 激活步骤与此相同</p><blockquote><p>版权声明：感谢博主 张未-大道五十,天衍四九,人遁其一-成都,中国</p></blockquote><p>本文转自：<a href="https://blog.weechang.xyz/2018/09/21/IDEA、WebStorm最新永久激活方式/" target="_blank" rel="noopener">https://blog.weechang.xyz/2018/09/21/IDEA、WebStorm最新永久激活方式/</a></p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a><strong>步骤</strong></h3><p>1.下载插件<br>2.安装插件<br>3.修改配置</p><h4 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h4><p>首先下载插件jar包 <a href="http://idea.lanyus.com/jar/JetbrainsCrack-3.1-release-enc.jar" target="_blank" rel="noopener">http://idea.lanyus.com/jar/JetbrainsCrack-3.1-release-enc.jar</a></p><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>然后将插件移动到 IDEA 安装目录的bin下。如我的目录 %IntelliJ IDEA%\bin</p><h4 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h4><p>修改 IDEA 安装bin目录下的 idea64.exe.vmoptions 或者 idea.exe.vmoptions 具体修改哪一个看自己操作系统是64 位还是32位。64位修改 idea64.exe.vmoptions ， 32位修改 idea.exe.vmoptions。</p><p>然后在文件末尾添加上（其中 D:\idea\IntelliJ IDEA 2018.2.4\bin\JetbrainsCrack-3.1-release-enc.jar 为插件的安装路径和文件名。注意，目录和文件名一定要一直，不然IDEA不能启动）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-javaagent:D:\idea\IntelliJ IDEA 2018.2.4\bin\JetbrainsCrack-3.1-release-enc.jar</span><br></pre></td></tr></table></figure><h4 id="重启IDEA、填写CODE"><a href="#重启IDEA、填写CODE" class="headerlink" title="重启IDEA、填写CODE"></a>重启IDEA、填写CODE</h4><p>重启IDEA，选择Activation Code填写激活码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">ThisCrackLicenseId-&#123;</span><br><span class="line">    &quot;licenseId&quot;:&quot;ThisCrackLicenseId&quot;,</span><br><span class="line">    &quot;licenseeName&quot;:&quot;你想填的用户名&quot;,</span><br><span class="line">    &quot;assigneeName&quot;:&quot;&quot;,</span><br><span class="line">    &quot;assigneeEmail&quot;:&quot;你想填的邮箱&quot;,</span><br><span class="line">    &quot;licenseRestriction&quot;:&quot;For This Crack, Only Test! Please support genuine!!!&quot;,</span><br><span class="line">    &quot;checkConcurrentUse&quot;:false,</span><br><span class="line">    &quot;products&quot;:[</span><br><span class="line">    &#123;&quot;code&quot;:&quot;II&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;DM&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;AC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;RS0&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;WS&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;DPN&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;RC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;PS&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;DC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;RM&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;CL&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;,</span><br><span class="line">    &#123;&quot;code&quot;:&quot;PC&quot;,&quot;paidUpTo&quot;:&quot;2099-12-31&quot;&#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;hash&quot;:&quot;2911276/0&quot;,</span><br><span class="line">    &quot;gracePeriodDays&quot;:7,</span><br><span class="line">    &quot;autoProlongated&quot;:false&#125;</span><br></pre></td></tr></table></figure><p>激活<br>OK，至此为止，你的IDEA 就激活成功，又可以继续浪了。</p>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2019/IDEA%E3%80%81WebStorm%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>关于postman的请求参数的格式问题</title>
+      <link>https://jiaoht.github.io/2019/%E5%85%B3%E4%BA%8Epostman%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/</link>
+      <guid>https://jiaoht.github.io/2019/%E5%85%B3%E4%BA%8Epostman%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/</guid>
+      <pubDate>Thu, 26 Dec 2019 09:33:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;版权声明：创作不易，转载请附上本文地址&lt;a href=&quot;https://blog.csdn.net/weixin_40375601/article/details/85121974&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;h
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote><p>版权声明：创作不易，转载请附上本文地址<a href="https://blog.csdn.net/weixin_40375601/article/details/85121974" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40375601/article/details/85121974</a></p></blockquote><p>注意点：<br>    1.GET请求<br>    2.参数格式为params : { “xx” : “xx” }<br>    3.Cookie的JSESSIONID</p><h5 id="1-错误示例："><a href="#1-错误示例：" class="headerlink" title="1.错误示例："></a>1.错误示例：</h5><p><img src="https://img-blog.csdnimg.cn/20181220144504609.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h5 id="2-正确示例："><a href="#2-正确示例：" class="headerlink" title="2.正确示例："></a>2.正确示例：</h5><p><img src="https://img-blog.csdnimg.cn/20181220144440397.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDM3NTYwMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2019/%E5%85%B3%E4%BA%8Epostman%E7%9A%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E6%A0%BC%E5%BC%8F%E9%97%AE%E9%A2%98/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>zookeeper连接不上/Session 0x0 for server null, unexpected error, closing socket connection</title>
+      <link>https://jiaoht.github.io/2019/zookeeper%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-Session-0x0-for-server-null-unexpected-error-closing-socket-connection/</link>
+      <guid>https://jiaoht.github.io/2019/zookeeper%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-Session-0x0-for-server-null-unexpected-error-closing-socket-connection/</guid>
+      <pubDate>Thu, 26 Dec 2019 09:32:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;好像是Linux重启导致zookeeper端口出了问题&lt;/p&gt;
+&lt;h5 id=&quot;设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，慎用-，不过我确实是用这个解决了-然后重新打开需要的端口）&quot;&gt;&lt;a href=&quot;#设置默认接口区域，立即生效无需重启（这个好像是重置所
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>好像是Linux重启导致zookeeper端口出了问题</p><h5 id="设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，慎用-，不过我确实是用这个解决了-然后重新打开需要的端口）"><a href="#设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，慎用-，不过我确实是用这个解决了-然后重新打开需要的端口）" class="headerlink" title="设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，慎用!!!，不过我确实是用这个解决了,然后重新打开需要的端口）"></a>设置默认接口区域，立即生效无需重启（这个好像是重置所有端口，<font color="red">慎用!!!</font>，不过我确实是用这个解决了,然后重新打开需要的端口）</h5><pre><code>firewall-cmd --set-default-zone=public</code></pre><p>打开端口命令：</p><pre><code>firewall-cmd --add-port=端口号/tcp</code></pre>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2019/zookeeper%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-Session-0x0-for-server-null-unexpected-error-closing-socket-connection/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>为Linux服务器设置静态IP的方法,并且ping通外网</title>
+      <link>https://jiaoht.github.io/2019/%E4%B8%BALinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E7%9A%84%E6%96%B9%E6%B3%95-%E5%B9%B6%E4%B8%94ping%E9%80%9A%E5%A4%96%E7%BD%91/</link>
+      <guid>https://jiaoht.github.io/2019/%E4%B8%BALinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E7%9A%84%E6%96%B9%E6%B3%95-%E5%B9%B6%E4%B8%94ping%E9%80%9A%E5%A4%96%E7%BD%91/</guid>
+      <pubDate>Thu, 26 Dec 2019 09:31:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;参考&lt;a href=&quot;https://www.cnblogs.com/freeweb/p/5335973.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.cnblogs.com/freeweb/p/
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote><p>参考<a href="https://www.cnblogs.com/freeweb/p/5335973.html" target="_blank" rel="noopener">https://www.cnblogs.com/freeweb/p/5335973.html</a></p></blockquote><p>这里以CentOS 7系列为例设置静态IP，原来RedHat系列的Linux发行版可以通过setup工具方便的设置静态IP，但是在版本7之后setup工具的功能就逐渐减弱了，所以这时候采用修改配置文件的方式来设置静态IP，方法如下：</p><p>　　首先注意，路由网关处必须设置可以配置静态IP或者使用指定IP绑定MAC才可以配置，否则配置不成功，不要盲目的配置<br>　　网络配置的配置文件在/etc/sysconfig/network-scripts/下，文件名前缀为ifcfg-后面跟的就是网卡的名称，可以通过双TAB键查看然后编辑，也可以使用ifconfig查看，也可以使用命令： vim /etc/sysconfig/network-scripts/ifcfg-* 编辑配置文件(没有安装vim可以使用Linux默认的<font color="blue">vi</font>编辑)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20181225173359867.PNG" alt="在这里插入图片描述"></p><p>比如这里就是ifcfg-ens33这个文件，现在使用： vim /etc/sysconfig/network-scripts/ifcfg-ens33 打开配置文件进行编辑，默认情况是dhcp动态获取的，如下图：<br><img src="https://img-blog.csdnimg.cn/20181225174313943.PNG" alt="在这里插入图片描述"><br>这时候如果想修改成静态的，首先把BOOTPROTO=”dhcp”改成BOOTPROTO=”static”表示静态获取，ONBOOT=no改成ONBOOT=yes联网，然后在最后追加比如下面的配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">BROADCAST=192.168.11.255</span><br><span class="line">IPADDR=192.168.11.128</span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line">GATEWAY=192.168.11.2</span><br></pre></td></tr></table></figure><p>BROADCAST设置的是局域网广播地址，IPADDR就是静态IP，NETMASK是子网掩码，GATEWAY（注意事项在下面）就是网关或者路由地址；需要说明，原来还有个NETWORK配置的是局域网网络号，这个是ifcalc自动计算的，所以这里配置这些就足够了，最终配置如下图：<br><img src="https://img-blog.csdnimg.cn/20181225175042392.PNG" alt="在这里插入图片描述"></p><p>需要注意的是GATEWAY是需要与虚拟机设置的一致，否则ping不通外网，比如我的是192.168.11.2。如图：<br><img src="https://img-blog.csdnimg.cn/20181225175554534.png" alt="在这里插入图片描述"><br>配置完成之后保存退出，设置完毕，然后使用命令： /etc/init.d/network restart 或者 service network restart 重启网络服务，重启后如果路由配置了支持静态IP，那么linux就能获取到刚才配置的IP地址，这样静态IP就配置成功了<br>　　配置成功后，dns配置一般会消失，所以这时候就ping不通域名了，需要配置DNS，配置文件位置是：/etc/resolv.conf，里面的nameserver指定dns服务器地址，这个配置很简单就不详细说了，如下图：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20181225175923432.PNG" alt="在这里插入图片描述"><br>保存后，dns配置是立即生效的，原因很简单，只要本地需要解析缓冲区没有的域名，都要读取一遍dns配置文件，所以这个配置是立即生效的，不用任何操作,到这里静态IP并访问外网就没问题了.<br>    啊哈哈！！</p>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2019/%E4%B8%BALinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E7%9A%84%E6%96%B9%E6%B3%95-%E5%B9%B6%E4%B8%94ping%E9%80%9A%E5%A4%96%E7%BD%91/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>spring @Configuration的使用</title>
+      <link>https://jiaoht.github.io/2019/spring-Configuration%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <guid>https://jiaoht.github.io/2019/spring-Configuration%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <pubDate>Thu, 26 Dec 2019 09:29:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;1.1、@Configuration配置spring并启动spring容器&lt;br&gt;@Configuration标注在类上，相当于把该类作为spring的xml配置文件中的&lt;beans&gt;，作用为：配置spring容器(应用上下文)&lt;/beans&gt;&lt;/p&gt;
+&lt;p&gt;1.2、@Co
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>1.1、@Configuration配置spring并启动spring容器<br>@Configuration标注在类上，相当于把该类作为spring的xml配置文件中的<beans>，作用为：配置spring容器(应用上下文)</beans></p><p>1.2、@Configuration启动容器+@Bean注册Bean，@Bean下管理bean的生命周期<br>@Bean标注在方法上(返回某个实例的方法)，等价于spring的xml配置文件中的<bean>，作用为：注册bean对象<br>    注：<br>    (1)、@Bean注解在返回实例的方法上，如果未通过@Bean指定bean的名称，则默认与标注的方法名相同；<br>    (2)、@Bean注解默认作用域为单例singleton作用域，可通过@Scope(“prototype”)设置为原型作用域；<br>    (3)、既然@Bean的作用是注册bean对象，那么完全可以使用@Component、@Controller、@Service、@Repository等注解注册bean，当然需要配置@ComponentScan注解进行自动扫描。</bean></p><p>@Bean下管理bean的生命周期<br>可以使用基于 Java 的配置来管理 bean 的生命周期。@Bean 支持两种属性，即 initMethod 和destroyMethod，这些属性可用于定义生命周期方法。在实例化 bean 或即将销毁它时，容器便可调用生命周期方法。生命周期方法也称为回调方法，因为它将由容器调用。</p><p>1.3、@Configuration启动容器+@Component注册Bean</p><ul><li>@Component注册Bean</li><li>@ComponentScan扫描Bean</li></ul>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2019/spring-Configuration%E7%9A%84%E4%BD%BF%E7%94%A8/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Specification中一个条件用或者表示(criteriaBuilder.or)</title>
+      <link>https://jiaoht.github.io/2019/Specification%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E7%94%A8%E6%88%96%E8%80%85%E8%A1%A8%E7%A4%BA-criteriaBuilder-or/</link>
+      <guid>https://jiaoht.github.io/2019/Specification%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E7%94%A8%E6%88%96%E8%80%85%E8%A1%A8%E7%A4%BA-criteriaBuilder-or/</guid>
+      <pubDate>Thu, 26 Dec 2019 09:28:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Specification spec = (root, criteriaQuery, criteriaBuilder) -&gt; &#123;</span><br><span class="line"></span><br><span class="line">List&lt;Predicate&gt; predicate = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">Predicate pred1 = criteriaBuilder.equal(root.get(&quot;bizId&quot;), user.getBizId());</span><br><span class="line">Predicate pred2 = criteriaBuilder.equal(root.get(&quot;bizId&quot;), 0);</span><br><span class="line">predicate.add(criteriaBuilder.or(pred1, pred2));</span><br><span class="line"></span><br><span class="line">Predicate[] pre = new Predicate[predicate.size()];</span><br><span class="line">criteriaQuery.where(predicate.toArray(pre));</span><br><span class="line">return null;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://jiaoht.github.io/2019/Specification%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E7%94%A8%E6%88%96%E8%80%85%E8%A1%A8%E7%A4%BA-criteriaBuilder-or/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
